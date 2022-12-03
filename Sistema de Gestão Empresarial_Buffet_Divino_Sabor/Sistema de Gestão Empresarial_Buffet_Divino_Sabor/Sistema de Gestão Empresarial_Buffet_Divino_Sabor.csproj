@@ -172,6 +172,8 @@
     <Compile Include="Classe\cliente.cs" />
     <Compile Include="Classe\contratos.cs" />
     <Compile Include="Classe\empresa.cs" />
+    <Compile Include="Classe\estoque.cs" />
+    <Compile Include="Classe\fluxo_de_caixa.cs" />
     <Compile Include="Classe\fornecedores.cs" />
     <Compile Include="Classe\funcionarios.cs" />
     <Compile Include="Classe\menu.cs" />
@@ -197,6 +199,8 @@
     <Compile Include="Negocio\cliente.cs" />
     <Compile Include="Negocio\contratos.cs" />
     <Compile Include="Negocio\empresa.cs" />
+    <Compile Include="Negocio\estoque.cs" />
+    <Compile Include="Negocio\fluxo_de_caixa.cs" />
     <Compile Include="Negocio\fornecedores.cs" />
     <Compile Include="Negocio\funcionarios.cs" />
     <Compile Include="Negocio\menu.cs" />

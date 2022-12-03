@@ -12,6 +12,8 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
         }
     }
 }
