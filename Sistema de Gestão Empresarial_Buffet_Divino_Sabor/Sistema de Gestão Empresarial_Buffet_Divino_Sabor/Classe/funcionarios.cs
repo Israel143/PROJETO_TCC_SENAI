@@ -8,13 +8,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Classe
     public class funcionarios
     {
 
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public string Endereco { get; set; }
-        public string Telefone { get; set; }
-        public double Salario { get; set; }
-        public string Cargo { get; set; }
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string cpf { get; set; }
+        public string endereco { get; set; }
+        public string telefone { get; set; }
+        public double salario { get; set; }
+        public string cargo { get; set; }
 
     }
 }

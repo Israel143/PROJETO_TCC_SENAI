@@ -8,12 +8,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Classe
     public class estoque
     {
 
-        public string Codigo_de_barras { get; set; }
-        public int Id_Fornecedor { get; set; }
-        public string Nome_Produto { get; set; }
-        public DateTime Validade { get; set; }
-        public double Preco_Unidade { get; set; }
-        public int Quantidade { get; set; }
+        public string codigo_de_barras { get; set; }
+        public int id_fornecedor { get; set; }
+        public string nome_produto { get; set; }
+        public DateTime validade { get; set; }
+        public double preco_Unidade { get; set; }
+        public int quantidade { get; set; }
+        public string seguimento { get; set; }
 
     }
 }
