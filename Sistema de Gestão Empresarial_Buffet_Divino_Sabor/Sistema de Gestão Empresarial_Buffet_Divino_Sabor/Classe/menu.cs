@@ -7,13 +7,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Classe
 {
     public class menu
     {
-        public int Id { get; set; }
-        public string Entrada { get; set; }
-        public string Salada { get; set; }
-        public string Produto { get; set; }
-        public string Jantar { get; set; }
-        public string Sobremesa { get; set; }
-        public string Bebidas { get; set; }
+        public int id { get; set; }
+        public string entrada { get; set; }
+        public string salada { get; set; }
+        public string jantar { get; set; }
+        public string sobremesa { get; set; }
+        public string bebidas { get; set; }
 
 
     }
