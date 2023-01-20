@@ -10,7 +10,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Classe
         public int id { get; set; }
         public string codigo_barras { get; set; }
         public int id_fornecedor { get; set; }
-        public string produto { get; set; }
+        public string descricao { get; set; }
         public DateTime validade { get; set; }
         public double preco { get; set; }
         public string quantidade { get; set; }

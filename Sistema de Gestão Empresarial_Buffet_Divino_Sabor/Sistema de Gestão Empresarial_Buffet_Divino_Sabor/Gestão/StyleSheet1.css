@@ -1,0 +1,68 @@
+﻿body {
+
+}
+
+/********** GRADES, CAIXAS E DIVISÕES **********/
+.content-box {
+    background-color: rgba(0, 0, 0,0.5);
+    height: 500px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 10px 20px #030303;
+    border-radius: 20px;
+    padding-top:100px;
+}
+
+.element-1 {
+    text-align:center;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+/********** FORMATAÇÃO DE TEXTO **********/
+
+.title-box {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/********** FORMATAÇÃO DE ELEMENTOS **********/
+.txt-box{
+    border-radius:20px;
+    border-width:thin;
+    margin:10px;
+}
+
+.lbl-box{
+    font-family:'Times New Roman', Times, serif;
+    font-weight:600;
+}
+
+.button {
+    display: inline-block;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    height: 35px;
+    width: 80px;
+    outline: none;
+    color: black;
+    background-color:white;
+    border: none;
+    border-radius: 15px;
+    margin:5px;
+}
+
+    .button:hover {
+        background-color: rgb(53, 53, 53)
+    }
+
+    .button:active {
+        background-color: #2e1f68;
+        box-shadow: 0 5px 5px rgb(56, 55, 55);
+        transform: translateY(4px);
+    }

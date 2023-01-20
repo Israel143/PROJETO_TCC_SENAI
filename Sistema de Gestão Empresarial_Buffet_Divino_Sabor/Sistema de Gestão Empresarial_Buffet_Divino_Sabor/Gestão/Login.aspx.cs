@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 {
-    public partial class Inicio : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
