@@ -17,11 +17,11 @@
                 </div>
                 <div class="row">
                     <asp:Label runat="server" ID="lbl_Pswd" CssClass="lbl-box">Senha</asp:Label>
-                    <asp:TextBox runat="server" ID="txt_Pswd" CssClass="txt-box"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="txt_Pswd" TextMode="Password" CssClass="txt-box"></asp:TextBox>
                 </div>
                 <div class="row" style="margin-left:30px">
-                    <asp:Button runat="server" ID="btn_login" Text="Login" CssClass="button" />
-                    <asp:Button runat="server" ID="btn_cad" Text="Cadastro" CssClass="button" />
+                    <asp:Button runat="server" ID="btn_login" Text="Login" Onclick="btn_login_Click" CssClass="button" />
+                    <asp:Button runat="server" ID="btn_cadastro" Text="Cadastro" Onclick="btn_cadastro_Click" CssClass="button" />
                 </div>
             </div>
             </div>
