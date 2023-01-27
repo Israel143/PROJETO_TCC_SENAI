@@ -138,13 +138,11 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-
+    <Content Include="Gestão\Cadastro_de_Funcionarios.css" />
     <Content Include="Gestão\Dashboard.aspx" />
-
     <Content Include="Gestão\Cadastro de Funcionários.aspx" />
-
     <Content Include="Gestão\Login.aspx" />
-    <Content Include="Gestão\StyleSheet1.css" />
+    <Content Include="Gestão\login.css" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -223,21 +221,19 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="Gestão\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Gestão\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
-
+    </Compile>
     <Compile Include="Gestão\Cadastro de Funcionários.aspx.cs">
       <DependentUpon>Cadastro de Funcionários.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Gestão\Cadastro de Funcionários.aspx.designer.cs">
       <DependentUpon>Cadastro de Funcionários.aspx</DependentUpon>
-
     </Compile>
     <Compile Include="Gestão\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
