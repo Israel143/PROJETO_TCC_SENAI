@@ -1,0 +1,21 @@
+﻿body {
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+p{
+    font-size:30px;
+}
+
+.btn {
+    height: 35px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    border:none;
+    color:black;
+    font-size: 18px;
+}
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
