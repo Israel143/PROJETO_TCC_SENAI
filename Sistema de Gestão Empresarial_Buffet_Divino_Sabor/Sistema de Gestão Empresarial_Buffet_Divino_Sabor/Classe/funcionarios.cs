@@ -15,6 +15,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Classe
         public string telefone { get; set; }
         public double salario { get; set; }
         public string cargo { get; set; }
+        public string turno { get; set; }
 
     }
 }
