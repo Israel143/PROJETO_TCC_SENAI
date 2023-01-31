@@ -142,7 +142,6 @@
     <Content Include="Gestão\Dashboard.aspx" />
     <Content Include="Gestão\Cadastro de Funcionários.aspx" />
 
-    <Content Include="Gestão\estoque.aspx" />
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
     <Content Include="Gestão\Funcionarios\StyleSheet1.css" />
