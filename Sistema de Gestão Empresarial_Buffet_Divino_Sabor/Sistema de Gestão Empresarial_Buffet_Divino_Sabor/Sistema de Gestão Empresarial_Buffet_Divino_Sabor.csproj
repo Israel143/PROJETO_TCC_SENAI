@@ -141,7 +141,14 @@
     <Content Include="Gestão\Cadastro_de_Funcionarios.css" />
     <Content Include="Gestão\Dashboard.aspx" />
     <Content Include="Gestão\Cadastro de Funcionários.aspx" />
+
+    <Content Include="Gestão\estoque.aspx" />
+    <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
+    <Content Include="Gestão\Funcionarios\JavaScript.js" />
+    <Content Include="Gestão\Funcionarios\StyleSheet1.css" />
+
     <Content Include="Gestão\Estoque.aspx" />
+
     <Content Include="Gestão\Login.aspx" />
     <Content Include="Gestão\login.css" />
     <Content Include="Global.asax" />
@@ -242,6 +249,13 @@
     </Compile>
     <Compile Include="Gestão\Estoque.aspx.designer.cs">
       <DependentUpon>Estoque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestão\Funcionarios\Funcionario.aspx.cs">
+      <DependentUpon>Funcionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestão\Funcionarios\Funcionario.aspx.designer.cs">
+      <DependentUpon>Funcionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
