@@ -1,0 +1,42 @@
+﻿body {
+}
+
+/**Nav Bar**/
+.nav-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-secondary-option {
+    font-size: 18px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.nav-secondary-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+#option1.active ~ .nav-secondary-line {
+    left: 0;
+}
+
+#option2.active ~ .nav-secondary-line {
+    left: 100px;
+}/**********/
+
+ /**CONTEUDO**/
+.conteudo{
+    margin-top: 90px;
+    background-color:antiquewhite;
+}
+
+ /***********/
