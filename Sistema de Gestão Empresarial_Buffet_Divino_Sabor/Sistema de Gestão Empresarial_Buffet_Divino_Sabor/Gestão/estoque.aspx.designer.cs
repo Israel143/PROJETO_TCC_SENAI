@@ -13,66 +13,102 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
     public partial class estoque {
         
         /// <summary>
-        /// Controle TxtCodigodebarras.
+        /// Controle Txt_Codigo_de_Barra.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCodigodebarras;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Codigo_de_Barra;
         
         /// <summary>
-        /// Controle txtProduto.
+        /// Controle Txt_Id_Fornecedor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProduto;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Id_Fornecedor;
         
         /// <summary>
-        /// Controle TxtValidade.
+        /// Controle Txt_Nome_Produto.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtValidade;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Nome_Produto;
         
         /// <summary>
-        /// Controle TxtPreco.
+        /// Controle Txt_Validade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPreco;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Validade;
         
         /// <summary>
-        /// Controle TxtQuantidade.
+        /// Controle Txt_Preco_Unidade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtQuantidade;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Preco_Unidade;
         
         /// <summary>
-        /// Controle ddlMenu.
+        /// Controle Txt_Quantidade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMenu;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Quantidade;
         
         /// <summary>
-        /// Controle lblMenu.
+        /// Controle Txt_Seguimento.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMenu;
+        protected global::System.Web.UI.WebControls.TextBox Txt_Seguimento;
+        
+        /// <summary>
+        /// Controle Btn_inserir.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_inserir;
+        
+        /// <summary>
+        /// Controle TxtPesquisa.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtPesquisa;
+        
+        /// <summary>
+        /// Controle Btn_pesquisar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_pesquisar;
+        
+        /// <summary>
+        /// Controle GridView1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
