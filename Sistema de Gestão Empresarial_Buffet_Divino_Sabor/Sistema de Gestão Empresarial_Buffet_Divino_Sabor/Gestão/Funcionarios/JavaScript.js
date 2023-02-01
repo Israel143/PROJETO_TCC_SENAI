@@ -1,9 +1,12 @@
-﻿var options = document.querySelectorAll('.nav-secondary-option');
-options.forEach(function (option) {
-    option.addEventListener('click', function () {
-        options.forEach(function (o) {
-            o.classList.remove('active');
-        });
-        this.classList.add('active');
-    });
-});
+﻿function showDiv(selectedOption) {
+    var funcionariosDiv = document.getElementById("funcionarios");
+    var escalasDiv = document.getElementById("escalas");
+
+  if (selectedOption === "funcionarios") {
+    funcionariosDiv.style.display = "block";
+    escalasDiv.style.display = "none";
+  } else if (selectedOption === "escalas") {
+    funcionariosDiv.style.display = "none";
+    escalasDiv.style.display = "block";
+  }
+}

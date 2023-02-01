@@ -7,67 +7,138 @@
     </header>
     <!--Barra Secundaria!-->
     <div class="nav-secondary">
-        <div class="nav-secondary-option" id="option1">Funcionários</div>
-        <div class="nav-secondary-option" id="option2">Escala</div>
-        <div class="nav-secondary-line"></div>
+        <button onclick="showDiv('funcionarios');return;" type="button"> Funcionários</button>
+        <button onclick="showDiv('escalas')" type="button">Escalas</button>
     </div>
     <!--Conteudo!-->
     <div id="content" class="conteudo">
-        <div id="Funcionarios">
-            <div id="create" class="col-md-6">
+        <div id="funcionarios" style="display:block">
+            <div id="create" class="col-md-5">
                 <div class="infobox">
                     <div id="infos1" class="row">
                         <div class="row">
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtNome"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblNome" Text="Nome:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtNome"></asp:TextBox>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtCPF"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblCPF" Text="CPF:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtCPF"></asp:TextBox>
+                                </div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top:5px">
+                        <div class="row" style="margin-top: 5px">
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtCargo"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblCargo" Text="Cargo:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtCargo"></asp:TextBox>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtTurno"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblTurno" Text="Turno:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtTurno"></asp:TextBox>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="infos2" class="row" style="margin-top:20px">
+                    <div id="infos2" class="row" style="margin-top: 20px">
                         <div class="row">
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtRua"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblRua" Text="Rua:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtRua"></asp:TextBox>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtNumro"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblnumero" Text="Numero:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtNumero"></asp:TextBox>
+                                </div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top:5px">
+                        <div class="row" style="margin-top: 5px">
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtBairro"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblBairro" Text="Bairro:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtBairro"></asp:TextBox>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtCidadeEstado"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblCidadeEstado" Text="Cidade e Estado:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtCidadeEstado"></asp:TextBox>
+                                </div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top:5px">
+                        <div class="row" style="margin-top: 5px">
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtTelefone"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblTelefone" Text="Telefone:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtTelefone"></asp:TextBox>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="txtSalario"></asp:TextBox>
+                                <div class="row">
+                                    <asp:Label runat="server" ID="lblSalario" Text="Salário:"></asp:Label>
+                                </div>
+                                <div class="row">
+                                    <asp:TextBox runat="server" ID="txtSalario"></asp:TextBox>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="buttonBox" class="row" style="margin-top:5px">
-                    <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" />
+                <div id="buttonBox" class="row" style="margin-top: 5px">
+                    <div class="col-sm-4" style="padding: 0"></div>
+                    <div class="col-sm-4" style="padding: 0">
+                        <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" />
+                    </div>
+                    <div class="col-sm-4"></div>
                 </div>
             </div>
-            <div id="read" class="col-md-6"></div>
+            <div class="col-md-2"></div>
+            <div id="read" class="col-md-5">
+                <div id="srcBox" style="margin-top: 20px" class="row">
+                    <div class="col-sm-4">
+                        <asp:TextBox runat="server" ID="txtPesquisa"></asp:TextBox>
+                    </div>
+                    <div class="col-sm-4">
+                        <asp:Button runat="server" ID="btnPesquisa" Text="Pesquisar" />
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div id="resultBox" class="row">
+                    <asp:GridView ID="GridView1" runat="server">
+                    </asp:GridView>
+                </div>
+            </div>
         </div>
-        <div id="Escalas"></div>
+        <div id="escalas" style="display:none">
+            <h1>ESCALA DE SERVIÇO</h1>
+        </div>
     </div>
     <!--Modal!-->
     <div id="modal"></div>
