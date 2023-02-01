@@ -31,7 +31,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 
             conexao.Open();
             var reader = new MySqlCommand("SELECT id,codigo_de_barra,id_fornecedor,nome_produto,validade,preco_unidade,quantidade,seguimento FROM estoque WHERE id= "+ TxtPesquisa.Text, conexao).ExecuteReader();
-            while (reader.Read())
+            
+           
+            {
+               
+            }
+                while (reader.Read())
             {
                 var novo_estoque = new Classe.estoque();
                 novo_estoque.id = reader.GetInt32("id");
@@ -48,6 +53,25 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             }
             conexao.Close();
 
+        }
+
+        protected void Btn_inserir_Click(object sender, EventArgs e)
+        {
+            //Inserir intens no estoque 
+            conexao.Open();
+            var comando = new MySqlCommand("INSERT INTO estoque  (codigo_de_barra,id_fornecedor,nome_produto,validade,preco_unidade,quantidade,seguimento) VALUES (@codigo_de_barra,@id_fornecedor,@nome_produto,@validade,@preco_unidade,@quantidade,@seguimento)", conexao);
+            
+            comando.Parameters.Add(new MySqlParameter("codigo_de_barra", Txt_Codigo_de_Barra.Text));
+            comando.Parameters.Add(new MySqlParameter("id_fornecedor", Txt_Id_Fornecedor.Text));
+            comando.Parameters.Add(new MySqlParameter("nome_produto", Txt_Nome_Produto.Text));
+            comando.Parameters.Add(new MySqlParameter("validade", Convert.ToDateTime(Txt_Validade.Text).ToString("yyyy-MM-dd")));
+            comando.Parameters.Add(new MySqlParameter("preco_unidade", Txt_Preco_Unidade.Text));
+            comando.Parameters.Add(new MySqlParameter("quantidade", Txt_Quantidade.Text));
+            comando.Parameters.Add(new MySqlParameter("seguimento", Txt_Seguimento.Text));
+            comando.ExecuteNonQuery();
+
+            SiteMaster.ExibirAlert(this, "Intem  adicionado  com sucesso!", "Estoque.aspx");
+            conexao.Close();
         }
     }
 }

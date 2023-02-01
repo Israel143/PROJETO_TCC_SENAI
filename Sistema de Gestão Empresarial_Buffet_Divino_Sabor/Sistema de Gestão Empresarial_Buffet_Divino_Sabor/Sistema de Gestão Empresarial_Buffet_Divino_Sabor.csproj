@@ -141,13 +141,11 @@
     <Content Include="Gestão\Cadastro_de_Funcionarios.css" />
     <Content Include="Gestão\Dashboard.aspx" />
     <Content Include="Gestão\Cadastro de Funcionários.aspx" />
-
+    <Content Include="Gestão\Estoque.css" />
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
     <Content Include="Gestão\Funcionarios\StyleSheet1.css" />
-
     <Content Include="Gestão\Estoque.aspx" />
-
     <Content Include="Gestão\Login.aspx" />
     <Content Include="Gestão\login.css" />
     <Content Include="Global.asax" />
