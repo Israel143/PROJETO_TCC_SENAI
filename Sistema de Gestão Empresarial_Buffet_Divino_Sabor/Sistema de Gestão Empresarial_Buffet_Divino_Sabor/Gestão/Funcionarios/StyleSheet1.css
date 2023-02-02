@@ -1,8 +1,14 @@
 ﻿body {
+    background-color: rgba(0, 0, 0,0.5);
 }
 
-/**Nav Bar**/
-.nav-secondary {
+
+.Grid {
+    background-color: white;
+}
+
+    /**Nav Bar**/
+    .nav-secondary {
     display: flex;
     justify-content: center;
     align-items: center;
