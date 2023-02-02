@@ -114,7 +114,9 @@
                 <div id="buttonBox" class="row" style="margin-top: 5px">
                     <div class="col-sm-4" style="padding: 0"></div>
                     <div class="col-sm-4" style="padding: 0">
-                        <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" />
+                        <br />
+                        <br />
+                        <asp:Button runat="server" ID="btnCadastrar" Onclick="btnCadastrar_Click" Text="Cadastrar" />
                     </div>
                     <div class="col-sm-4"></div>
                 </div>
@@ -126,12 +128,24 @@
                         <asp:TextBox runat="server" ID="txtPesquisa"></asp:TextBox>
                     </div>
                     <div class="col-sm-4">
-                        <asp:Button runat="server" ID="btnPesquisa" Text="Pesquisar" />
+                        <asp:Button runat="server" ID="btnPesquisa" Onclick="btnPesquisa_Click" Text ="Pesquisar" />
+                        <br />
+                        <br />
                     </div>
                     <div class="col-sm-2"></div>
                 </div>
                 <div id="resultBox" class="row">
-                    <asp:GridView ID="GridView1" runat="server">
+                    <asp:GridView ID="GridView1" runat="server" CssClass= "Grid"  AutoGenerateColumns="false" style="width:600px; height:300px">
+                        <Columns>
+    <asp:BoundField DataField="id" HeaderText="ID" />
+    <asp:BoundField DataField="nome" HeaderText="Nome" />
+    <asp:BoundField DataField="cpf" HeaderText="CPF" />
+    <asp:BoundField DataField="endereco" HeaderText="Endereço" />
+    <asp:BoundField DataField="telefone" HeaderText="Telefone" />
+    <asp:BoundField DataField="salario" HeaderText="Salário" />
+    <asp:BoundField DataField="cargo" HeaderText="Cargo" />
+    <asp:BoundField DataField="turno" HeaderText="Turno" />
+  </Columns>
                     </asp:GridView>
                 </div>
             </div>
