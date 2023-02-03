@@ -139,6 +139,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Gestão\Cadastro_de_Funcionarios.css" />
+    <Content Include="Gestão\Contratos\Contratos.aspx" />
     <Content Include="Gestão\Dashboard.aspx" />
     <Content Include="Gestão\Cadastro de Funcionários.aspx" />
     <Content Include="Gestão\Estoque.css" />
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestão\Contratos\Contratos.aspx.cs">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestão\Contratos\Contratos.aspx.designer.cs">
+      <DependentUpon>Contratos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
