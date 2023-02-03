@@ -10,8 +10,28 @@
                   <asp:ListItem Text="Bebida" Value="bebida"></asp:ListItem>
                   <asp:ListItem Text="Sobremesa" Value="sobremesa"></asp:ListItem>
             </asp:DropDownList>
+     
+
+      <div class="col-sm-24">
+             <p>Pesquisa:</p>
+             <asp:TextBox runat="server" ID="TxtPesquisar" CssClass="form-control"></asp:TextBox>
+            <br />
+            <br />
+
             <asp:Label runat="server" ID="lblMenu1"></asp:Label>
    <asp:Button ID="Btnpesquisar" runat="server" OnClick ="Btnpesquisar_Click" CssClass="btn btn-sucess" Text="Pesquisar prato" />
+
+      <asp:GridView ID="GridView2" CssClass= "Grid " runat="server" AutoGenerateColumns="false" style="width:600px; height:300px">
+  <Columns>
+    <asp:BoundField DataField="id" HeaderText="ID" />
+    <asp:BoundField DataField="entrada" HeaderText="Entrada" />
+    <asp:BoundField DataField="salada" HeaderText="Salada" />
+    <asp:BoundField DataField="jantar" HeaderText="Jantar" />
+    <asp:BoundField DataField="sobremesa" HeaderText="Sobremesa" />
+    <asp:BoundField DataField="bebida" HeaderText="Bebida" />
+  </Columns>
+</asp:GridView>
+
 
    
    

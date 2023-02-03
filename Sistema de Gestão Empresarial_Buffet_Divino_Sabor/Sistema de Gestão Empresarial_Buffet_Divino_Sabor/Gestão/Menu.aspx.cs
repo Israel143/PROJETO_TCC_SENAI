@@ -24,11 +24,34 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 
         protected void ddlMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblMenu1.Text = "";
+            //lblMenu1.Text = "";
         }
 
         protected void Btnpesquisar_Click(object sender, EventArgs e)
         {
+            var Lista = new List<Classe.menu>();
+
+            conexao.Open();
+            var reader = new MySqlCommand("SELECT id,entrada,salada,jantar,sobremesa,bebida FROM menu WHERE id= " + TxtPesquisar.Text, conexao).ExecuteReader();
+
+
+            {
+
+            }
+            while (reader.Read())
+            {
+                var novo_menu = new Classe.menu();
+                novo_menu.id = reader.GetInt32("id");
+                novo_menu.entrada = reader.GetString("entrada");
+                novo_menu.salada = reader.GetString("salada");
+                novo_menu.jantar = reader.GetString("jantar");
+                novo_menu.sobremesa = reader.GetString("sobremesa");
+                novo_menu.bebida = reader.GetString("bebida");
+                Lista.Add(novo_menu);
+                GridView2.DataSource = Lista;
+                GridView2.DataBind();
+            }
+            conexao.Close();
 
         }
     }
