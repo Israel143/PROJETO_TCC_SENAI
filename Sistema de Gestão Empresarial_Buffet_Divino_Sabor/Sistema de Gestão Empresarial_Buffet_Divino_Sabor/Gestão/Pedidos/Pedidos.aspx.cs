@@ -22,7 +22,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
             }
 
             conn.Open();
-            string query = "SELECT pedidos.Data, clientes.Nome FROM pedidos INNER JOIN clientes ON pedidos.IdCliente = clientes.Id";
+            string query = "SELECT pedidos.data, cliente.nome FROM pedidos INNER JOIN cliente ON pedidos.id_cliente = cliente.id AND menu.entrada, menu.salada WHERE estado IS NULL";
             using (MySqlCommand command = new MySqlCommand(query, conn))
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
