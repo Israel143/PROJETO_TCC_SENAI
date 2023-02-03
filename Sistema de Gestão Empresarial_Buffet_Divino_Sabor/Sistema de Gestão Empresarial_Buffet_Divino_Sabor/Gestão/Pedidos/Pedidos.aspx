@@ -10,12 +10,14 @@
                     <asp:Repeater ID="repeaterOrders" runat="server">
                         <ItemTemplate>
                             <div id="pedidosnovos">
-                                <p>Nome do cliente: <%# Eval("ClientName") %></p>
-                                <p>Data do pedido: <%# Eval("OrderDate") %></p>
+                                <p>Nome do cliente: <%# Eval("nome") %></p>
+                                <p>Data do pedido: <%# Eval("data") %></p>
                                 <button type="button">Ver mais</button>
                                 <div id="infoadd" class="row">
-                                    <p class="row">
-                                    </p>
+                                    <div class="row">
+                                        <p><strong>Pedido</strong></p>
+
+                                    </div>
                                 </div>
                             </div>
                         </ItemTemplate>
