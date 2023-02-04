@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <header>
+        <link rel="stylesheet" type="text/css" href="EstiloPedidos.css" />
+        <script src="JSPedidos.js"></script>
     </header>
     <div id="content">
         <div id="pedidosbox">
@@ -9,13 +11,19 @@
                 <div id="novos" class="col-md-4">
                     <asp:Repeater ID="repeaterOrders" runat="server">
                         <ItemTemplate>
-                            <div id="pedidosnovos">
+                            <div id="pedidosnovos" class="OrderBox">
                                 <p>Nome do cliente: <%# Eval("nome") %></p>
                                 <p>Data do pedido: <%# Eval("data") %></p>
-                                <button type="button">Ver mais</button>
-                                <div id="infoadd" class="row">
+                                <button class="btnVerMais" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
+                                 <div class="InfoAdd InfoBox" id="InfoAdd<%# Eval("Id") %>" style="display: none;">
                                     <div class="row">
                                         <p><strong>Pedido</strong></p>
+                                        <ul>
+                                            <li>Entrada: <%# Eval("entrada") %></li>
+                                            <li>Salada: <%# Eval("salada") %></li>
+                                            <li>Jantar: <%# Eval("jantar") %></li>
+                                            <li>Sobremesa: <%# Eval("sobremesa") %></li>
+                                        </ul>
 
                                     </div>
                                 </div>
