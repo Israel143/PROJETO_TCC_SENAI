@@ -27,6 +27,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 
         protected void Btn_pesquisar_Click(object sender, EventArgs e)
         {
+            if (TxtPesquisa.Text == "")
+            {
+                SiteMaster.ExibirAlert(this, "É necessário colocar o Id do Estoque");
+                return;
+            }
             var Lista = new List<Classe.estoque>();
 
             conexao.Open();

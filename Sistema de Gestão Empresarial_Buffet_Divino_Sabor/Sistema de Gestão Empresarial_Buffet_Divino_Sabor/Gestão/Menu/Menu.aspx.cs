@@ -24,11 +24,17 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 
         protected void ddlMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lblMenu1.Text = "";
+           
         }
 
         protected void Btnpesquisar_Click(object sender, EventArgs e)
         {
+            if(TxtPesquisar.Text == "")
+            {
+                SiteMaster.ExibirAlert(this, "É necessário selecionar o menu,digitar o id e apertar pesquisar prato");
+                return;
+            }
+
             var Lista = new List<Classe.menu>();
 
             conexao.Open();
@@ -51,6 +57,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
                 GridView2.DataSource = Lista;
                 GridView2.DataBind();
             }
+
             conexao.Close();
 
         }
