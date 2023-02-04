@@ -138,19 +138,22 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Gestão\Cadastro_de_Funcionarios.css" />
-    <Content Include="Gestão\Contratos\Contratos.aspx" />
-    <Content Include="Gestão\Dashboard.aspx" />
-    <Content Include="Gestão\Cadastro de Funcionários.aspx" />
-    <Content Include="Gestão\Estoque.css" />
+    <Content Include="Gestão\Contratos\Busca de Contratos.css" />
+    <Content Include="Gestão\Funcionarios\Cadastro_de_Funcionarios.css" />
+    <Content Include="Gestão\Contratos\Busca de Contratos.aspx" />
+    <Content Include="Gestão\Dashboard\Dashboard.aspx" />
+    <Content Include="Gestão\Funcionarios\Cadastro de Funcionários.aspx" />
+    <Content Include="Gestão\Estoque\Estoque.css" />
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
+
     <Content Include="Gestão\Funcionarios\StyleSheet1.css" />
     <Content Include="Gestão\Estoque.aspx" />
     <Content Include="Gestão\Login.aspx" />
     <Content Include="Gestão\login.css" />
     <Content Include="Gestão\Menu.aspx" />
     <Content Include="Gestão\Pedidos\JSPedidos.js" />
+
     <Content Include="Gestão\Pedidos\Pedidos.aspx" />
     <Content Include="Gestão\Pedidos\EstiloPedidos.css" />
     <Content Include="Global.asax" />
@@ -231,32 +234,32 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Contratos\Contratos.aspx.cs">
-      <DependentUpon>Contratos.aspx</DependentUpon>
+    <Compile Include="Gestão\Contratos\Busca de Contratos.aspx.cs">
+      <DependentUpon>Busca de Contratos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Contratos\Contratos.aspx.designer.cs">
-      <DependentUpon>Contratos.aspx</DependentUpon>
+    <Compile Include="Gestão\Contratos\Busca de Contratos.aspx.designer.cs">
+      <DependentUpon>Busca de Contratos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Dashboard.aspx.cs">
+    <Compile Include="Gestão\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Dashboard.aspx.designer.cs">
+    <Compile Include="Gestão\Dashboard\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Cadastro de Funcionários.aspx.cs">
+    <Compile Include="Gestão\Funcionarios\Cadastro de Funcionários.aspx.cs">
       <DependentUpon>Cadastro de Funcionários.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Cadastro de Funcionários.aspx.designer.cs">
+    <Compile Include="Gestão\Funcionarios\Cadastro de Funcionários.aspx.designer.cs">
       <DependentUpon>Cadastro de Funcionários.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Estoque.aspx.cs">
+    <Compile Include="Gestão\Estoque\Estoque.aspx.cs">
       <DependentUpon>Estoque.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Estoque.aspx.designer.cs">
+    <Compile Include="Gestão\Estoque\Estoque.aspx.designer.cs">
       <DependentUpon>Estoque.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Funcionarios\Funcionario.aspx.cs">
@@ -266,18 +269,18 @@
     <Compile Include="Gestão\Funcionarios\Funcionario.aspx.designer.cs">
       <DependentUpon>Funcionario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Login.aspx.cs">
+    <Compile Include="Gestão\Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Login.aspx.designer.cs">
+    <Compile Include="Gestão\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Menu.aspx.cs">
+    <Compile Include="Gestão\Menu\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Menu.aspx.designer.cs">
+    <Compile Include="Gestão\Menu\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Pedidos\Pedidos.aspx.cs">

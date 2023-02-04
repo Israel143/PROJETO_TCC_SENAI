@@ -58,7 +58,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             comando.Parameters.Add(new MySqlParameter("senha", txtSenha.Text));
             comando.ExecuteNonQuery();
 
-            SiteMaster.ExibirAlert(this, "Funcionário Cadastrado com sucesso!", "Login.aspx");
+            SiteMaster.ExibirAlert(this, "Funcionário Cadastrado com sucesso!", "../Login/Login.aspx");
             conexao.Close();
         }
     }
