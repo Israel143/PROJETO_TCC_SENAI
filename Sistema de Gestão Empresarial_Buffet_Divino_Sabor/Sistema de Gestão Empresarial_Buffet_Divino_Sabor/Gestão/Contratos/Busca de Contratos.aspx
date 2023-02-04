@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contratos.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos.Contratos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Busca de Contratos.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos.Contratos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <link rel="stylesheet" href="Busca de Contratos.css" />
     <div class="container-principal">
         <div id="main">
             <h2 class="box-title" style="font-family:'Times New Roman'; font-size:70px">Busca de Contratos</h2>
