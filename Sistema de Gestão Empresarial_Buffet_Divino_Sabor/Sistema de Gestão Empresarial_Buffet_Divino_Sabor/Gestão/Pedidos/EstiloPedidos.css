@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.OrderBox{
+    background-color:ghostwhite;
+    border:solid;
+    border-width:1px;
+    border-color:black;
+    margin-bottom:5px;
+    padding:5px;
+    height:auto;
+}
+
+.InfoBox{
+    display:none;
+    padding:5PX;
+}

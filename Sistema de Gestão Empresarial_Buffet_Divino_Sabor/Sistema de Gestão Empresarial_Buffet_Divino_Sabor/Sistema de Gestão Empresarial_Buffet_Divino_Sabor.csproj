@@ -150,9 +150,9 @@
     <Content Include="Gestão\Login.aspx" />
     <Content Include="Gestão\login.css" />
     <Content Include="Gestão\Menu.aspx" />
-    <Content Include="Gestão\Pedidos\JavaScript.js" />
+    <Content Include="Gestão\Pedidos\JSPedidos.js" />
     <Content Include="Gestão\Pedidos\Pedidos.aspx" />
-    <Content Include="Gestão\Pedidos\StyleSheet1.css" />
+    <Content Include="Gestão\Pedidos\EstiloPedidos.css" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
