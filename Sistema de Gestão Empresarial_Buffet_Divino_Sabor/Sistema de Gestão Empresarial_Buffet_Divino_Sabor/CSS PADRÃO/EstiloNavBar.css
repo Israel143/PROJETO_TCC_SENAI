@@ -1,0 +1,27 @@
+﻿body {
+    padding:0;
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-white1: #BECAFF;
+    --color-dark: #000000;
+    --color-dark1: #A22B2B;
+    --color-dark2: #470000;
+}
+
+.header,
+.navigation_header{
+    background-color: var(--color-dark1);
+    height:50px;
+}
+
+#profile {
+    float: right;
+    margin: 15px 30px 0;
+}
+
+.notification {
+    float: right;
+    margin: 16px 0 0;
+}
