@@ -16,6 +16,12 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <link rel="stylesheet" type="text/css" href="CSS PADRÃO/EstiloNavBar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link href='https://css.gg/bell.css' rel='stylesheet'>
+    <link href='https://css.gg/user-list.css' rel='stylesheet'>
+
+
 </head>
 <body>
     <form runat="server">
@@ -38,23 +44,15 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nome do aplicativo</a>
+        
+        <div class="header" id="header">
+            <div class="logo_header"></div>
+            <div class="navigation_header">
+                <div id="profile">
+                    <a href="#"><i class="gg-user-list"></i></a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Página inicial</a></li>
-                        <li><a runat="server" href="~/About">Sobre</a></li>
-                        <li><a runat="server" href="~/Contact">Contato</a></li>
-                    </ul>
+                <div id="notification" class="notification">
+                    <a href="#"><i class="gg-bell"></i></a>
                 </div>
             </div>
         </div>
