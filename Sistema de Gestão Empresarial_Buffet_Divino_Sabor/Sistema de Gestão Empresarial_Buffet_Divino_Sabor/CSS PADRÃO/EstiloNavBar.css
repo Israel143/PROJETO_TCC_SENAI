@@ -1,5 +1,5 @@
 ﻿body {
-    padding:0;
+    
 }
 
 :root {
@@ -11,9 +11,9 @@
 }
 
 .header,
-.navigation_header{
-    background-color: var(--color-dark1);
-    height:50px;
+.navigation_header {
+    background-color:var(--color-dark2);
+    height: 50px;
 }
 
 #profile {
@@ -25,3 +25,38 @@
     float: right;
     margin: 16px 0 0;
 }
+
+/******************************************SIDEBAR****************************************/
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+    #sidebar.open {
+        left: 0;
+    }
+
+#sidebar-btn {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+#sidebar-menu {
+    padding: 20px;
+}
+
+    #sidebar-menu a {
+        display: block;
+        color: #fff;
+        padding: 10px;
+    }
