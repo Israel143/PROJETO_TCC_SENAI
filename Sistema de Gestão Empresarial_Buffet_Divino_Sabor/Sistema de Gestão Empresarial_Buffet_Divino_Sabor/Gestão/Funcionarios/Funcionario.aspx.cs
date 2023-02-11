@@ -37,7 +37,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Funcionario
             comando.Parameters.Add(new MySqlParameter("turno", txtTurno.Text));
             comando.ExecuteNonQuery();
 
-            SiteMaster.ExibirAlert(this, "Funcionario Cadastrado com sucesso!", "Funcionario.aspx");
+            SiteMaster.ExibirAlertRedirecionar(this, "Funcionario Cadastrado com sucesso!", "Funcionario.aspx");
             conexao.Close();
         }
         // Pesquisa de Funcionarios
