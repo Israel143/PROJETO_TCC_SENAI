@@ -10,3 +10,8 @@
     --color-dark1: #A22B2B;
     --color-dark2: #470000;
 }
+
+/*ELEMENTOS***************************/
+.txtbox{
+    border-radius:20px;
+}
