@@ -18,7 +18,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
 
 
         }
-        public static void ExibirAlert(Page page, string mensagem)
+        public static void ExibirAlert(Gestão.Login login, Page page, string mensagem)
         {
             page.ClientScript.RegisterStartupScript(
                  page.GetType(),
@@ -27,12 +27,21 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
               );
         }
 
-        public static void ExibirAlert(Page page, string mensagem, string pagina)
+        public static void ExibirAlertRedirecionar(Page page, string mensagem, string pagina)
         {
             page.ClientScript.RegisterStartupScript(
                  page.GetType(),
                  "MessageBox" + Guid.NewGuid(),
                  "<script language='javascript'>alert('" + mensagem + "');window.location='" + pagina + "';</script>"
+              );
+        }
+
+        public static void ExibirAlert(Page page, string mensagem)
+        {
+            page.ClientScript.RegisterStartupScript(
+                 page.GetType(),
+                 "MessageBox" + Guid.NewGuid(),
+                 "<script language='javascript'>alert('" + mensagem + "');</script>"
               );
         }
 

@@ -25,10 +25,10 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             var reader = comando.ExecuteReader();
             if (reader.Read())
             {
-                SiteMaster.ExibirAlert(this, "Você está logado como " + reader.GetString("email"));
+                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + reader.GetString("email")+" no sistema", "../Dashboard/Dashboard.aspx");
                 return;
             }
-            SiteMaster.ExibirAlert(this, "Senha ou Email incorreto!");
+            SiteMaster.ExibirAlert(this,"Senha ou Email incorreto!");
             conexao.Close();
         }
 
@@ -41,7 +41,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             comando.Parameters.Add(new MySqlParameter("senha", txt_Pswd.Text));
             comando.ExecuteNonQuery();
 
-            SiteMaster.ExibirAlert(this, "Usuário Cadastrado com sucesso!", "Login.aspx");
+            SiteMaster.ExibirAlertRedirecionar(this, "Usuário Cadastrado com sucesso!", "Login.aspx");
             conexao.Close();
         }
     }

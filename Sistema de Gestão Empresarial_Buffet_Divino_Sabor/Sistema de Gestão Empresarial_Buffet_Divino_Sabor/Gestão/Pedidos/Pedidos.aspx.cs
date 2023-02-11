@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -66,10 +67,25 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
 
             Button btnAcept = (Button)sender;
             pedido.id = int.Parse(btnAcept.CommandArgument);
+            try
+            {
+                Log.Information("Entrou");
+                var pedidos = new Negocio.pedidos();
+                pedidos.Acept(pedido);
+                Response.Redirect(Request.Url.AbsoluteUri);
+            }
+            catch (Exception err)
+            {
 
-            var pedidos = new Negocio.pedidos();
-            pedidos.Acept(pedido);
-            Response.Redirect(Request.Url.AbsoluteUri);
+                Log.Error("Problema localizado: " + err.Message);
+            }
+
+            finally
+            {
+                Log.Warning("Acabou");
+
+            }
+
         }
 
         protected void btnFinish_Click(object sender, EventArgs e)
@@ -81,7 +97,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
 
             var pedidos = new Negocio.pedidos();
             pedidos.Finish(pedido);
-            Response.Redirect(Request.Url.AbsoluteUri); 
+            Response.Redirect(Request.Url.AbsoluteUri);
         }
     }
 }

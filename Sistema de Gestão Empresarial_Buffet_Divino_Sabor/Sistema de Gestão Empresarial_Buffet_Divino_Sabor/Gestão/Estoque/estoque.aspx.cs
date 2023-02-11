@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Serilog;
 
 namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 {
@@ -62,7 +63,8 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 
         protected void Btn_inserir_Click(object sender, EventArgs e)
         {
-            //Inserir intens no estoque 
+            //Inserir intens no estoque
+            
             conexao.Open();
             var comando = new MySqlCommand("INSERT INTO estoque  (codigo_de_barra,id_fornecedor,nome_produto,validade,preco_unidade,quantidade,seguimento) VALUES (@codigo_de_barra,@id_fornecedor,@nome_produto,@validade,@preco_unidade,@quantidade,@seguimento)", conexao);
             
@@ -75,7 +77,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             comando.Parameters.Add(new MySqlParameter("seguimento", Txt_Seguimento.Text));
             comando.ExecuteNonQuery();
 
-            SiteMaster.ExibirAlert(this, "Intem  adicionado  com sucesso!", "Estoque.aspx");
+            SiteMaster.ExibirAlertRedirecionar(this, "Intem  adicionado  com sucesso!", "Estoque.aspx");
             conexao.Close();
         }
     }
