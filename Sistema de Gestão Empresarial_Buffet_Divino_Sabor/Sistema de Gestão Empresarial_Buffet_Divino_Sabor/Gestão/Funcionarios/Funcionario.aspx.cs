@@ -45,12 +45,8 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Funcionario
         {
             var Lista = new List<Classe.funcionarios>();
             conexao.Open();
-            var reader = new MySqlCommand("SELECT id,nome,cpf,endereco,telefone,salario,cargo,turno FROM funcionarios WHERE nome like '%" + txtPesquisa.Text+"%'", conexao).ExecuteReader();
-
-
-            {
-
-            }
+            var reader = new MySqlCommand("SELECT id,nome,cpf,endereco,telefone,salario,cargo,turno FROM funcionarios WHERE nome like '%" + txtPesquisa.Text + "%'", conexao).ExecuteReader();
+            
             while (reader.Read())
             {
                 var novo_funcionario = new Classe.funcionarios();
