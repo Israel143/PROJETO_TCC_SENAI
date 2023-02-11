@@ -7,9 +7,9 @@ p {
 }
 
 .btn {
-    height: 35px;
+    height: 50px;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: white;
     border: none;
     color: black;
@@ -17,10 +17,15 @@ p {
 }
 
     .btn:hover {
-        background-color: white;
-        color: black;
+        background-color: #903535;
+        color: #808080;
     }
 
 .Grid {
     background-color: white;
+    border: none;
+    color: black;
+
 }
+
+
