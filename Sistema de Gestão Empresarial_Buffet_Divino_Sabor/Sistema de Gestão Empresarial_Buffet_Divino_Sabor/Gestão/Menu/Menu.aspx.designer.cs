@@ -22,33 +22,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
         protected global::System.Web.UI.WebControls.DropDownList ddlMenu;
         
         /// <summary>
-        /// Controle TxtPesquisar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPesquisar;
-        
-        /// <summary>
-        /// Controle lblMenu1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMenu1;
-        
-        /// <summary>
-        /// Controle Btnpesquisar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btnpesquisar;
-        
-        /// <summary>
         /// Controle GridView2.
         /// </summary>
         /// <remarks>

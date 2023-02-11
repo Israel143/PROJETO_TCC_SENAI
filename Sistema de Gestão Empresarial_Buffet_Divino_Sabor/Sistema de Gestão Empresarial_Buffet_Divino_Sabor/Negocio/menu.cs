@@ -20,13 +20,15 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             try
             {
                 connection.Open();
-                string menu = "";
+                string menu = "entrada";
                 var comando = new MySqlCommand("SELECT " + campo + " FROM menu", connection);
                 var reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
                     menu = menu + reader.GetString(0) + "<br />";
                 }
+
+               
             }
             catch
             {

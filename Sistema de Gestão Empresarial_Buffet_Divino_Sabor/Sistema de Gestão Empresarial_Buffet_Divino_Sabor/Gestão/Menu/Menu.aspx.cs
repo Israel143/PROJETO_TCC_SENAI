@@ -25,41 +25,33 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
         protected void ddlMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-        }
-
-        protected void Btnpesquisar_Click(object sender, EventArgs e)
-        {
-            if(TxtPesquisar.Text == "")
-            {
-                SiteMaster.ExibirAlert(this, "É necessário selecionar o menu,digitar o id e apertar pesquisar prato");
-                return;
-            }
-
             var Lista = new List<Classe.menu>();
 
             conexao.Open();
-            var reader = new MySqlCommand("SELECT id,entrada,salada,jantar,sobremesa,bebida FROM menu WHERE id= " + TxtPesquisar.Text, conexao).ExecuteReader();
+            var reader = new MySqlCommand("SELECT "+ ddlMenu.SelectedValue + ",id FROM menu", conexao).ExecuteReader();
 
-
-            {
-
-            }
             while (reader.Read())
             {
                 var novo_menu = new Classe.menu();
                 novo_menu.id = reader.GetInt32("id");
-                novo_menu.entrada = reader.GetString("entrada");
-                novo_menu.salada = reader.GetString("salada");
-                novo_menu.jantar = reader.GetString("jantar");
-                novo_menu.sobremesa = reader.GetString("sobremesa");
-                novo_menu.bebida = reader.GetString("bebida");
+                novo_menu.escolha = reader.GetString(0);
+                novo_menu.valor = reader.GetBoolean(0);
                 Lista.Add(novo_menu);
-                GridView2.DataSource = Lista;
-                GridView2.DataBind();
             }
 
+            Session["menu"] = Lista;
+                GridView2.DataSource = Lista;
+                GridView2.DataBind();
             conexao.Close();
 
+        }
+
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            var lista = (List<Classe.menu>)Session["menu"];
+            var index = Convert.ToInt32(e.CommandArgument);
+
+            SiteMaster.ExibirAlert(this, lista[index].escolha);
         }
     }
 }
