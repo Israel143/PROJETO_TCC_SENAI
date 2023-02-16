@@ -49,12 +49,23 @@
             <div class="logo_header"></div>
             <div class="navigation_header">
                 <div id="profile">
-                    <a href="#"><i class="gg-user-list"></i></a>
+                    <a style="color:white" href="#"><i class="gg-user-list"></i></a>
                 </div>
                 <div id="notification" class="notification">
-                    <a href="#"><i class="gg-bell"></i></a>
+                    <a style="color:white" href="#"><i class="gg-bell"></i></a>
+                </div>
+                <div id="open_side">
+                    <span style="font-size: 30px; cursor: pointer; color:#ffffff" onclick="openNav()">&#9776;</span>
                 </div>
             </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../Contratos/Busca de Contratos.aspx">Contratos</a>
+            <a href="../Estoque/estoque.aspx">Estoque</a>
+            <a href="../Funcionarios/Funcionario.aspx">Funcionários</a>
+            <a href="../Menu/Menu.aspx">Cardápios</a>
+            <a href="../Pedidos/Pedidos.aspx">Pedidos</a>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

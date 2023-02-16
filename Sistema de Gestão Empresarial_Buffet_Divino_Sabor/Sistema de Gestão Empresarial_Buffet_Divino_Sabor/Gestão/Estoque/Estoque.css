@@ -1,5 +1,4 @@
 ﻿body {
-    background-color: rgba(0, 0, 0,0.5);
 }
 
 p {
@@ -23,4 +22,10 @@ p {
 
 .Grid {
     background-color: white;
+}
+
+.txtbox {
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
 }

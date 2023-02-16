@@ -147,6 +147,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Gestão\Contratos\Busca de Contratos.css" />
+    <Content Include="Gestão\Contratos\EstiloContratos.css" />
     <Content Include="Gestão\Dashboard\Dashboard.css" />
     <Content Include="Gestão\Estoque\estoque.aspx" />
     <Content Include="Gestão\Contratos\Busca de Contratos.aspx" />

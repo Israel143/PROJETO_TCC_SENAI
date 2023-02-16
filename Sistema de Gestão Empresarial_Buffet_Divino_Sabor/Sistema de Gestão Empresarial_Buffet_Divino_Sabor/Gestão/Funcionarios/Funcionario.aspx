@@ -4,6 +4,7 @@
     <header>
         <link rel="stylesheet" type="text/css" href="funcionarioestilo.css" />
         <script src="JavaScript.js"></script>
+        <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
     </header>
     <div id="escopo" class="escopo">
         <!--Barra Secundaria!-->
@@ -124,16 +125,13 @@
                 </div>
                 <div class="col-md-2"></div>
                 <div id="read" class="col-md-5">
-                    <div id="srcBox" style="margin-top: 20px" class="row">
-                        <div class="col-sm-4">
+                    <div id="srcBox" style="margin-top: 20px; margin-bottom:20px" class="row">
+                        <div class="col-sm-6">
                             <asp:TextBox runat="server" ID="txtPesquisa" CssClass="txtbox"></asp:TextBox>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <asp:Button runat="server" ID="btnPesquisa" OnClick="btnPesquisa_Click" CssClass="btn" Text="Pesquisar" />
-                            <br />
-                            <br />
                         </div>
-                        <div class="col-sm-2"></div>
                     </div>
                     <div id="resultBox" class="row">
                         <asp:GridView ID="GridView1" style="background-color: rgba(71, 0, 0, 0.45); padding:10px; color:white; width:60%; margin-left:0; border:thin;" runat="server" CssClass="Grid" AutoGenerateColumns="false">
