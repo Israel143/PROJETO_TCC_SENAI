@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="Estoque.css" />
+    <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
     <div class="row text-center">
         <h1>Controle de Estoque</h1>
     </div>
@@ -10,7 +11,7 @@
         <div class="col-sm-6">
 
 <p>Código de Barra:</p>
-             <asp:TextBox runat="server" ID="Txt_Codigo_de_Barra" CssClass="form-control"></asp:TextBox>
+             <asp:TextBox runat="server" ID="Txt_Codigo_de_Barra" class="txtbox"></asp:TextBox>
 <p>Id Fornecedor:</p>
              <asp:TextBox runat="server" ID="Txt_Id_Fornecedor" CssClass="form-control"></asp:TextBox>
 <p>Nome do Produto:</p>

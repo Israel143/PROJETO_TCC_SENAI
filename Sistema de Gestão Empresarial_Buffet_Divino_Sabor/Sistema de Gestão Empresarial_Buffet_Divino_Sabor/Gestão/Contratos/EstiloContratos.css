@@ -1,0 +1,48 @@
+﻿body {
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #470000;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: auto;
+}
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+.Grid {
+    background-color: white;
+}
+
+.txtbox {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+/*containers******************************************/
+.main {
+}
+
+.container-principal {
+    text-align: center;
+    margin-top:70px;
+}
+
+.content-box {
+    padding: 20px;
+    min-height: 500px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.42);
+    border-radius: 10px;
+    box-shadow: 10px 5px 30px;
+    margin:20px 0 0 325px;
+}

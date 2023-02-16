@@ -1,6 +1,7 @@
-﻿const sidebar = document.getElementById("sidebar");
-const sidebarBtn = document.getElementById("sidebar-btn");
+﻿function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
 
-sidebarBtn.addEventListener("click", function () {
-    sidebar.classList.toggle("open");
-});
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}

@@ -7,15 +7,20 @@
 
 .OrderBox{
     background-color:ghostwhite;
-    border:solid;
-    border-width:1px;
-    border-color:black;
+    border-radius:10px;
     margin-bottom:5px;
-    padding:5px;
+    padding:10px;
     height:auto;
+    box-shadow:rgba(0, 0, 0, 0.58) 10px 10px 15px;
 }
 
 .InfoBox{
     display:none;
     padding:5PX;
+}
+
+/*ELEMENTOS***********************************************************/
+.btn {
+    background-color: rgba(71, 0, 0, 0.80);
+    color:white;
 }

@@ -4,6 +4,7 @@
     <header>
         <link rel="stylesheet" type="text/css" href="EstiloPedidos.css" />
         <script src="JSPedidos.js"></script>
+        <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
     </header>
     <div id="content">
         <div id="pedidosbox" style="margin-top: 50px;">
@@ -20,7 +21,7 @@
                                         <p>Data do pedido: <%# Eval("data") %></p>
                                     </div>
                                 </div>
-                                <button class="btnVerMais" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
+                                <button class="btnVerMais btn" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
                                 <div class="InfoAdd InfoBox" id="InfoAdd<%# Eval("Id") %>" style="display: none;">
                                     <div class="row" style="padding-left: 10px">
                                         <p><strong>Pedido</strong></p>
@@ -34,7 +35,7 @@
                                         </ul>
                                     </div>
                                     <div class="row" style="text-align:center">
-                                        <asp:Button runat="server" ID="btnAcept" ClientIDMode="static" Text="Aceitar" OnClick="btnAcept_Click" CommandArgument=<%# Eval("Id") %>/>
+                                        <asp:Button runat="server" CssClass="btn" ID="btnAcept" ClientIDMode="static" Text="Aceitar" OnClick="btnAcept_Click" CommandArgument=<%# Eval("Id") %>/>
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +54,7 @@
                                         <p>Data do pedido: <%# Eval("data") %></p>
                                     </div>
                                 </div>
-                                <button class="btnVerMais" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
+                                <button class="btnVerMais btn" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
                                 <div class="InfoAdd InfoBox" id="InfoAdd<%# Eval("Id") %>" style="display: none;">
                                     <div class="row" style="padding-left: 10px">
                                         <p><strong>Pedido</strong></p>
@@ -67,7 +68,7 @@
                                         </ul>
                                     </div>
                                     <div class="row" style="text-align:center">
-                                        <asp:Button runat="server" Text="Finalizar" ID="btnFinish" OnClick="btnFinish_Click" CommandArgument=<%# Eval("Id") %> />
+                                        <asp:Button runat="server" CssClass="btn" Text="Finalizar" ID="btnFinish" OnClick="btnFinish_Click" CommandArgument=<%# Eval("Id") %> />
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +87,7 @@
                                         <p>Data do pedido: <%# Eval("data") %></p>
                                     </div>
                                 </div>
-                                <button class="btnVerMais" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
+                                <button class="btnVerMais btn" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
                                 <div class="InfoAdd InfoBox" id="InfoAdd<%# Eval("Id") %>" style="display: none;">
                                     <div class="row" style="padding-left: 10px">
                                         <p><strong>Pedido</strong></p>

@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="Dashboard.css">
+    <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
 
     <div class="body">
         <div id="content" class="content">
