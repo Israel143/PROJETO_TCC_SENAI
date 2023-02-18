@@ -225,6 +225,7 @@
     <Compile Include="Classe\fluxo_de_caixa.cs" />
     <Compile Include="Classe\fornecedores.cs" />
     <Compile Include="Classe\funcionarios.cs" />
+    <Compile Include="Classe\Login.cs" />
     <Compile Include="Classe\menu.cs" />
     <Compile Include="Classe\pedidos.cs" />
     <Compile Include="Classe\produto.cs" />
@@ -301,6 +302,7 @@
     <Compile Include="Negocio\fluxo_de_caixa.cs" />
     <Compile Include="Negocio\fornecedores.cs" />
     <Compile Include="Negocio\funcionarios.cs" />
+    <Compile Include="Negocio\login.cs" />
     <Compile Include="Negocio\menu.cs" />
     <Compile Include="Negocio\pedidos.cs" />
     <Compile Include="Negocio\produtos.cs" />
