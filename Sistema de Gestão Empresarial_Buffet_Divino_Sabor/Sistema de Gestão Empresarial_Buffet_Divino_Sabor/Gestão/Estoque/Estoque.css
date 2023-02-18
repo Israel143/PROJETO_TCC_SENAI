@@ -6,20 +6,17 @@ p {
 }
 
 .btn {
-    height: 35px;
-    width: 100%;
-    border-radius: 15px;
     background-color: white;
     border: none;
-    color: black;
-    font-size: 18px;
+    border-radius: 10px;
+    width: 90px;
+    margin-top: 10px;
 }
 
     .btn:hover {
         background-color: white;
         color: black;
     }
-
 .Grid {
     background-color: white;
 }
