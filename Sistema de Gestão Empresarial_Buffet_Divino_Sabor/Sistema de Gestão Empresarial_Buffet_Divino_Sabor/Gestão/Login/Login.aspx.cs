@@ -17,29 +17,39 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
         }
         // Acesso do Login 
         protected void btn_login_Click(object sender, EventArgs e)
+
         {
-            conexao.Open();
-            var comando = new MySqlCommand($"SELECT senha, email FROM login WHERE email = @email and senha = MD5(@senha) ", conexao);
-            comando.Parameters.Add(new MySqlParameter("email", txt_User.Text));
-            comando.Parameters.Add(new MySqlParameter("senha", txt_Pswd.Text));
-            var reader = comando.ExecuteReader();
-            if (reader.Read())
+            var login = new Classe.Login();
+            login.email = txt_User.Text;
+            login.senha = txt_Pswd.Text;
+            var user = new Negocio.login().Read(login);
+
+            if(user==true)
             {
-                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + reader.GetString("email")+" no sistema", "../Dashboard/Dashboard.aspx");
-                return;
+                Session["user"] = user;
+
+                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + login.email + " no sistema", "../Dashboard/Dashboard.aspx");
+                
             }
-            SiteMaster.ExibirAlert(this,"Senha ou Email incorreto!");
-            conexao.Close();
+
+            else
+            {
+                SiteMaster.ExibirAlert(this, "Senha ou Email incorreto!");
+            }
+         
+                return;
+            
+            
+           
         }
 
         protected void btn_cadastro_Click(object sender, EventArgs e)
         {
             //Criar Cadastro
-            conexao.Open();
-            var comando = new MySqlCommand("INSERT INTO login (email, senha) VALUES (@email,MD5(@senha))", conexao);
-            comando.Parameters.Add(new MySqlParameter("email", txt_User.Text));
-            comando.Parameters.Add(new MySqlParameter("senha", txt_Pswd.Text));
-            comando.ExecuteNonQuery();
+            var login = new Classe.Login();
+            login.email = txt_User.Text;
+            login.senha = txt_Pswd.Text;
+            var user = new Negocio.login().Create(login);
 
             SiteMaster.ExibirAlertRedirecionar(this, "Usuário Cadastrado com sucesso!", "Login.aspx");
             conexao.Close();
