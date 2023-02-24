@@ -29,7 +29,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                 conexao.Close();
                 return true;
             }
-            catch(Exception e)
+            catch
             {
                 return false;
             }

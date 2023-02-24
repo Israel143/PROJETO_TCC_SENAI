@@ -25,17 +25,18 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Funcionario
         {
 
             //Cadastro de Funcionarios
-            conexao.Open();
-            var comando = new MySqlCommand("INSERT INTO funcionarios  (nome,cpf,endereco,telefone,salario,cargo,turno) VALUES (@nome,@cpf,@endereco,@telefone,@salario,@cargo,@turno)", conexao);
 
-            comando.Parameters.Add(new MySqlParameter("nome",txtNome.Text));
-            comando.Parameters.Add(new MySqlParameter("cpf", txtCPF.Text));
-            comando.Parameters.Add(new MySqlParameter("endereco", $"{txtRua.Text},{txtBairro.Text},{txtNumero.Text},{txtCidadeEstado.Text}"));
-            comando.Parameters.Add(new MySqlParameter("telefone",txtTelefone.Text));
-            comando.Parameters.Add(new MySqlParameter("salario", txtSalario.Text));
-            comando.Parameters.Add(new MySqlParameter("cargo", txtCargo.Text));
-            comando.Parameters.Add(new MySqlParameter("turno", txtTurno.Text));
-            comando.ExecuteNonQuery();
+            var Funcionarios = new Classe.funcionarios();
+            Funcionarios.nome = txtNome.Text;
+            Funcionarios.cpf = txtCPF.Text;
+            Funcionarios.endereco =((txtRua.Text+","+txtNumero.Text+" - "+txtBairro.Text+","+txtCidadeEstado.Text));
+            Funcionarios.telefone = txtTelefone.Text;
+            Funcionarios.salario = Convert.ToDouble(txtSalario.Text);
+            Funcionarios.cargo = txtCargo.Text;
+            Funcionarios.turno = txtTurno.Text;
+
+            var funcionarios = new Negocio.funcionarios().Create(Funcionarios);
+            
 
             SiteMaster.ExibirAlertRedirecionar(this, "Funcionario Cadastrado com sucesso!", "Funcionario.aspx");
             conexao.Close();
@@ -43,26 +44,14 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Funcionario
         // Pesquisa de Funcionarios
         protected void btnPesquisa_Click(object sender, EventArgs e)
         {
-            var Lista = new List<Classe.funcionarios>();
-            conexao.Open();
-            var reader = new MySqlCommand("SELECT id,nome,cpf,endereco,telefone,salario,cargo,turno FROM funcionarios WHERE nome like '%" + txtPesquisa.Text + "%'", conexao).ExecuteReader();
+            var Lista =  new Negocio.funcionarios().Read(txtPesquisa.Text);
             
-            while (reader.Read())
-            {
-                var novo_funcionario = new Classe.funcionarios();
-                novo_funcionario.id = reader.GetInt32("id");
-                novo_funcionario.nome = reader.GetString("nome");
-                novo_funcionario.cpf = reader.GetString("cpf");
-                novo_funcionario.endereco = reader.GetString("endereco");
-                novo_funcionario.telefone = reader.GetString("telefone");
-                novo_funcionario.salario = reader.GetDouble("salario");
-                novo_funcionario.cargo = reader.GetString("cargo");
-                novo_funcionario.turno = reader.GetString("turno");
-                Lista.Add(novo_funcionario);
-                GridView1.DataSource = Lista;
-                GridView1.DataBind();
-            }
-            conexao.Close();
+            GridView1.DataSource = Lista;
+            GridView1.DataBind();
+                
+        
+            
+
         }
     }
 }
