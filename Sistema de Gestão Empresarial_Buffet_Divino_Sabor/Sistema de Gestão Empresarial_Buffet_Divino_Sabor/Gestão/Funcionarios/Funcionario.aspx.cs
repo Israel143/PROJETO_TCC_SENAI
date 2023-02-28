@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,8 +36,15 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Funcionario
             Funcionarios.cargo = txtCargo.Text;
             Funcionarios.turno = txtTurno.Text;
 
-            var funcionarios = new Negocio.funcionarios().Create(Funcionarios);
-            
+
+            //Chama a função da pasta negocio para Criar um novo funcionario
+            if (Utils.ValidarDocumento(txtCPF.Text))
+            {
+                var funcionarios = new Negocio.funcionarios().Create(Funcionarios);
+
+
+            }
+
 
             SiteMaster.ExibirAlertRedirecionar(this, "Funcionario Cadastrado com sucesso!", "Funcionario.aspx");
             conexao.Close();
