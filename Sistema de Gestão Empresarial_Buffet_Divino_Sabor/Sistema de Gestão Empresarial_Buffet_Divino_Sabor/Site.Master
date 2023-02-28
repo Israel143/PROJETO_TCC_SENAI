@@ -66,6 +66,7 @@
             <a href="../Funcionarios/Funcionario.aspx">Funcionários</a>
             <a href="../Menu/Menu.aspx">Cardápios</a>
             <a href="../Pedidos/Pedidos.aspx">Pedidos</a>
+            <a href="../Fornecedores/Fornecedores.aspx">Fornecedores</a>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
