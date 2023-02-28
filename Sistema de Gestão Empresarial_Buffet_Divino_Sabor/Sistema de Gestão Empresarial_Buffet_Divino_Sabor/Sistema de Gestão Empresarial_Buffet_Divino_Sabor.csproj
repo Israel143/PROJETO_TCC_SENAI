@@ -146,6 +146,7 @@
     <Content Include="CSS PADRÃO\EstiloPadrao.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Gestão\Caixa\Entrada\MovEntrada.aspx" />
     <Content Include="Gestão\Contratos\Busca de Contratos.css" />
     <Content Include="Gestão\Contratos\EstiloContratos.css" />
     <Content Include="Gestão\Dashboard\Dashboard.css" />
@@ -218,11 +219,11 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classe\Caixa.cs" />
     <Compile Include="Classe\cliente.cs" />
     <Compile Include="Classe\contratos.cs" />
     <Compile Include="Classe\empresa.cs" />
     <Compile Include="Classe\estoque.cs" />
-    <Compile Include="Classe\fluxo_de_caixa.cs" />
     <Compile Include="Classe\fornecedores.cs" />
     <Compile Include="Classe\funcionarios.cs" />
     <Compile Include="Classe\Login.cs" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestão\Caixa\Entrada\MovEntrada.aspx.cs">
+      <DependentUpon>MovEntrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestão\Caixa\Entrada\MovEntrada.aspx.designer.cs">
+      <DependentUpon>MovEntrada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Contratos\Busca de Contratos.aspx.cs">
       <DependentUpon>Busca de Contratos.aspx</DependentUpon>
@@ -295,11 +303,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\Caixa.cs" />
     <Compile Include="Negocio\cliente.cs" />
     <Compile Include="Negocio\contratos.cs" />
     <Compile Include="Negocio\empresa.cs" />
     <Compile Include="Negocio\estoque.cs" />
-    <Compile Include="Negocio\fluxo_de_caixa.cs" />
     <Compile Include="Negocio\fornecedores.cs" />
     <Compile Include="Negocio\funcionarios.cs" />
     <Compile Include="Negocio\login.cs" />
@@ -332,6 +340,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Campo\" />
+    <Folder Include="Gestão\Caixa\Saida\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

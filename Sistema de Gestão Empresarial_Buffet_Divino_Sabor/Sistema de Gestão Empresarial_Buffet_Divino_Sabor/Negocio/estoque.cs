@@ -48,10 +48,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
         }
 
-
-
-
-
         public List<Classe.estoque> Read(string estoque)
         {
             var Lista = new List<Classe.estoque>();
@@ -88,6 +84,35 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
 
             }
             return Lista;
+        }
+
+        public bool Update(int id)
+        {
+            try
+            {
+                conexao.Open();
+                var comando = new MySqlCommand("INSERT INTO estoque  (UPDATE `estoque` SET `codigo_de_barra`= @codigo_de_barra,`id_fornecedor`=@id_fornecedor,`nome_produto`= @nome_produto,`validade`= @validade,`preco_unidade`= @preco_unidade,`quantidade`= @quantidade,`seguimento`= @seguimento WHERE `id` = @id)", conexao);
+                var estoque = new Classe.estoque();
+                comando.Parameters.Add(new MySqlParameter("id", id));
+                comando.Parameters.Add(new MySqlParameter("codigo_de_barra", estoque.codigo_de_barra));
+                comando.Parameters.Add(new MySqlParameter("id_fornecedor", estoque.id_fornecedor));
+                comando.Parameters.Add(new MySqlParameter("nome_produto", estoque.nome_produto));
+                comando.Parameters.Add(new MySqlParameter("validade", Convert.ToDateTime(estoque.validade).ToString("yyyy-MM-dd")));
+                comando.Parameters.Add(new MySqlParameter("preco_unidade", estoque.preco_unidade));
+                comando.Parameters.Add(new MySqlParameter("quantidade", estoque.quantidade));
+                comando.Parameters.Add(new MySqlParameter("seguimento", estoque.seguimento));
+                comando.ExecuteNonQuery();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }
