@@ -15,6 +15,7 @@
                     <asp:TextBox runat="server" ID="Txt_Codigo_de_Barra" class="txtbox"></asp:TextBox>
                 </div>
                 <div class="col-md-6">
+                    <!--Trocar para um dropdownList que pega da tabela de fornecedores, e adicionar botão "Criar novo fornecedor"-->
                     <asp:Label runat="server" ID="lbl_fornecedor" Text="Fornecedor"></asp:Label>
                     <asp:TextBox runat="server" ID="Txt_Id_Fornecedor" class="txtbox"></asp:TextBox>
                 </div>
