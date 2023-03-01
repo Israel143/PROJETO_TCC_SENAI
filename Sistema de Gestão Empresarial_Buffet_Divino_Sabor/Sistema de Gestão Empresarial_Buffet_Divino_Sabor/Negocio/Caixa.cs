@@ -43,12 +43,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
         }
 
-
+        //RELATORIO DE MOVIMENTAÇÃO
         public List<Classe.Caixa> Read(int move, bool type)
         {
             var Lista = new List<Classe.Caixa>();
             try
-            {
+            {   //RELATÓRIO DE ENTRADA
                 if (type == true)
                 {
                     if (move == 0)
@@ -90,7 +90,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                         }
                     }
                 }
-                else
+                else //RELATÓRIO DE SAÍDA
                 {
                     if(move == 0)
                     {
@@ -141,6 +141,32 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                 conexao.Close();
             }
             return Lista;
+        }
+
+        //BUSCA DE PRODUTO POR ID_PRODUTO PARA DROPDOWNLIST
+        public List<String> BuscaDDL()
+        {
+            var lista = new List<String>();
+            try
+            {   
+                conexao.Open();
+                var reader = new MySqlCommand("SELECT `nome_produto` FROM estoque WHERE 1", conexao).ExecuteReader();
+
+                while (reader.Read())
+                {
+                    lista.Add(reader.GetString("nome_produto"));
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lista;
+            
         }
     }
 }
