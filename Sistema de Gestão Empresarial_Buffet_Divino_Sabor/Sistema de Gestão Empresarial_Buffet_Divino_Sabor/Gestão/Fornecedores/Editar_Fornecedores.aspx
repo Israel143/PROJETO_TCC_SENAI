@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Fornecedores.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedores.Fornecedores" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Editar_Fornecedores.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedores.Editar_Fornecedores" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <header>
         <link rel="stylesheet" type="text/css" href="fornecedoresestilo.css" />
@@ -69,39 +68,17 @@
                             <div class="col-sm-4" style="padding: 0">
                                 <br />
                                 <br />
-                                <asp:Button runat="server" ID="btnCadastrar_Fornecedor" OnClick="btnCadastrar_Fornecedor_Click" CssClass="btn" Text="Cadastrar" />
+                                <asp:Button runat="server" ID="btnEditar_Fornecedor" OnClick="btnEditar_Fornecedor_Click" CssClass="btn" Text="Editar" />
                             </div>
                             <div class="col-sm-4"></div>
                         </div>
                     </div>
                     <div class="col-md-2"></div>
-                    <div id="read" class="col-md-5">
-                        <div id="srcBox" style="margin-top: 20px; margin-bottom: 20px" class="row">
+                   
                             <div class="col-sm-6">
-                                <asp:TextBox runat="server" ID="txtPesquisa" CssClass="txtbox"></asp:TextBox>
-                            </div>
-                            <div class="col-sm-6">
-                                
-                                <asp:Button runat="server" ID="btnPesquisa_Fornecedor" OnClick="btnPesquisa_Fornecedor_Click" CssClass="btn" Text="Pesquisar" />
+                                <asp:Button runat="server" ID="btnDeletar_Fornecedor" OnClick="btnDeletar_Fornecedor_Click" CssClass="btn" Text="Deletar" />
 
                             </div>
                         </div>
-                        <div id="resultBox" class="row">
-                            <asp:GridView ID="GVW_Fornecedores" Style="background-color: rgba(71, 0, 0, 0.45); padding: 10px; color: white; width: 60%; margin-left: 0; border: thin;" runat="server" CssClass="Grid" OnRowCommand="GVW_Fornecedores_RowCommand" AutoGenerateColumns="false">
-                                <Columns>
-                                    <asp:BoundField DataField="id" HeaderText="ID" />
-                                    <asp:BoundField DataField="nome" HeaderText="Nome" />
-                                    <asp:BoundField DataField="contato" HeaderText="Contato" />
-                                    <asp:BoundField DataField="seguimento" HeaderText="Seguimento" />
-                                    <asp:BoundField DataField="cnpj" HeaderText="CNPJ" />
-                                    <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="Editar" Text="Editar" />
-                                    <asp:ButtonField ButtonType="Link" ControlStyle-CssClass="btn btn-info" CommandName="Deletar" Text="Deletar" />
-                                </Columns>
-                            </asp:GridView>
-                        </div>
-                    </div>
-                </div>
-    <!--Modal!-->
-    <div id="modal"></div>
-
+                   
 </asp:Content>

@@ -154,6 +154,7 @@
     <Content Include="Gestão\Contratos\Busca de Contratos.aspx" />
     <Content Include="Gestão\Dashboard\Dashboard.aspx" />
     <Content Include="Gestão\Estoque\Estoque.css" />
+    <Content Include="Gestão\Fornecedores\Editar_Fornecedores.aspx" />
     <Content Include="Gestão\Fornecedores\Fornecedores.aspx" />
     <Content Include="Gestão\Fornecedores\fornecedoresestilo.css" />
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
@@ -273,6 +274,13 @@
     </Compile>
     <Compile Include="Gestão\Estoque\Estoque.aspx.designer.cs">
       <DependentUpon>Estoque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestão\Fornecedores\Editar_Fornecedores.aspx.cs">
+      <DependentUpon>Editar_Fornecedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestão\Fornecedores\Editar_Fornecedores.aspx.designer.cs">
+      <DependentUpon>Editar_Fornecedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Fornecedores\Fornecedores.aspx.cs">
       <DependentUpon>Fornecedores.aspx</DependentUpon>

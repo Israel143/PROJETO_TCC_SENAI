@@ -27,7 +27,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                 comando.Parameters.Add(new MySqlParameter("contato", Fornecedores.contato));
                 comando.Parameters.Add(new MySqlParameter("seguimento", Fornecedores.seguimento));
                 comando.Parameters.Add(new MySqlParameter("cnpj", Fornecedores.cnpj));
-              
+
                 comando.ExecuteNonQuery();
             }
             catch
@@ -87,10 +87,50 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
 
 
         }
+        public bool Update(Classe.fornecedores fornecedores)
+        {
+            try
+            {
+                conexao.Open();
+                var comando = new MySqlCommand($"UPDATE fornecedores SET nome= @nome,contato= @contato,seguimento = @seguimento, cnpj= @cnpj WHERE id = @id", conexao);
+                comando.Parameters.Add(new MySqlParameter("id", fornecedores.id));
+                comando.Parameters.Add(new MySqlParameter("nome", fornecedores.nome));
+                comando.Parameters.Add(new MySqlParameter("contato", fornecedores.contato));
+                comando.Parameters.Add(new MySqlParameter("seguimento", fornecedores.seguimento));
+                comando.Parameters.Add(new MySqlParameter("cnpj", fornecedores.cnpj));
 
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+            finally
+            {
 
+                conexao.Close();
+
+            }
+        }
+
+        public bool Delete(string id)
+        {
+            try
+            {
+                conexao.Open();
+                var comando = new MySqlCommand("DELETE FROM fornecedor WHERE id = " + id, conexao);
+                comando.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
 
 
     }
 }
-    
+
