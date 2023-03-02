@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedores
 {
@@ -33,7 +34,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedore
             //Chama a função da pasta negocio para Criar um novo fornecedores
             if (Utils.ValidarDocumento(txtCNPJ.Text))
             {
-                var funcionarios = new Negocio.fornecedores().Create(Fornecedores);
+                var fornecedores = new Negocio.fornecedores().Create(Fornecedores);
 
 
             }
@@ -45,10 +46,21 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedore
         protected void btnPesquisa_Fornecedor_Click(object sender, EventArgs e)
         {
             var Lista = new Negocio.fornecedores().Read(txtPesquisa.Text);
+            Session["Lista"] = Lista;
+            GVW_Fornecedores.DataSource = Lista;
+            GVW_Fornecedores.DataBind();
 
-            GridView1.DataSource = Lista;
-            GridView1.DataBind();
+        }
 
+        protected void GVW_Fornecedores_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "Editar")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                var tabela = (List<Classe.fornecedores>)Session["Lista"];
+                var comando = new MySqlCommand("UPDATE FROM fornecedores WHERE id = " +tabela[index].id.ToString(),conexao);
+                Response.Redirect("Editar_Fornecedores.aspx");
+            }
         }
     }
 }

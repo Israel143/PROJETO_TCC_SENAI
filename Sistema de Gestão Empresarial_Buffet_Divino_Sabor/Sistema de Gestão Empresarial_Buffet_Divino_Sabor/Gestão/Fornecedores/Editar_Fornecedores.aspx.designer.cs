@@ -10,7 +10,7 @@
 namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedores {
     
     
-    public partial class Fornecedores {
+    public partial class Editar_Fornecedores {
         
         /// <summary>
         /// Controle lblNome_Fornecedor.
@@ -85,39 +85,21 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedore
         protected global::System.Web.UI.WebControls.TextBox txtCNPJ;
         
         /// <summary>
-        /// Controle btnCadastrar_Fornecedor.
+        /// Controle btnEditar_Fornecedor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrar_Fornecedor;
+        protected global::System.Web.UI.WebControls.Button btnEditar_Fornecedor;
         
         /// <summary>
-        /// Controle txtPesquisa.
+        /// Controle btnDeletar_Fornecedor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPesquisa;
-        
-        /// <summary>
-        /// Controle btnPesquisa_Fornecedor.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPesquisa_Fornecedor;
-        
-        /// <summary>
-        /// Controle GVW_Fornecedores.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVW_Fornecedores;
+        protected global::System.Web.UI.WebControls.Button btnDeletar_Fornecedor;
     }
 }
