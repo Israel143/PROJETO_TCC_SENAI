@@ -54,12 +54,32 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedore
 
         protected void GVW_Fornecedores_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if(e.CommandName == "Editar")
+            if (e.CommandName == "Editar")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 var tabela = (List<Classe.fornecedores>)Session["Lista"];
-                var comando = new MySqlCommand("UPDATE FROM fornecedores WHERE id = " +tabela[index].id.ToString(),conexao);
-                Response.Redirect("Editar_Fornecedores.aspx");
+                var comando = new MySqlCommand("UPDATE FROM fornecedores WHERE id = " + tabela[index].id.ToString(), conexao);
+                Response.Redirect("Editar_Fornecedores.aspx?id=" + tabela[index].id.ToString());
+            }
+
+            {
+                if (e.CommandName == "Deletar")
+                {
+                    int index = Convert.ToInt32(e.CommandArgument);
+                    var tabela_fornecedor = (List<Classe.fornecedores>)Session["Lista"];
+
+                    if(new Negocio.fornecedores().Delete(tabela_fornecedor[index].id.ToString()))
+
+                    SiteMaster.ExibirAlert(this, "Fornecedor excluído com sucesso!");
+                
+                   else
+                   
+                    
+                   
+                        SiteMaster.ExibirAlert(this, "O Fornecedor não pode ser excluído porque ele está sendo usado! ");
+                    btnPesquisa_Fornecedor_Click(null, null);
+                }
+
             }
         }
     }
