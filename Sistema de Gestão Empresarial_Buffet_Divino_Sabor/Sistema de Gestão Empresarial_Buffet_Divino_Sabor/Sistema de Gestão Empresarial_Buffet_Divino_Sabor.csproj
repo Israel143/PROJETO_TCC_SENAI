@@ -232,7 +232,6 @@
     <Compile Include="Classe\Login.cs" />
     <Compile Include="Classe\menu.cs" />
     <Compile Include="Classe\pedidos.cs" />
-    <Compile Include="Classe\produto.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -330,7 +329,6 @@
     <Compile Include="Negocio\login.cs" />
     <Compile Include="Negocio\menu.cs" />
     <Compile Include="Negocio\pedidos.cs" />
-    <Compile Include="Negocio\produtos.cs" />
     <Compile Include="Negocio\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

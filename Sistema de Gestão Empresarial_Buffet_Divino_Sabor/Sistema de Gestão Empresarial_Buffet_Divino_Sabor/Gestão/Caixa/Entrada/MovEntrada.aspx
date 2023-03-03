@@ -2,11 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="CampoA">
         <asp:DropDownList runat="server" ID="list_Produto"></asp:DropDownList>
-        <asp:TextBox runat="server" ID="txt_qtd"></asp:TextBox>
+        <asp:Label runat="server" ID="lbl_Qtd" Text="Quantidade"></asp:Label>
+        <asp:TextBox runat="server" ID="txt_qtd" OnTextChanged="txt_qtd_TextChanged" AutoPostBack="true"></asp:TextBox>
     </div>
     <div id="CampoB">
-        <asp:TextBox runat="server" ID="txt_valorUni"></asp:TextBox>
-        <asp:TextBox runat="server" ID="txt_ValorT"></asp:TextBox>
-        <asp:Button runat="server" ID="btn_faturar" OnClick="btn_faturar_Click" />
+        <asp:Label runat="server" ID="lbl_ValorUni" Text="Valor Unitário"></asp:Label>
+        <asp:TextBox runat="server" ID="txt_valorUni" ReadOnly="true"></asp:TextBox>
+        <asp:Label runat="server" ID="lbl_ValorT" Text="Valor Total"></asp:Label>
+        <asp:TextBox runat="server" ID="txt_ValorT" ReadOnly="true"></asp:TextBox>
+        <asp:Button runat="server" ID="btn_faturar" OnClick="btn_faturar_Click" Text="Faturar" />
     </div>
 </asp:Content>
