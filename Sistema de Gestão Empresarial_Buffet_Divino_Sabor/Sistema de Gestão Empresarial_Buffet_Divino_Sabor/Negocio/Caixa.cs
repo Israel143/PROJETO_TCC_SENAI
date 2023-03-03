@@ -21,7 +21,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             try
             {
                 conexao.Open();
-                var comando = new MySqlCommand("INSERT INTO `movimentacoes`(`id`, `entrada`, `saida`, `valor_total`, `data`, `id_produto`) VALUES (@id,@entrada,@saida,@valor_total,@data,@id_produto))", conexao);
+                var comando = new MySqlCommand("INSERT INTO `movimentacoes`(`id`, `entrada`, `saida`, `valor_total`, `data`, `id_produto`) VALUES (@id,@entrada,@saida,@valor_total,@data,@id_produto)", conexao);
 
                 comando.Parameters.Add(new MySqlParameter("id", caixa.id));
                 comando.Parameters.Add(new MySqlParameter("entrada", caixa.entrada));
@@ -33,8 +33,9 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
 
                 return true;
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine("Ocorreu um erro: " + e.Message);
                 return false;
             }
             finally
@@ -144,17 +145,24 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
         }
 
         //BUSCA DE PRODUTO POR ID_PRODUTO PARA DROPDOWNLIST
-        public List<String> BuscaDDL()
+        public List<Classe.estoque> BuscaDDL()
         {
-            var lista = new List<String>();
+            var lista = new List<Classe.estoque>();
             try
             {   
+                //Abre a conexão
                 conexao.Open();
-                var reader = new MySqlCommand("SELECT `nome_produto` FROM estoque WHERE 1", conexao).ExecuteReader();
+                //Comando MySQL para selecionar nome_produto e id da tabela Estoque do BD
+                var reader = new MySqlCommand("SELECT `nome_produto`, `id` FROM estoque WHERE 1", conexao).ExecuteReader();
 
+                //Laço de repetição que acontece enquando Reader (variavel que executa o comando SELECT do MYSQL) estiver ativa (enquanto ela capturar itens previstos pelo comando dado)
                 while (reader.Read())
                 {
-                    lista.Add(reader.GetString("nome_produto"));
+
+                    var p = new Classe.estoque();
+                    p.nome_produto = reader.GetString("nome_produto");
+                    p.id = reader.GetInt32("id");
+                    lista.Add(p);
                 }
             }
             catch

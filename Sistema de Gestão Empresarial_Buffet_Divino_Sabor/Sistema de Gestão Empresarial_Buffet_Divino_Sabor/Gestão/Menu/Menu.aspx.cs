@@ -35,7 +35,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
                 var novo_menu = new Classe.menu();
                 novo_menu.id = reader.GetInt32("id");
                 novo_menu.escolha = reader.GetString(0);
-                novo_menu.valor = reader.GetBoolean(0);
+                //novo_menu.valor = reader.GetBoolean(0);
                 Lista.Add(novo_menu);
             }
 
