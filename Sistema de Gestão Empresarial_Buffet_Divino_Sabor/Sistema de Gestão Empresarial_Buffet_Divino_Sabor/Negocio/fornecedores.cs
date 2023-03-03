@@ -119,15 +119,17 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             try
             {
                 conexao.Open();
-                var comando = new MySqlCommand("DELETE FROM fornecedor WHERE id = " + id, conexao);
+                var comando = new MySqlCommand("DELETE FROM fornecedores WHERE id = " + id, conexao);
                 comando.ExecuteNonQuery();
                 conexao.Close();
+                return true;
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine("ocorreu um erro: " + e.Message);
                 return false;
             }
-            return true;
+            
         }
 
 

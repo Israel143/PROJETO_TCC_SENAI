@@ -74,11 +74,6 @@
                         </div>
                     </div>
                     <div class="col-md-2"></div>
-                   
-                            <div class="col-sm-6">
-                                <asp:Button runat="server" ID="btnDeletar_Fornecedor" OnClick="btnDeletar_Fornecedor_Click" CssClass="btn" Text="Deletar" />
-
-                            </div>
-                        </div>
+                  
                    
 </asp:Content>
