@@ -22,7 +22,10 @@
     <asp:BoundField DataField="id" HeaderText="ID" Visible="false" />
     <asp:BoundField DataField="escolha" HeaderText="ESCOLHA" />
       <asp:ButtonField CommandName="Escolha realizada" Text="Escolher prato" />
+       <asp:ButtonField CommandName="Cancelar_escolha" Text="Cancelar escolha" />
   </Columns>
+
+
 
 
 </asp:GridView>  
