@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Editar_Fornecedores.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedores.Editar_Fornecedores" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <header>
         <link rel="stylesheet" type="text/css" href="fornecedoresestilo.css" />
@@ -14,7 +15,8 @@
     id="content" class="row conteudo">
             <div></div>
     id="fornecedores" style="display: block">
-                <div id="create" class="col-md-5">
+                <div></div>
+    id="create" class="col-md-5">
                     <div class="infobox">
                         <div id="infos1" class="row">
                             <div class="row">
@@ -71,9 +73,13 @@
                                 <asp:Button runat="server" ID="btnEditar_Fornecedor" OnClick="btnEditar_Fornecedor_Click" CssClass="btn" Text="Editar" />
                             </div>
                             <div class="col-sm-4"></div>
+                            <asp:RadioButtonList runat="server" CssClass="form-control" RepeatDirection="Horizontal" ID="rdoAtivo">
+                                <asp:ListItem Value="1" Text="Ativo"></asp:ListItem>
+                                <asp:ListItem Value="0" Text="Inativo"></asp:ListItem>
+                            </asp:RadioButtonList>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
-                  
-                   
+    <div class="col-md-2"></div>
+
+
 </asp:Content>

@@ -45,6 +45,42 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
 
         }
 
+        public List<Classe.fornecedores> ReadUpdate(string id)
+        {
+            var Lista = new List<Classe.fornecedores>();
+            try
+
+            {
+                conexao.Open();
+                var reader = new MySqlCommand("SELECT nome,contato,seguimento,cnpj,ativo FROM fornecedores WHERE id = " + id, conexao).ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var fornecedores = new Classe.fornecedores();
+                    fornecedores.nome = reader.GetString("nome");
+                    fornecedores.contato = reader.GetString("contato");
+                    fornecedores.seguimento = reader.GetString("seguimento");
+                    fornecedores.cnpj = reader.GetString("cnpj");
+                    fornecedores.ativo = reader.GetBoolean("ativo");
+                    Lista.Add(fornecedores);
+
+                }
+            }
+            catch 
+            {
+                
+
+            }
+            finally
+            {
+
+                conexao.Close();
+
+            }
+
+            return Lista;
+        }
+
         public List<Classe.fornecedores> Read(string fornecedores)
         {
 
@@ -92,12 +128,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             try
             {
                 conexao.Open();
-                var comando = new MySqlCommand($"UPDATE fornecedores SET nome= @nome,contato= @contato,seguimento = @seguimento, cnpj= @cnpj WHERE id = @id", conexao);
+                var comando = new MySqlCommand($"UPDATE fornecedores SET nome= @nome,contato= @contato,seguimento = @seguimento, cnpj= @cnpj, ativo= @ativo WHERE id = @id", conexao);
                 comando.Parameters.Add(new MySqlParameter("id", fornecedores.id));
                 comando.Parameters.Add(new MySqlParameter("nome", fornecedores.nome));
                 comando.Parameters.Add(new MySqlParameter("contato", fornecedores.contato));
                 comando.Parameters.Add(new MySqlParameter("seguimento", fornecedores.seguimento));
                 comando.Parameters.Add(new MySqlParameter("cnpj", fornecedores.cnpj));
+                comando.Parameters.Add(new MySqlParameter("ativo", fornecedores.ativo));
 
                 comando.ExecuteNonQuery();
                 return true;
