@@ -160,8 +160,9 @@
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
     <Content Include="Gestão\Funcionarios\funcionarioestilo.css" />
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
-    <Content Include="Gestão\Login\Login.aspx" />
-    <Content Include="Gestão\Login\login.css" />
+    <Content Include="Login\Login Cliente.aspx" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Login\login.css" />
     <Content Include="Gestão\Menu\Menu.aspx" />
     <Content Include="Gestão\Menu\Menu.css" />
     <Content Include="Gestão\Pedidos\JSPedidos.js" />
@@ -295,11 +296,18 @@
     <Compile Include="Gestão\Funcionarios\Funcionario.aspx.designer.cs">
       <DependentUpon>Funcionario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Gestão\Login\Login.aspx.cs">
+    <Compile Include="Login\Login Cliente.aspx.cs">
+      <DependentUpon>Login Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login Cliente.aspx.designer.cs">
+      <DependentUpon>Login Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Gestão\Login\Login.aspx.designer.cs">
+    <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Menu\Menu.aspx.cs">

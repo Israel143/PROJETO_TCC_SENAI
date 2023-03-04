@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using MySqlConnector;
 
+
 namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedores
 {
     public partial class Editar_Fornecedores : System.Web.UI.Page
@@ -18,28 +19,23 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedore
 
             if (!IsPostBack)
             {
+                var fornecedores = new Classe.fornecedores();
                 var id = Request.QueryString["id"].ToString();
-                var fornecedor = new Negocio.fornecedores().Read(id);
-                if (fornecedor == null)
+
+                var editar = new Negocio.fornecedores().ReadUpdate(id); 
+                if (editar == null)
                 {
                     SiteMaster.ExibirAlertRedirecionar(this, "Fornecedor não identificado, realize a pesquisa novamente", "../Gestão/Fornecedores.aspx");
                     return;
                 }
 
-                conexao.Open();
-                var reader = new MySqlCommand($"SELECT nome,contato,seguimento,cnpj FROM fornecedores WHERE id = {id}", conexao).ExecuteReader();
+                var itemlista = editar[0];
+                txtCNPJ.Text = itemlista.cnpj;
+                txtcontato.Text = itemlista.contato;
+                txtNome_Fornecedor.Text = itemlista.nome;
+                txtSeguimento_Fornecedor.Text = itemlista.seguimento;
+                rdoAtivo.SelectedValue = itemlista.NumeroAtivo;
 
-                if (reader.Read())
-                {
-                    txtNome_Fornecedor.Text = reader.GetString("nome");
-                    txtcontato.Text = reader.GetString("contato");
-                    txtSeguimento_Fornecedor.Text = reader.GetString("seguimento");
-                    txtCNPJ.Text = reader.GetString("cnpj");
-                  
-                }
-
-
-                conexao.Close();
 
 
             }
@@ -55,6 +51,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Fornecedore
             fornecedores.contato = txtcontato.Text;
             fornecedores.seguimento = txtSeguimento_Fornecedor.Text;
             fornecedores.cnpj = txtCNPJ.Text;
+            fornecedores.ativo = (rdoAtivo.SelectedValue == "1");
             new Negocio.fornecedores().Update(fornecedores);
             SiteMaster.ExibirAlertRedirecionar(this, "Fornecedor Editado com sucesso!", "Fornecedores.aspx");
         }
