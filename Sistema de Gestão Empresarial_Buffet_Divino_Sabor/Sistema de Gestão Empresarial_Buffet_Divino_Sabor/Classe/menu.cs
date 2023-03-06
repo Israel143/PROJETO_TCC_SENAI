@@ -14,7 +14,8 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Classe
         public string sobremesa { get; set; }
         public string bebida { get; set; }
         public string escolha { get; set; }
-        public Boolean valor { get; set; }
+        public string cancelar_escolha { get; set; }
+        public Boolean excluir { get; set; }
 
 
 
