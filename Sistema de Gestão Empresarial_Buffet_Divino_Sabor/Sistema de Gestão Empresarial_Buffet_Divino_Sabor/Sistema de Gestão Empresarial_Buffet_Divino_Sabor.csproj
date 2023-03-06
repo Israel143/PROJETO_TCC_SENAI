@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Clientes\Menu.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -233,6 +234,14 @@
     <Compile Include="Classe\Login.cs" />
     <Compile Include="Classe\menu.cs" />
     <Compile Include="Classe\pedidos.cs" />
+    <Compile Include="Classe\produto.cs" />
+    <Compile Include="Clientes\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clientes\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,13 +318,6 @@
     </Compile>
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Gestão\Menu\Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gestão\Menu\Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Pedidos\Pedidos.aspx.cs">
       <DependentUpon>Pedidos.aspx</DependentUpon>
