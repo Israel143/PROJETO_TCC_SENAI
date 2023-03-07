@@ -234,7 +234,6 @@
     <Compile Include="Classe\Login.cs" />
     <Compile Include="Classe\menu.cs" />
     <Compile Include="Classe\pedidos.cs" />
-    <Compile Include="Classe\produto.cs" />
     <Compile Include="Clientes\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
