@@ -22,13 +22,14 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             var login = new Classe.Login();
             login.email = txt_User.Text;
             login.senha = txt_Pswd.Text;
+            login.usuario = "Empresa"; 
             var user = new Negocio.login().Read(login);
 
             if(user==true)
             {
                 Session["user"] = user;
 
-                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + login.email + " no sistema", "../Dashboard/Dashboard.aspx");
+                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + login.email + " no sistema", "../Gestão/Dashboard/Dashboard.aspx");
                 
             }
 
@@ -49,6 +50,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             var login = new Classe.Login();
             login.email = txt_User.Text;
             login.senha = txt_Pswd.Text;
+            login.usuario = "Empresa";
             var user = new Negocio.login().Create(login);
 
             SiteMaster.ExibirAlertRedirecionar(this, "Usuário Cadastrado com sucesso!", "Login.aspx");
