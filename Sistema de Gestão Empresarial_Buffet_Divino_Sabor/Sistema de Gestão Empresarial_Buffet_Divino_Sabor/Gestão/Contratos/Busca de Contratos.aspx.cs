@@ -13,7 +13,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
     {
         private MySqlConnection conexao;
         private DateTime data_inicio;
-      
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {

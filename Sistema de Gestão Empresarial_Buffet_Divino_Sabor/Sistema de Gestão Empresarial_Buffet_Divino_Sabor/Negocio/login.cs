@@ -22,9 +22,10 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                
                 //Criar Cadastro
                 conexao.Open();
-                var comando = new MySqlCommand("INSERT INTO login (email, senha) VALUES (@email,MD5(@senha))", conexao);
+                var comando = new MySqlCommand("INSERT INTO login (email, senha, usuario) VALUES (@email,MD5(@senha),@usuario)", conexao);
                 comando.Parameters.Add(new MySqlParameter("email", login.email));
                 comando.Parameters.Add(new MySqlParameter("senha", login.senha));
+                comando.Parameters.Add(new MySqlParameter("usuario", login.usuario));
                 comando.ExecuteNonQuery();
                 conexao.Close();
                 return true;
@@ -40,9 +41,10 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             try
             {
                 conexao.Open();
-                var comando = new MySqlCommand($"SELECT senha, email FROM login WHERE email = @email and senha = MD5(@senha) ", conexao);
+                var comando = new MySqlCommand($"SELECT senha, email,usuario FROM login WHERE email = @email AND senha = MD5(@senha) AND usuario= @usuario ", conexao);
                 comando.Parameters.Add(new MySqlParameter("email", login.email));
                 comando.Parameters.Add(new MySqlParameter("senha", login.senha));
+                comando.Parameters.Add(new MySqlParameter("usuario", login.usuario));
                 var reader = comando.ExecuteReader();
                 if (reader.Read())
                 {
