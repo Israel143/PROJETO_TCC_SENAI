@@ -32,7 +32,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
         {
             if (Consultar.Text == "")
             {
-                SiteMaster.ExibirAlert(this, "É necessário colocar o Id do Cliente");
+                SiteMaster.ExibirAlert(this, "É necessário colocar o Id do Pedido");
                 return;
             }
 
@@ -40,7 +40,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
             DataTable tabela = new DataTable();
 
             tabela.Columns.Add("id");
-            tabela.Columns.Add("data");
             tabela.Columns.Add("id_pedido");
             tabela.Columns.Add("Data de Inicio");
             tabela.Columns.Add("Data de Termino");
@@ -57,7 +56,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
             conexao.Open();
 
 
-            var commando = new MySqlCommand($@"SELECT contratos.id, contratos.id_pedido, contratos.data_inicio, contratos.data_fim, cliente.nome FROM contratos INNER JOIN cliente ON contratos.id_cliente = cliente.id WHERE contratos.id_cliente={Consultar.Text};", conexao);
+            var commando = new MySqlCommand($@"SELECT contratos.id, contratos.id_pedido, contratos.data_inicio, contratos.data_fim, cliente.nome FROM contratos INNER JOIN cliente ON contratos.id_pedido = cliente.id WHERE contratos.id_pedido={Consultar.Text};", conexao);
             var reader = commando.ExecuteReader();
 
             while (reader.Read())
