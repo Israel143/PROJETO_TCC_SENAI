@@ -149,6 +149,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Gestão\Caixa\Entrada\MovEntrada.aspx" />
     <Content Include="Gestão\Contratos\Busca de Contratos.css" />
+    <Content Include="Gestão\Contratos\Contrato.aspx" />
     <Content Include="Gestão\Contratos\EstiloContratos.css" />
     <Content Include="Gestão\Dashboard\Dashboard.css" />
     <Content Include="Gestão\Estoque\estoque.aspx" />
@@ -268,6 +269,13 @@
     </Compile>
     <Compile Include="Gestão\Contratos\Busca de Contratos.aspx.designer.cs">
       <DependentUpon>Busca de Contratos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestão\Contratos\Contrato.aspx.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestão\Contratos\Contrato.aspx.designer.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gestão\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
