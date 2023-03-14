@@ -61,14 +61,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
         protected string Testemunhas;
         protected string Local;
         protected string Ano;
-        protected string Assinatura_Contratante;
-        protected string Assinatura_Contratado;
         protected string Nome_Testemunha;
         protected string Nome_Testemunha2;
         protected string RG_Testemunha;
         protected string RG_Testemunha2;
-        protected string Assinatura_Testemunha1;
-        protected string Assinatura_Testemunha2;
+        protected string Quantidade_Pessoas;
 
 
     }
