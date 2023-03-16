@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Clientes\JavaScript.js" />
     <Content Include="Clientes\Menu.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -229,6 +230,7 @@
     <Compile Include="Classe\cliente.cs" />
     <Compile Include="Classe\contratos.cs" />
     <Compile Include="Classe\empresa.cs" />
+    <Compile Include="Classe\escolha.cs" />
     <Compile Include="Classe\estoque.cs" />
     <Compile Include="Classe\fornecedores.cs" />
     <Compile Include="Classe\funcionarios.cs" />
@@ -340,6 +342,7 @@
     <Compile Include="Negocio\cliente.cs" />
     <Compile Include="Negocio\contratos.cs" />
     <Compile Include="Negocio\empresa.cs" />
+    <Compile Include="Negocio\escolha.cs" />
     <Compile Include="Negocio\estoque.cs" />
     <Compile Include="Negocio\fornecedores.cs" />
     <Compile Include="Negocio\funcionarios.cs" />

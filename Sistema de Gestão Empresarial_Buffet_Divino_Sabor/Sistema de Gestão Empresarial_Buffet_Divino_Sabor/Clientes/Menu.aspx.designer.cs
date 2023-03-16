@@ -22,12 +22,21 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
         protected global::System.Web.UI.WebControls.DropDownList ddlMenu;
         
         /// <summary>
-        /// Controle GridView2.
+        /// Controle RepeatPratos.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.Repeater RepeatPratos;
+        
+        /// <summary>
+        /// Controle RepeatPratoSelected.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RepeatPratoSelected;
     }
 }
