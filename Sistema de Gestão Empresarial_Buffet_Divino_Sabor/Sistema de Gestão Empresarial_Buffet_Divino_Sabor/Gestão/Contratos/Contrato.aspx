@@ -12,7 +12,7 @@
     </p>
     <br />
     <p>
-        <b>CONTRATADA:</b> <%=Nome_da_Contratada%>, inscrita no C.N.P.J. sob o nº <%=CNPJ_Contratada%>, neste ato  residente e domiciliado na <%=Endereco_Contratada%></p>.
+        <b>CONTRATADA:</b> <%=Nome_da_Contratada%>, inscrita no C.N.P.J. sob o nº <%=CNPJ_Contratada%>, neste ato  residente e domiciliado na <%=Endereco_Contratada%> ,email <%=Email_Contratada%> ,contato <%=Contato_Contratada%></p>.
     <br />
     As partes acima identificadas têm, entre si, justo e acertado o presente Contrato de Prestação de Serviços de Buffet, que se regerá pelas cláusulas seguintes e pelas condições de preço, forma e termo de pagamento descritas no presente.
     <p>
@@ -174,7 +174,7 @@
     <br />
     <p style="text-align:right">
     
-        Local<%=Local%>, Data<%=Data%>  e Ano<%=Ano%>
+        Itajubá, Data <%=Data.Day%>  e Ano <%=Ano%>
     </p>
     <br />
     <p>
