@@ -8,11 +8,11 @@
 <b>IDENTIFICAÇÃO DAS PARTES CONTRATANTES</b>
     </p>
     <p>
-        <b>CONTRATANTE:</b> <%=Nome_da_Contratante%>, com telefone <%=Contato_Contrante%> portador do email <%=Email_Contratante%>.
+        <b>CONTRATANTE:</b> <b><%=Nome_da_Contratante%></b>, com telefone <b><%=Contato_Contrante%></b> portador do email <b><%=Email_Contratante%></b>.
     </p>
     <br />
     <p>
-        <b>CONTRATADA:</b> <%=Nome_da_Contratada%>, inscrita no C.N.P.J. sob o nº <%=CNPJ_Contratada%>, neste ato  residente e domiciliado na <%=Endereco_Contratada%> ,email <%=Email_Contratada%> ,contato <%=Contato_Contratada%></p>.
+        <b>CONTRATADA:</b> <b><%=Nome_da_Contratada%></b>, inscrita no C.N.P.J. sob o nº<b><%=CNPJ_Contratada%></b>, neste ato  residente e domiciliado na <b><%=Endereco_Contratada%></b> ,email <b><%=Email_Contratada%></b> ,contato <b><%=Contato_Contratada%></b></p>.
     <br />
     As partes acima identificadas têm, entre si, justo e acertado o presente Contrato de Prestação de Serviços de Buffet, que se regerá pelas cláusulas seguintes e pelas condições de preço, forma e termo de pagamento descritas no presente.
     <p>
@@ -22,9 +22,9 @@
 
     <br />
     <p>
-        <b>Cláusula 1ª.</b> É objeto do presente contrato a prestação pela CONTRATADA à CONTRATANTE dos serviços de Buffet, em evento que se realizará na data de <%=Data%>, no salão de festas.
+        <b>Cláusula 1ª.</b> É objeto do presente contrato a prestação pela CONTRATADA à CONTRATANTE dos serviços de Buffet, em evento que se realizará na data de <b><%Data.ToString("dd/MM/yy hh:mm");%></b>, no salão de festas.
     <br />
-    DO EVENTO
+    <b>EVENTO</b>
     <p>
         <b>Cláusula 2ª.</b> O evento, para cuja realização são contratados os serviços de buffet, é um baile de confraternização da empresa CONTRATANTE, e contará com a presença de pessoas.
     </p>
@@ -86,7 +86,7 @@
     </p>
     <br />
     <p>
-        <b>Cláusula 11.</b> O serviço contratado no presente instrumento será remunerado pela quantia de (valor expresso), devendo ser pago em dinheiro ou cheque, até a data de <%=Data%>.
+        <b>Cláusula 11.</b> O serviço contratado no presente instrumento será remunerado pela quantia de (valor expresso), devendo ser pago em dinheiro ou cheque, até a data de <b><%=Data.ToString("dd/MM/yy hh:mm")%></b>.
     </p>
     <br />
     <p>
@@ -174,7 +174,7 @@
     <br />
     <p style="text-align:right">
     
-        Itajubá, Data <%=Data.Day%>  e Ano <%=Ano%>
+        Itajubá, <b><%=Data.ToString("dd/MM/yy hh:mm")%></b> e Ano <b><%=Data.Year%></b>
     </p>
     <br />
     <p>
@@ -182,7 +182,7 @@
             
         _________________________________________<br />
  <br />
-  Nome da Contratante <%=Nome_da_Contratante%> 
+  Nome da Contratante <b><%=Nome_da_Contratante%></b>
             </center>
     </p>
     <br />
@@ -191,7 +191,7 @@
     <center>
      _________________________________________<br />
    <br />
-   Nome da Contratada <%=Nome_da_Contratada%> 
+   Nome da Contratada <b><%=Nome_da_Contratada%></b> 
      </center>
     <br />
     </p>

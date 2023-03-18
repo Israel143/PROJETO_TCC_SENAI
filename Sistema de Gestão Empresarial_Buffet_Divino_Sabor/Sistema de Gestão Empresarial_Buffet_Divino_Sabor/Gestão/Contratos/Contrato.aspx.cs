@@ -16,9 +16,9 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
         protected string Email_Contratada;
         protected string Contato_Contratada;
         protected string CNPJ_Contratada;
-        protected string  Data.Day;
-        protected string Local;
-        protected string Ano;
+        protected DateTime Data;
+        
+        
 
 
 
@@ -56,7 +56,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                         {
                             // Armazenamento dos resultados em variáveis
 
-                            Data = reader.GetDateTime("Data").ToString();
+                            Data = reader.GetDateTime("Data");
                             Nome_da_Contratante = reader.GetString("nome_cliente");
                             Contato_Contrante = reader.GetString("contato_cliente");
                             Email_Contratante = reader.GetString("email_cliente");
