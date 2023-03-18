@@ -80,6 +80,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Sistema de Gestão Empresarial_Buffet_Divino_Sabor\Sistema de Gestão Empresarial_Buffet_Divino_Sabor.csproj">
       <Project>{e4b7fec5-a8a8-4b25-a9cf-b5c99138be49}</Project>
       <Name>Sistema de Gestão Empresarial_Buffet_Divino_Sabor</Name>

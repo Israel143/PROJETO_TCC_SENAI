@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes.Menu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <link rel="stylesheet" href="Menu.css" />
 <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
@@ -13,17 +13,18 @@
           <asp:ListItem Text="Jantar" Value="jantar"></asp:ListItem>
           <asp:ListItem Text="Bebida" Value="bebida"></asp:ListItem>
           <asp:ListItem Text="Sobremesa" Value="sobremesa"></asp:ListItem>
+        
           </asp:DropDownList>
      
 
-      <asp:GridView ID="GridView2" CssClass= "Grid " runat="server" AutoGenerateColumns="false" style="width:800px; height:500px"
-           OnRowCommand="GridView2_RowCommand">
-  <Columns>
-    <asp:BoundField DataField="id" HeaderText="ID" Visible="false" />
-    <asp:BoundField DataField="escolha" HeaderText="ESCOLHA" />
-      <asp:ButtonField CommandName="Escolha realizada" Text="Escolher prato" />
-       <asp:ButtonField CommandName="Cancelar_escolha" Text="Cancelar escolha" />
-  </Columns>
+          <asp:GridView ID="GridView2" CssClass= "Grid " runat="server" AutoGenerateColumns="false" style="width:800px; height:500px"
+               OnRowCommand="GridView2_RowCommand">
+      <Columns>
+        <asp:BoundField DataField="id" HeaderText="ID" Visible="false" />
+        <asp:BoundField DataField="escolha" HeaderText="ESCOLHA" />
+       <asp:ButtonField CommandName="Escolha realizada" Text="Escolher prato" />
+
+      </Columns>
 
 
 
