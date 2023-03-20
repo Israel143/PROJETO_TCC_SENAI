@@ -9,7 +9,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
 {
     public partial class SiteMaster : MasterPage
     {
-        public static string ConnectionString = "Server=127.0.0.1;User ID=root;Password=;Database=buffetdivinosabor";
+        public static string ConnectionString = "Server=MYSQL8003.site4now.net;Database=db_a95df4_gevent;Uid=a95df4_gevent;Pwd=wac26841379";
         public static string KeyAES = "kjbflkajsb";
 
         protected void Page_Load(object sender, EventArgs e)

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using MySqlConnector;
 
 namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
@@ -12,64 +7,97 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
     {
         private MySqlConnection conexao;
 
+
         protected string Nome_da_Contratante;
-        protected string Sede_Contratante;
-        protected string Rua_Contratante;
-        protected string Numero_Contratante;
-        protected string Bairro_Contratante;
-        protected string CEP_Contratante;
-        protected string Estado_Contratante;
-        protected string CNPJ_Contratante;
-        protected string Numero_Estadual_Contrante;
-        protected string Diretor_Contratante;
-        protected string Nacionalidade_Contratante;
-        protected string Estado_Civil_Contrante;
-        protected string Profissao_Contrante;
-        protected string Numero_da_Indentidade_Contrante;
-        protected string CPF_Contrante;
-        protected string Cidade_Contrante;
+        protected string Contato_Contrante;
+        protected string Email_Contratante;
         protected string Nome_da_Contratada;
-        protected string Sede_Contratada;
-        protected string Rua_Contratada;
-        protected string Numero_Contratada;
-        protected string Bairro_Contratada;
-        protected string CEP_Contratada;
-        protected string Estado_Contratada;
+        protected string Endereco_Contratada;
+        protected string Email_Contratada;
+        protected string Contato_Contratada;
         protected string CNPJ_Contratada;
-        protected string Numero_Estadual_Contratada;
-        protected string Diretor_Contratada;
-        protected string Nacionalidade_Contratada;
-        protected string Estado_Civil_Contratada;
-        protected string Profissao_Contratada;
-        protected string Numero_da_Indentidade_Contratada;
-        protected string CPF_Contratada;
-        protected string Cidade_Contratada;
-        protected string Data;
-        protected string Horas;
-        protected string Salao_Festas;
-        protected string Rua_Festas;
-        protected string Numero_Festa;
-        protected string Bairro_Festa;
-        protected string Cidade_Festa;
-        protected string Estado_Festa;
-        protected string Garcons;
-        protected string Copeiros;
-        protected string Valor;
-        protected string Dias;
-        protected string Porcetagem;
-        protected string Comarca;
-        protected string Testemunhas;
-        protected string Local;
-        protected string Ano;
-        protected string Nome_Testemunha;
-        protected string Nome_Testemunha2;
-        protected string RG_Testemunha;
-        protected string RG_Testemunha2;
-        protected string Quantidade_Pessoas;
+        protected DateTime Data;
+        
+        
+
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            conexao = new MySqlConnection(SiteMaster.ConnectionString);
+            if (!IsPostBack)
+            {
+
+                {
+
+
+                    // Query SQL para buscar as informações
+                    string query = $@"SELECT pedidos.id_cliente, pedidos.data, pedidos.id_menu, empresa.endereco ,empresa.cnpj, cliente.nome AS nome_cliente, cliente.contato AS contato_cliente, cliente.email AS email_cliente, empresa.nome AS nome_empresa, empresa.cnpj, empresa.contato AS contato_empresa, empresa.email AS email_empresa
+                                   FROM contratos
+                                   INNER JOIN pedidos ON contratos.id_pedido = pedidos.id_menu
+                                   INNER JOIN cliente ON pedidos.id_cliente = cliente.id
+                                   INNER JOIN empresa ON contratos.id_pedido = empresa.id
+                                   WHERE contratos.id_pedido = @id_pedido;";
+
+                    // Criação do objeto MySqlCommand para executar a query SQL
+                    MySqlCommand commando = new MySqlCommand(query, conexao);
+                    commando.Parameters.AddWithValue("@id_pedido",1);
+                    
+                    try
+                    {
+                        // Abertura da conexão com o banco de dados
+                        conexao.Open();
+
+                        // Execução da query SQL e leitura dos resultados
+                        MySqlDataReader reader = commando.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            // Armazenamento dos resultados em variáveis
+
+                            Data = reader.GetDateTime("Data");
+                            Nome_da_Contratante = reader.GetString("nome_cliente");
+                            Contato_Contrante = reader.GetString("contato_cliente");
+                            Email_Contratante = reader.GetString("email_cliente");
+                            Email_Contratada = reader.GetString("email_empresa");
+                            Nome_da_Contratada = reader.GetString("nome_empresa");
+                            Contato_Contratada = reader.GetString("contato_empresa");
+                            CNPJ_Contratada = reader.GetString("cnpj");
+                            Endereco_Contratada = reader.GetString("endereco");
+
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Erro: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Fechamento da conexão com o banco de dados
+                        conexao.Close();
+                    }
+
+                   
+                }
+            }
+
+
+        }
 
 
     }
-    //protected void Page_Load(object sender, EventArgs e)
-    
 
-}   
+
+
+
+}
+
+
+
+
+
+
+
+
