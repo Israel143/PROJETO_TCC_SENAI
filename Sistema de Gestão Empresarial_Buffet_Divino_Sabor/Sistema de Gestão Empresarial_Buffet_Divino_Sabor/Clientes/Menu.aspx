@@ -1,9 +1,9 @@
+
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="Menu.css" />
     <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
-
     <div id="conteudo">
         <div id="selecao" class="col-sm-5">
             <div class="row">
@@ -36,7 +36,6 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-
         <div class="col-sm-2"></div>
 
         <div id="pedido" class="col-sm-5">

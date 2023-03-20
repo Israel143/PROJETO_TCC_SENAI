@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
+namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes
 {
     public partial class Menu : System.Web.UI.Page
     {
