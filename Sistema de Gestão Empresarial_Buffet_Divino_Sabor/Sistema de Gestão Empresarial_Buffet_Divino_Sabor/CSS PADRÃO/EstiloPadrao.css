@@ -1,6 +1,11 @@
 ﻿body {
     padding: 0;
-    background-color:#dbdbdb;
+    margin: 0;
+    background-image: url(../imgs/background.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    position: center;
 }
 
 :root {
@@ -14,4 +19,13 @@
 /*ELEMENTOS***************************/
 .txtbox{
     border-radius:20px;
+}
+
+.sidebox {
+    background-color: rgba(148, 40, 40, 0.67);
+    padding: 30px;
+    width: 50%;
+    height: 739px;
+    right: 0px;
+    position: absolute;
 }

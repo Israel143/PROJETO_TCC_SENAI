@@ -42,6 +42,9 @@
         <div id="pedido" class="col-sm-5">
             <div id="carrinho">
                 <p>CARRINHO</p>
+                <div id="valorTotal">
+                    Total da compra: R$<asp:Label runat="server" ID="lblValorT"></asp:Label>
+                </div>
                 <div id="selecionados" class="row">
                     <asp:Repeater ID="RepeatPratoSelected" runat="server">
                         <ItemTemplate>
@@ -60,13 +63,15 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <asp:Button ID="select" runat="server" Text="Descartar" OnClick="select_Click" />
+                                    <asp:Button ID="descartar" runat="server" Text="Descartar" OnClick="descartar_Click" CommandArgument='<%# Eval("Id") %>' />
                                 </div>
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
-                <div id="preco" class="row"></div>
+                <div id="finaliza" class="row">
+                    <asp:Button runat="server" ID="BtnFinaliza" Text="Finalizar" OnClick="BtnFinaliza_Click" />
+                </div>
             </div>
             <div id="finalizar"></div>
         </div>

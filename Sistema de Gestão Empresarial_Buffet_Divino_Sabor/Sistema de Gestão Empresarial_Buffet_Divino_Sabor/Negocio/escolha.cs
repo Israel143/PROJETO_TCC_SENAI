@@ -50,7 +50,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             //abre a conexão
             connection.Open();
             //comando MySQL para selecionar os dados
-            string query = "SELECT nome, preco, categoria FROM escolha WHERE id = @id";
+            string query = "SELECT id, nome, preco, categoria FROM escolha WHERE id = @id";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 //adiciona o parâmetro "categoria" ao comando
@@ -67,6 +67,42 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
             //retorna o valor da datatable
             return dts;
+        }
+
+        public string ReadCategoria(Classe.escolha escolha)
+        {
+            string categoria = "";
+            //abre a conexão
+            connection.Open();
+            //comando MySQL para selecionar os dados
+            string sql = "SELECT categoria FROM escolha WHERE id=@ID";
+            using (var cmd = new MySqlCommand(sql, connection))
+            {
+                cmd.Parameters.AddWithValue("@ID", escolha.id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        categoria = reader.GetString(0);
+                    }
+                }
+            }
+            return categoria;
+        }
+
+        public string SomaTotal(DataTable Soma)
+        {
+            // Calcular o total da compra
+            double total = 0;
+            foreach (DataRow row in Soma.Rows)
+            {
+                total += Convert.ToDouble(row["preco"]);
+            }
+
+            // Exibir o total da compra
+            string resultado = $"{total:F2}";
+
+            return resultado;
         }
     }
 }
