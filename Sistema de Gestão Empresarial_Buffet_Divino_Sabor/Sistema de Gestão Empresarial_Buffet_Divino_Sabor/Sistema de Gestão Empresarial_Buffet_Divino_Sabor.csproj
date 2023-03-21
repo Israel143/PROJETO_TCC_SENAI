@@ -238,7 +238,6 @@
     <Compile Include="Classe\pedidos.cs" />
     <Compile Include="Clientes\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Clientes\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
