@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
+namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes
 {
     public partial class Menu : System.Web.UI.Page
     {
@@ -155,10 +155,10 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             var carrinho = Session["CarrinhoDeCompras"] as DataTable;
             var finalizar = new Negocio.menu1().Create(carrinho, lblValorT.Text);
 
-            if (finalizar == true)
+            /*if (finalizar == true)
             {
                 SiteMaster.ExibirAlert(this, "Menu Selecionado com sucesso");
-            }
+            }*/
         }
     }
 }
