@@ -163,7 +163,11 @@
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
     <Content Include="Gestão\Funcionarios\funcionarioestilo.css" />
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
+
     <Content Include="imgs\background.png" />
+
+    <Content Include="Gestão\Pratos\Cadastrodepratos.aspx" />
+
     <Content Include="Login\Login Cliente.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\login.css" />
@@ -240,7 +244,6 @@
     <Compile Include="Classe\pedidos.cs" />
     <Compile Include="Clientes\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Clientes\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
@@ -314,6 +317,13 @@
     </Compile>
     <Compile Include="Gestão\Funcionarios\Funcionario.aspx.designer.cs">
       <DependentUpon>Funcionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestão\Pratos\Cadastrodepratos.aspx.cs">
+      <DependentUpon>Cadastrodepratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestão\Pratos\Cadastrodepratos.aspx.designer.cs">
+      <DependentUpon>Cadastrodepratos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\Login Cliente.aspx.cs">
       <DependentUpon>Login Cliente.aspx</DependentUpon>

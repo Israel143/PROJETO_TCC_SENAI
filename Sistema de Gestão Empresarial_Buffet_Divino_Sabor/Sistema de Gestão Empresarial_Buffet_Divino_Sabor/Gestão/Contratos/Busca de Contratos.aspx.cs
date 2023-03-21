@@ -78,7 +78,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                     data_fim = reader.GetDateTime("data_fim");
                 }
                 conexao.Close();
-                Response.Redirect($"../Contratos/Busca de Contratos.aspx?id={id}&data_inicio={data_incio}&data_fim={data_fim}&id_pedido={id_pedido}");
+                Response.Redirect($"../Contratos/Contrato.aspx?id={id}&data_inicio={data_incio}&data_fim={data_fim}&id_pedido={id_pedido}");
 
 
 

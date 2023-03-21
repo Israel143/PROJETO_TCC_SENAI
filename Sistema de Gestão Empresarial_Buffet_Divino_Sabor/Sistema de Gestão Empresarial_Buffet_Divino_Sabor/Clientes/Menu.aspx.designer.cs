@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
+namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes {
     
     
     public partial class Menu {
