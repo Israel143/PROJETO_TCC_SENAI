@@ -1,13 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes.Menu" %>
 =======
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu" %>
 
 >>>>>>> 2497a444d4c12f9d9997d7dda3fdc4b6ee7069c6
+=======
+
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu" %>
+
+>>>>>>> 99fd60d9383dfd79cd7b29d77045156a5b7b38fc
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="Menu.css" />
     <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
-
     <div id="conteudo">
         <div id="selecao" class="col-sm-5">
             <div class="row">
@@ -29,6 +34,7 @@
                                 <asp:Label ID="LblNome" runat="server" Text='<%# Eval("nome") %>'></asp:Label>
                             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
  <div class ="col-sm-8">
          <p>Menu:</p>
@@ -52,6 +58,8 @@
 
       </Columns>
 =======
+=======
+>>>>>>> 99fd60d9383dfd79cd7b29d77045156a5b7b38fc
                             <div id="preco">
                                 <asp:Label ID="LblPreco" runat="server" Text='<%# Eval("preco") %>'></asp:Label>
                             </div>
@@ -63,9 +71,11 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-
         <div class="col-sm-2"></div>
+<<<<<<< HEAD
 >>>>>>> 2497a444d4c12f9d9997d7dda3fdc4b6ee7069c6
+=======
+>>>>>>> 99fd60d9383dfd79cd7b29d77045156a5b7b38fc
 
         <div id="pedido" class="col-sm-5">
             <div id="carrinho">

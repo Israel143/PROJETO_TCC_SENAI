@@ -27,10 +27,20 @@
 //        protected void ddlMenu_SelectedIndexChanged(object sender, EventArgs e)
 //        {
 
+<<<<<<< HEAD
 //            var tipo = new Classe.escolha();
 //            tipo.categoria = ddlMenu.SelectedValue;
 //            RepeatPratos.DataSource = new Negocio.escolha().ReadPratos(tipo);
 //            RepeatPratos.DataBind();
+=======
+            var tipo = new Classe.escolha();
+            tipo.categoria = ddlMenu.SelectedValue;
+            RepeatPratos.DataSource = new Negocio.escolha().ReadPratos(tipo);
+            RepeatPratos.DataBind();
+
+
+        }
+>>>>>>> 99fd60d9383dfd79cd7b29d77045156a5b7b38fc
 
 
 //            conexao.Open();
