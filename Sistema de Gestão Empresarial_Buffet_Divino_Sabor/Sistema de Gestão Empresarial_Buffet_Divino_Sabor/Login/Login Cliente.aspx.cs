@@ -27,7 +27,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Login
 
             if (user == true)
             {
-                Session["user"] = user;
+                Session["clienteID"] = login.id.ToString();
 
                 SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + login.email + " no sistema", "/../Clientes/Menu.aspx");
 

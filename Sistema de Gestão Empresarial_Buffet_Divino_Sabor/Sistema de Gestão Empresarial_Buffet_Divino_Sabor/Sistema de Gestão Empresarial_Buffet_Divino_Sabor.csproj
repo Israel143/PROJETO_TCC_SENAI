@@ -163,7 +163,11 @@
     <Content Include="Gestão\Funcionarios\Funcionario.aspx" />
     <Content Include="Gestão\Funcionarios\funcionarioestilo.css" />
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
+
+    <Content Include="imgs\background.png" />
+
     <Content Include="Gestão\Pratos\Cadastrodepratos.aspx" />
+
     <Content Include="Login\Login Cliente.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\login.css" />
@@ -179,6 +183,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="JS PADRÃO\NavBarPadrao.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -210,6 +215,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Suporte\Contato.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -370,6 +376,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Suporte\Contato.aspx.cs">
+      <DependentUpon>Contato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suporte\Contato.aspx.designer.cs">
+      <DependentUpon>Contato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -382,6 +395,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Campo\" />
     <Folder Include="Gestão\Caixa\Saida\" />
+    <Folder Include="Gestão\Menu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

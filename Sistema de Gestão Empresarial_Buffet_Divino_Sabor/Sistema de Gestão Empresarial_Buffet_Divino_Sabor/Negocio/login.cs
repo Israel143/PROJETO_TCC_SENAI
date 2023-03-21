@@ -41,10 +41,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             try
             {
                 conexao.Open();
-                var comando = new MySqlCommand($"SELECT senha, email,usuario FROM login WHERE email = @email AND senha = MD5(@senha) AND usuario= @usuario ", conexao);
+                var comando = new MySqlCommand($"SELECT id, senha, email,usuario FROM login WHERE email = @email AND senha = MD5(@senha) AND usuario= @usuario ", conexao);
                 comando.Parameters.Add(new MySqlParameter("email", login.email));
                 comando.Parameters.Add(new MySqlParameter("senha", login.senha));
                 comando.Parameters.Add(new MySqlParameter("usuario", login.usuario));
+                comando.Parameters.Add(new MySqlParameter("id", login.id));
                 var reader = comando.ExecuteReader();
                 if (reader.Read())
                 {

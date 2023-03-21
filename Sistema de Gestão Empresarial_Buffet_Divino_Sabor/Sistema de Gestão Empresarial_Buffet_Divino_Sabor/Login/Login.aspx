@@ -5,7 +5,7 @@
 
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-        <div class="content-box">
+        <div class="sidebox">
             <div class="element-1">
             <div class="row">
                 <h1 class="title-box">Login</h1>

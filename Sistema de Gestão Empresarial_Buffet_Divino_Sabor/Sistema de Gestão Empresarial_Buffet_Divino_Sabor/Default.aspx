@@ -1,42 +1,80 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        body {
+            background-image: url(imgs/background.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin-right: 0 !important;
+        }
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+        #conteudo {
+            background-color: rgba(148, 40, 40, 0.67);
+            padding: 30px;
+            width: 50%;
+            height: 739px;
+            right: 0px;
+            position: absolute;
+        }
+        #titulo{
+            font-family:serif;
+            font-size:72px;
+            color:white;
+            font-weight: 600;
+        }
+        #descricao{
+            font-family:'Adobe Myungjo Std';
+            color:white;
+            width:75%;
+            text-align:justify;
+            margin:20px 0 20px 60px;
+        }
+        .my-btn-lg {
+            background-color: #942828;
+            text-align: center;
+            font-family: serif;
+            font-size: 23px;
+            font-weight: 500;
+            padding: 5px;
+            color: white;
+            width: 150px;
+            height: unset;
+            border-radius: 30px;
+            box-shadow: #000000 5px 1px 15px;
+            display: block;
+        }
+    </style>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+    <div id="conteudo">
+        <div id="titulo">
+            GEvent
+        </div>
+        <div id="descricao">
+            <p> Estima-se que atualmente no Brasil, 
+                o setor de festas e eventos movimente mais de R$300 bilhões, 
+                sendo imprescindível que as empresas do setor aprimorem seus 
+                processos de gestão, para torná-las mais eficientes. Nesse contexto, 
+                a empresa necessita de um sistema de gestão informatizado, para ajudar 
+                e facilitar a administração do negócio, de modo a auxiliar a gestão de 
+                estoque de produtos, cadastro de clientes, gestão financeira e controle e 
+                registro de pedidos. Vamos tentar criar um sistema intuitivo para simplificar 
+                a demanda da empresa.</p>
+        </div>
+        <br />
+        <br />
+        <div id="botoes" style="margin-top:150px; margin-left:30px; margin-right:30px" >
+            <div class="col-md-4">
+            <p><a href="Login/Login.aspx" class="my-btn-lg">Cadastrar Empresa</a></p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+            <p><a href="Login/Login Cliente.aspx" class="my-btn-lg">Cadastrar Cliente</a></p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+            <p><a href="Suporte/Contato.aspx" class="my-btn-lg">Entre em contato</a></p>
         </div>
+        </div>      
     </div>
 
 </asp:Content>
