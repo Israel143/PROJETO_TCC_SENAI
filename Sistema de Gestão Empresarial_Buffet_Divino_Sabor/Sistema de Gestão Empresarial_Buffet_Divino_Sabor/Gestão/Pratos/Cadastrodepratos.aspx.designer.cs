@@ -202,13 +202,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Salada_com_hortela;
         
         /// <summary>
-        /// Controle Salada_de_rucula .
+        /// Controle Salada_de_rucula.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Salada_de_rucula ;
+        protected global::System.Web.UI.WebControls.Label Salada_de_rucula;
         
         /// <summary>
         /// Controle Salada_mediterranea.
@@ -245,5 +245,59 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Salada_caesar;
+        
+        /// <summary>
+        /// Controle Salada_com_ricota.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Salada_com_ricota;
+        
+        /// <summary>
+        /// Controle Salada_Verão.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Salada_Verão;
+        
+        /// <summary>
+        /// Controle Salada _de_brocolis.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Salada_de_brocolis;
+        
+        /// <summary>
+        /// Controle Salada_com_abacaxigrelhado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Salada_com_abacaxigrelhado;
+        
+        /// <summary>
+        /// Controle Salada_tropical_com_maionese.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Salada_tropical_com_maionese;
+        
+        /// <summary>
+        /// Controle Salada_tropical.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Salada_tropical;
     }
 }

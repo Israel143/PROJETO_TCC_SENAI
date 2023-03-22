@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cadastrodepratos.aspx.cs" Inherits="Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu.Cadastrodepratos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row text-center">
-    <h1>Escolha de pratos</h1>
+    <h1>Cadastro de pratos</h1>
          </div>
-          <asp:TextBox runat="server" ID="txt_escolhade_pratos" class="txtbox"></asp:TextBox>
+          <%--<asp:TextBox runat="server" ID="txt_cadastro_pratos" class="txtbox"></asp:TextBox>--%>
     
      <div class ="col-sm-8">
 
@@ -45,19 +45,67 @@
          <br />
                 <asp:Label Text="Confit de tomate e cebola" runat="server" ID="Confit_tomate" ></asp:Label>
          <br />
+         </div>
                
 
-     <div class ="col-sm-16">
+     <div class ="col-sm-13">
                 <asp:Label Text="Salada de feijão branco" runat="server" ID="Salada_de_feijao_branco" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada de repolho cremoso" runat="server" ID="Salada_de_repolho_cremoso" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada de batata com ovos" runat="server" ID="Salada_de_batata" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada de berinjela" runat="server" ID="Salada_de_berinjela" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada com hortelã" runat="server" ID="Salada_com_hortela" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada de rúcula com manga" runat="server" ID="Salada_de_rucula" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada mediterrânea" runat="server" ID="Salada_mediterranea" ></asp:Label>
+          <br />
                 <asp:Label Text="Vinagrete de verão" runat="server" ID="Vinagrete_de_verao" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada Niçoise" runat="server" ID="Salada_Nicoise" ></asp:Label>
+          <br />
                 <asp:Label Text="Salada caesar com frango grelhado" runat="server" ID="Salada_caesar" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada com ricota" runat="server" ID="Salada_com_ricota" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada Verão" runat="server" ID="Salada_Verão" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada de brócolis e couve-flor" runat="server" ID="Salada_de_brocolis" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada com abacaxi grelhado" runat="server" ID="Salada_com_abacaxigrelhado" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada tropical com maionese" runat="server" ID="Salada_tropical_com_maionese" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada tropical no espeto" runat="server" ID="Salada_tropical" ></asp:Label>
+
+
+     <div class ="col-sm-16">
+                <asp:Label Text="Contra Filé Grelhado" runat="server" ID="Contra_File_Grelhado" ></asp:Label>
+          <br />
+                <asp:Label Text="Espaguete Formaggio Quatro Queijos - Billy the Grill" runat="server" ID="Espaguete_Formaggio_Quatro_Queijos" ></asp:Label>
+          <br />
+                <asp:Label Text="Espaguete Formaggio Quatro Queijos - Billy the Grill" runat="server" ID="Label1" ></asp:Label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
