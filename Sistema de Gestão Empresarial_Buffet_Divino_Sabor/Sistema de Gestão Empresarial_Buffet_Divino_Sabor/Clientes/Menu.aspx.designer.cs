@@ -49,12 +49,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes {
         protected global::System.Web.UI.WebControls.Repeater RepeatPratoSelected;
         
         /// <summary>
-        /// Controle BtnFinaliza.
+        /// Controle btnConcluir.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnFinaliza;
+        protected global::System.Web.UI.WebControls.Button btnConcluir;
     }
 }

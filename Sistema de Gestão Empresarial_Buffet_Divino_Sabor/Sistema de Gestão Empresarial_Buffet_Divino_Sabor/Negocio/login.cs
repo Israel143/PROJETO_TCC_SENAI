@@ -45,10 +45,10 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                 comando.Parameters.Add(new MySqlParameter("email", login.email));
                 comando.Parameters.Add(new MySqlParameter("senha", login.senha));
                 comando.Parameters.Add(new MySqlParameter("usuario", login.usuario));
-                comando.Parameters.Add(new MySqlParameter("id", login.id));
                 var reader = comando.ExecuteReader();
                 if (reader.Read())
                 {
+                    login.id = reader.GetInt32("id");
                     return true;
                     
                 }

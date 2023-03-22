@@ -152,6 +152,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes
 
         protected void BtnFinaliza_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void btnConcluir_Click(object sender, EventArgs e)
+        {
+
             var carrinho = Session["CarrinhoDeCompras"] as DataTable;
             var finalizar = new Negocio.menu1().Create(carrinho, lblValorT.Text);
 
@@ -159,6 +165,21 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes
             {
                 SiteMaster.ExibirAlert(this, "Menu Selecionado com sucesso");
             }*/
+
+            //CRIA O PEDIDO:
+            //-> referencia a classe pedido para incluir nela os IDs de MENU e CLIENTE.
+            var pedido = new Classe.pedidos();
+            pedido.id_cliente = Convert.ToInt32(Session["clienteID"]);
+            pedido.id_menu = Convert.ToInt32(Session["menu"]);
+            //->referencia o método CREATE de PEDIDOS enviando como parametro "PEDIDO"
+            var CreatePedido = new Negocio.pedidos().Create(pedido);
+
+            if(CreatePedido == true)
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "FecharModal", "$('#MinhaModal').modal('hide');", true);
+
+            }
+
         }
     }
 }
