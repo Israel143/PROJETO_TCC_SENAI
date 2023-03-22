@@ -124,5 +124,28 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
             return true;
         }
+
+        public bool Create(Classe.pedidos pedidos)
+        {
+            try
+            {
+                connection.Open();
+                var comando = new MySqlCommand("INSERT INTO pedidos (id_cliente, id_menu, estado) VALUES (@id_cliente, @id_menu, NULL)", connection);
+                comando.Parameters.Add(new MySqlParameter("id_cliente", pedidos.id_cliente));
+                comando.Parameters.Add(new MySqlParameter("id_menu", pedidos.id_menu));
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
     }
 }

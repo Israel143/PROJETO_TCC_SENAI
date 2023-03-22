@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="Menu.css" />
     <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
+    <script src="JavaScript.js"></script>
+
     <div id="conteudo">
         <div id="selecao" class="col-sm-5">
             <div class="row">
@@ -66,7 +68,7 @@
                     </asp:Repeater>
                 </div>
                 <div id="finaliza" class="row">
-                    <asp:Button runat="server" ID="BtnFinaliza" Text="Finalizar" data-toggle="modal" data-target="#myModal" OnClick="BtnFinaliza_Click" />
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" data-dismiss="modal">Finalizar</button>
                 </div>
             </div>
         </div>
@@ -78,14 +80,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     ...
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <asp:Button ID="btnConcluir" runat="server" data-dimiss="modal" Text="Concluir" class="btn btn-primary" OnClick="btnConcluir_Click" />
                 </div>
             </div>
             <!-- /.modal-content -->
