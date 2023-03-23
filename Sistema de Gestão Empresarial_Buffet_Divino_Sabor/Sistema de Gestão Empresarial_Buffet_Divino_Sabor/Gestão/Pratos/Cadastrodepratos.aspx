@@ -3,25 +3,29 @@
     <div class="row text-center">
     <h1>Cadastro de pratos</h1>
          </div>
-          <%--<asp:TextBox runat="server" ID="txt_cadastro_pratos" class="txtbox"></asp:TextBox>--%>
+          
     
-     <div class ="col-sm-8">
+     <div class ="col-sm-4">
 
+      
+
+      <asp:Label Text="Pratos de entrada" runat="server" ID="entradas" ></asp:Label>
+         <br />
 
       <asp:Label Text="Alcatra ao molho roti" runat="server" ID="Alcatra_ao_molho_roti" ></asp:Label>
          <br />
       <asp:Label Text="Caprese no palito" runat="server" ID="Caprese_no_palito" ></asp:Label>
          <br />
-      <asp:Label Text="Canapés de salame" runat="server" ID="Canapés_de_salame" ></asp:Label>
+      <asp:Label Text="Canapés de salame" runat="server" ID="Canapes_de_salame" ></asp:Label>
          <br />
 
-      <asp:Label Text="Patê de azeitona com torradinhas" runat="server" ID="Patê_de_azeitona_com_torradinhas" ></asp:Label>
+      <asp:Label Text="Patê de azeitona com torradinhas" runat="server" ID="Pate_de_azeitona_com_torradinhas" ></asp:Label>
          <br />
 
       <asp:Label Text="Espetinho de carambola" runat="server" ID="Espetinho_de_carambola" ></asp:Label>
          <br />
 
-      <asp:Label Text="Tábua de queijos" runat="server" ID="Tábua_de_queijos" ></asp:Label>
+      <asp:Label Text="Tábua de queijos" runat="server" ID="Tabua_de_queijos" ></asp:Label>
          <br />
 
       <asp:Label Text="Carpaccio" runat="server" ID="Carpaccio" ></asp:Label>
@@ -30,7 +34,7 @@
       <asp:Label Text="Antepasto de berinjela" runat="server" ID="Antepasto_de_berinjela" ></asp:Label>
          <br />
 
-      <asp:Label Text="Ceviche clássico" runat="server" ID="Ceviche_clássico" ></asp:Label>
+      <asp:Label Text="Ceviche clássico" runat="server" ID="Ceviche_classico" ></asp:Label>
          <br />
 
       <asp:Label Text="Polenta grelhada com molho de espinafre e cogumelos" runat="server" ID="Polenta_grelhada" ></asp:Label>
@@ -48,8 +52,11 @@
          </div>
                
 
-     <div class ="col-sm-13">
-                <asp:Label Text="Salada de feijão branco" runat="server" ID="Salada_de_feijao_branco" ></asp:Label>
+     <div class ="col-sm-8">
+
+      <asp:Label Text="Pratos de salada" runat="server" ID="salada" ></asp:Label>
+         <br />
+<asp:Label Text="Salada de feijão branco" runat="server" ID="Salada_de_feijao_branco" ></asp:Label>
           <br />
                 <asp:Label Text="Salada de repolho cremoso" runat="server" ID="Salada_de_repolho_cremoso" ></asp:Label>
           <br />
@@ -80,14 +87,184 @@
                 <asp:Label Text="Salada tropical com maionese" runat="server" ID="Salada_tropical_com_maionese" ></asp:Label>
           <br />
                 <asp:Label Text="Salada tropical no espeto" runat="server" ID="Salada_tropical" ></asp:Label>
+         </div>
 
 
-     <div class ="col-sm-16">
+     <div class ="col-sm-18">
+
+      <asp:Label Text="Pratos principais" runat="server" ID="principais" ></asp:Label>
+         <br />
+
                 <asp:Label Text="Contra Filé Grelhado" runat="server" ID="Contra_File_Grelhado" ></asp:Label>
           <br />
-                <asp:Label Text="Espaguete Formaggio Quatro Queijos - Billy the Grill" runat="server" ID="Espaguete_Formaggio_Quatro_Queijos" ></asp:Label>
+                <asp:Label Text="Espaguete Formaggio Quatro Queijos" runat="server" ID="Espaguete_Formaggio" ></asp:Label>
           <br />
-                <asp:Label Text="Espaguete Formaggio Quatro Queijos - Billy the Grill" runat="server" ID="Label1" ></asp:Label>
+                <asp:Label Text="Risoto de Moqueca Frutos do Mar" runat="server" ID="Risoto_de_Moqueca" ></asp:Label>
+          <br />
+                <asp:Label Text="Milanesa de Carne" runat="server" ID="Milanesa_de_Carne" ></asp:Label>
+          <br />
+                <asp:Label Text="Feijoada do Rango Brazuca" runat="server" ID="Feijoada_do_Rango" ></asp:Label>
+          <br />
+                <asp:Label Text="Estrogonofe de Frango Deli Express by Sodexo'" runat="server" ID="Estrogonofe_de_FrangoDeli" ></asp:Label>
+          <br />
+                <asp:Label Text="Bacalhau Zé do Pipo A Quinta do Marquês" runat="server" ID="Bacalhau_Ze" ></asp:Label>
+          <br />
+                <asp:Label Text="Almôndegas" runat="server" ID="Almondegas" ></asp:Label>
+          <br />
+                <asp:Label Text="Arroz de forno" runat="server" ID="Arroz_de_forno" ></asp:Label>
+          <br />
+                <asp:Label Text="Bolo de carne vegano" runat="server" ID="Bolo_de_carnevegano" ></asp:Label>
+          <br />
+                <asp:Label Text="Brócolis refogado com cenoura" runat="server" ID="Brocolis_refogado" ></asp:Label>
+          <br />
+                <asp:Label Text="Costelinha de porco na panela de pressão" runat="server" ID="Costelinha_de_porco" ></asp:Label>
+          <br />
+                <asp:Label Text="Espaguete integral ao alho e óleo" runat="server" ID="Espaguete_integral" ></asp:Label>
+          <br />
+                <asp:Label Text="Estrogonofe de berinjela" runat="server" ID="Estrogonofe_de_berinjela" ></asp:Label>
+          <br />
+                <asp:Label Text="Filé de frango com molho de mostarda" runat="server" ID="File_de_frango" ></asp:Label>
+          <br />
+                <asp:Label Text="Rocambole de carne moída" runat="server" ID="Rocambole_de_carne_moida" ></asp:Label>
+         </div>
+
+     <div class ="col-sm-20">
+
+                <asp:Label Text="Frozen Yogurt" runat="server" ID="Frozen_Yogurt" ></asp:Label>
+          <br />
+                <asp:Label Text="Suflê de Banana e Canela" runat="server" ID="Sufle_de_Banana" ></asp:Label>
+          <br />
+                <asp:Label Text="Mousse de Chocolate Light" runat="server" ID="Mousse_de_Chocolate" ></asp:Label>
+          <br />
+                <asp:Label Text="Petit Gâteau Tradicional" runat="server" ID="Petit_Gateau_Tradicional" ></asp:Label>
+          <br />
+                <asp:Label Text="Crème Brûlée" runat="server" ID="Creme_Brulee" ></asp:Label>
+          <br />
+                <asp:Label Text="Tiramisù" runat="server" ID="Tiramisu" ></asp:Label>
+          <br />
+                <asp:Label Text="Sagu" runat="server" ID="Sagu" ></asp:Label>
+          <br />
+                <asp:Label Text="Salada de frutas" runat="server" ID="Salada_de_frutas" ></asp:Label>
+          <br />
+                <asp:Label Text="Chico Balanceado" runat="server" ID="Chico_Balanceado" ></asp:Label>
+          <br />
+                <asp:Label Text="Canjica com leite condensado" runat="server" ID="Canjica_com_leitecondensado" ></asp:Label>
+          <br />
+                <asp:Label Text="Arroz Doce" runat="server" ID="Arroz_Doce" ></asp:Label>
+          <br />
+                <asp:Label Text="Brownie" runat="server" ID="Brownie" ></asp:Label>
+          <br />
+                <asp:Label Text="Mini Churros" runat="server" ID="Mini_Churros" ></asp:Label>
+          <br />
+                <asp:Label Text="Pavê de Cookies" runat="server" ID="Pave_de_Cookies" ></asp:Label>
+          <br />
+                <asp:Label Text="Cheesecake de Frutas Vermelhas" runat="server" ID="Cheesecake_de_Frutas_Vermelhas" ></asp:Label>
+          <br />
+                <asp:Label Text="Churros" runat="server" ID="Churros" ></asp:Label>
+
+
+     <div class ="col-sm-20">
+                <asp:Label Text="Suco de Laranja" runat="server" ID="Suco_de_Laranja" ></asp:Label>
+          <br />
+                <asp:Label Text="Suco de Uva" runat="server" ID="Suco_de_Uva" ></asp:Label>
+          <br />
+                <asp:Label Text="Suco de Morango" runat="server" ID="Suco_de_Morango" ></asp:Label>
+          <br />
+                <asp:Label Text="Suco de Goiaba" runat="server" ID="Suco_de_Goiaba" ></asp:Label>
+          <br />
+                <asp:Label Text="Suco de Maracujá" runat="server" ID="Suco_de_Maracujá" ></asp:Label>
+          <br />
+                <asp:Label Text="Suco de limão" runat="server" ID="Suco_de_limão" ></asp:Label>
+          <br />
+                <asp:Label Text="Suco de limão" runat="server" ID="Label1" ></asp:Label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <asp:TextBox runat="server" ID="txt_cadastro_pratos" class="txtbox"></asp:TextBox>
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
