@@ -86,8 +86,8 @@
                     ...
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <asp:Button ID="btnConcluir" runat="server" data-dimiss="modal" Text="Concluir" class="btn btn-primary" OnClick="btnConcluir_Click" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <asp:Button ID="btnConcluir" runat="server" data-dimiss="modal" Text="Aceitar" class="btn btn-primary" OnClick="btnConcluir_Click" />
                 </div>
             </div>
             <!-- /.modal-content -->

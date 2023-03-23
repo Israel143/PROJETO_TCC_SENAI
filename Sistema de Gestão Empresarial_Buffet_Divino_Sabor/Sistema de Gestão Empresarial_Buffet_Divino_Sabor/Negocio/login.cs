@@ -15,17 +15,16 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             conexao = new MySqlConnection(SiteMaster.ConnectionString);
         }
 
-        public bool Create(Classe.Login login)
+        public bool CreateCliente(Classe.cliente cliente)
         {
             try
             {
                
                 //Criar Cadastro
                 conexao.Open();
-                var comando = new MySqlCommand("INSERT INTO login (email, senha, usuario) VALUES (@email,MD5(@senha),@usuario)", conexao);
-                comando.Parameters.Add(new MySqlParameter("email", login.email));
-                comando.Parameters.Add(new MySqlParameter("senha", login.senha));
-                comando.Parameters.Add(new MySqlParameter("usuario", login.usuario));
+                var comando = new MySqlCommand("INSERT INTO cliente (email, senha) VALUES (@email,MD5(@senha))", conexao);
+                comando.Parameters.Add(new MySqlParameter("email", cliente.email));
+                comando.Parameters.Add(new MySqlParameter("senha", cliente.senha));
                 comando.ExecuteNonQuery();
                 conexao.Close();
                 return true;
@@ -36,19 +35,18 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
         }
 
-        public bool Read(Classe.Login login)
+        public bool ReadCliente(Classe.cliente cliente)
         {
             try
             {
                 conexao.Open();
-                var comando = new MySqlCommand($"SELECT id, senha, email,usuario FROM login WHERE email = @email AND senha = MD5(@senha) AND usuario= @usuario ", conexao);
-                comando.Parameters.Add(new MySqlParameter("email", login.email));
-                comando.Parameters.Add(new MySqlParameter("senha", login.senha));
-                comando.Parameters.Add(new MySqlParameter("usuario", login.usuario));
+                var comando = new MySqlCommand($"SELECT id, senha, email FROM cliente WHERE email = @email AND senha = MD5(@senha)", conexao);
+                comando.Parameters.Add(new MySqlParameter("email", cliente.email));
+                comando.Parameters.Add(new MySqlParameter("senha", cliente.senha));
                 var reader = comando.ExecuteReader();
                 if (reader.Read())
                 {
-                    login.id = reader.GetInt32("id");
+                    cliente.id = reader.GetInt32("id");
                     return true;
                     
                 }
@@ -68,5 +66,57 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
 
         }
+        public bool CreateEmpresa(Classe.empresa empresa)
+        {
+            try
+            {
+
+                //Criar Cadastro
+                conexao.Open();
+                var comando = new MySqlCommand("INSERT INTO empresa (email, senha) VALUES (@email,MD5(@senha))", conexao);
+                comando.Parameters.Add(new MySqlParameter("email", empresa.email));
+                comando.Parameters.Add(new MySqlParameter("senha", empresa.senha));
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool ReadEmpresa(Classe.empresa empresa)
+        {
+            try
+            {
+                conexao.Open();
+                var comando = new MySqlCommand($"SELECT id, senha, email FROM empresa WHERE email = @email AND senha = MD5(@senha)", conexao);
+                comando.Parameters.Add(new MySqlParameter("email", empresa.email));
+                comando.Parameters.Add(new MySqlParameter("senha", empresa.senha));
+                var reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    empresa.id = reader.GetInt32("id");
+                    return true;
+
+                }
+
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+        }
+
     }
 }
