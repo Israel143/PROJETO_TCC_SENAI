@@ -22,7 +22,7 @@
 
     <br />
     <p>
-        <b>Cláusula 1ª.</b> É objeto do presente contrato a prestação pela CONTRATADA à CONTRATANTE dos serviços de Buffet, em evento que se realizará na data de <b><%Data.ToString("dd/MM/yy hh:mm");%></b>, no salão de festas.
+        <b>Cláusula 1ª.</b> É objeto do presente contrato a prestação pela CONTRATADA à CONTRATANTE dos serviços de Buffet, em evento que se realizará na data de <b><%=Data%></b>, no salão de festas.
     <br />
     <b>EVENTO</b>
     <p>
@@ -86,7 +86,7 @@
     </p>
     <br />
     <p>
-        <b>Cláusula 11.</b> O serviço contratado no presente instrumento será remunerado pela quantia de (valor expresso), devendo ser pago em dinheiro ou cheque, até a data de <b><%=Data.ToString("dd/MM/yy hh:mm")%></b>.
+        <b>Cláusula 11.</b> O serviço contratado no presente instrumento será remunerado pela quantia de (valor expresso), devendo ser pago em dinheiro ou cheque, até a data de <b><%=Data%></b>.
     </p>
     <br />
     <p>
@@ -174,7 +174,7 @@
     <br />
     <p style="text-align:right">
     
-        Itajubá, <b><%=Data.ToString("dd/MM/yy hh:mm")%></b> e Ano <b><%=Data.Year%></b>
+        Itajubá, <b><%=Data%></b> e Ano <b><%=DataZ.Year%></b>
     </p>
     <br />
     <p>

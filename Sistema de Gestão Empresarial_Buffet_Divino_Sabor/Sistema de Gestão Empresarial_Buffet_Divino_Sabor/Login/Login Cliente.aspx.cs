@@ -18,18 +18,17 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Login
         //Login do Cliente
         protected void btn_Login_Cliente_Click(object sender, EventArgs e)
         {
-            var login = new Classe.Login();
-            login.email = txt_User.Text;
-            login.senha = txt_Pswd.Text;
-            login.usuario = "Cliente";
-            var user = new Negocio.login().Read(login);
+            var cliente = new Classe.cliente();
+            cliente.email = txt_User.Text;
+            cliente.senha = txt_Pswd.Text;
+            var user = new Negocio.login().ReadCliente(cliente);
 
 
             if (user == true)
             {
-                Session["clienteID"] = login.id.ToString();
+                Session["clienteID"] = cliente.id.ToString();
 
-                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + login.email + " no sistema", "/../Clientes/Menu.aspx");
+                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + cliente.email + " no sistema", "/../Clientes/Menu.aspx");
 
             }
 
@@ -43,11 +42,10 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Login
         //Criar Cadastro do Cliente
         protected void btn_Cadastro_Cliente_Click(object sender, EventArgs e)
         {
-            var login = new Classe.Login();
-            login.email = txt_User.Text;
-            login.senha = txt_Pswd.Text;
-            login.usuario = "Cliente";
-            var user = new Negocio.login().Create(login);
+            var cliente = new Classe.cliente();
+            cliente.email = txt_User.Text;
+            cliente.senha = txt_Pswd.Text;
+            var user = new Negocio.login().CreateCliente(cliente);
 
             SiteMaster.ExibirAlertRedirecionar(this, "Cliente Cadastrado com sucesso!", "Login Cliente.aspx");
             conexao.Close();
