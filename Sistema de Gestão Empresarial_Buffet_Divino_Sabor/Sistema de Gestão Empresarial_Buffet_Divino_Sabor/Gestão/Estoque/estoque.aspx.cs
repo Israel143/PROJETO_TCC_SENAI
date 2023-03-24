@@ -17,6 +17,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
 
         {
             conexao = new MySqlConnection(SiteMaster.ConnectionString);
+            if (Session["empresaID"] == null || string.IsNullOrEmpty(Session["empresaID"].ToString()))
+            {
+                // redireciona para a página de login
+                Response.Redirect("~/Login/Login");
+            }
             if (IsPostBack)
             {
                

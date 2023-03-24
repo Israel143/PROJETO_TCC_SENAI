@@ -20,7 +20,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes
             if (Session["clienteID"] == null || string.IsNullOrEmpty(Session["clienteID"].ToString()))
             {
                 // redireciona para a página de login
-                Response.Redirect("PaginaDeLogin.aspx");
+                Response.Redirect("../Login/Login%20Cliente");
             }
     
             if (!IsPostBack)
