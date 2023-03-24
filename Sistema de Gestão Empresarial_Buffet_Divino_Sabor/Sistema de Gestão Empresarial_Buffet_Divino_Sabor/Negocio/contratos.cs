@@ -51,5 +51,30 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
             return tabela;
         }
+
+        public bool Create(string id)
+        {
+            try
+            {
+                DateTime dataAtual = DateTime.Today;
+
+                conexao.Open();
+                var comando = new MySqlCommand("INSERT INTO contratos (id_pedido, data_inicio, data_fim) VALUES (@id_pedido, @data_inicio, @data_fim)", conexao);
+                comando.Parameters.Add(new MySqlParameter("id_pedido", id));
+                comando.Parameters.Add(new MySqlParameter("data_inicio", dataAtual));
+                comando.Parameters.Add(new MySqlParameter("data_fim", dataAtual));
+
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }  

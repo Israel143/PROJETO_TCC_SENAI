@@ -45,5 +45,22 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
               );
         }
 
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            if (Session["clienteID"] != null)
+            {
+                Session["clienteID"] = null;
+                Response.Redirect(Request.Url.AbsoluteUri);
+            }
+            else if (Session["empresaID"]!=null)
+            {
+                Session["empresaID"] = null;
+                Response.Redirect(Request.Url.AbsoluteUri);
+            }
+            else
+            {
+                //VISIBLE=FALSE;
+            }
+        }
     }
 }

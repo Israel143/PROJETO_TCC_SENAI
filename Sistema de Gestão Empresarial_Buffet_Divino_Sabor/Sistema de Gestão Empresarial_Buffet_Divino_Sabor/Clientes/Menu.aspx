@@ -91,9 +91,8 @@
                 </div>
             </div>
             <!-- /.modal-content -->
-            TESTANDO!!!!!!!!
+            <!-- /.modal-dialog -->
         </div>
-        <!-- /.modal-dialog -->
+        <!-- /.MODAL -->
     </div>
-    <!-- /.MODAL -->
 </asp:Content>

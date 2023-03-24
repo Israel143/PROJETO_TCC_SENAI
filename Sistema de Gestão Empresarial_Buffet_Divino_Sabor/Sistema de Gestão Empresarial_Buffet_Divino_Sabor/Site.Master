@@ -48,11 +48,8 @@
         <div class="header" id="header">
             <div class="logo_header"></div>
             <div class="navigation_header">
-                <div id="profile">
-                    <a style="color:white" href="#"><i class="gg-user-list"></i></a>
-                </div>
-                <div id="notification" class="notification">
-                    <a style="color:white" href="#"><i class="gg-bell"></i></a>
+                <div id="logout">
+                    <asp:Button runat="server" ID="btnlogout" OnClick="btnlogout_Click" Text="Sair" />
                 </div>
                 <div id="open_side">
                     <span style="font-size: 30px; cursor: pointer; color:#ffffff" onclick="openNav()">&#9776;</span>

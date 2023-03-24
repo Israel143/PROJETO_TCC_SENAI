@@ -16,9 +16,14 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
         protected void Page_Load(object sender, EventArgs e)
         {
             conn = new MySqlConnection(SiteMaster.ConnectionString);
+            if (Session["empresaID"] == null || string.IsNullOrEmpty(Session["empresaID"].ToString()))
+            {
+                // redireciona para a página de login
+                Response.Redirect("~/Login/Login");
+            }
 
-                //Carrega os pedidos novos
-                repeaterOrders.DataSource = new Negocio.pedidos().ReadNovos();
+            //Carrega os pedidos novos
+            repeaterOrders.DataSource = new Negocio.pedidos().ReadNovos();
                 repeaterOrders.DataBind();
 
                 //Carrega os pedidos em andamento
@@ -59,14 +64,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
 
         protected void btnFinish_Click(object sender, EventArgs e)
         {
-            var pedido = new Classe.pedidos();
 
             Button btnFinish = (Button)sender;
-            pedido.id = int.Parse(btnFinish.CommandArgument);
-
-            var pedidos = new Negocio.pedidos();
-            pedidos.Finish(pedido);
-            Response.Redirect(Request.Url.AbsoluteUri);
+            Session["pedidoID"] = int.Parse(btnFinish.CommandArgument);
+            
+            Response.Redirect($"../Contratos/ConfirmaContrato.aspx?");
         }
     }
 }
