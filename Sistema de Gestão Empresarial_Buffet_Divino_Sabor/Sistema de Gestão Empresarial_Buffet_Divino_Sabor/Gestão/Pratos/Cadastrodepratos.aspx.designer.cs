@@ -13,15 +13,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
     public partial class Cadastrodepratos {
         
         /// <summary>
-        /// Controle entradas.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label entradas;
-        
-        /// <summary>
         /// Controle Alcatra_ao_molho_roti.
         /// </summary>
         /// <remarks>
@@ -40,22 +31,22 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Caprese_no_palito;
         
         /// <summary>
-        /// Controle Canapés_de_salame.
+        /// Controle Canapes_de_salame.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Canapés_de_salame;
+        protected global::System.Web.UI.WebControls.Label Canapes_de_salame;
         
         /// <summary>
-        /// Controle Patê_de_azeitona_com_torradinhas.
+        /// Controle Pate_de_azeitona_com_torradinhas.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Patê_de_azeitona_com_torradinhas;
+        protected global::System.Web.UI.WebControls.Label Pate_de_azeitona_com_torradinhas;
         
         /// <summary>
         /// Controle Espetinho_de_carambola.
@@ -67,13 +58,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Espetinho_de_carambola;
         
         /// <summary>
-        /// Controle Tábua_de_queijos.
+        /// Controle Tabua_de_queijos.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Tábua_de_queijos;
+        protected global::System.Web.UI.WebControls.Label Tabua_de_queijos;
         
         /// <summary>
         /// Controle Carpaccio.
@@ -94,13 +85,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Antepasto_de_berinjela;
         
         /// <summary>
-        /// Controle Ceviche_clássico.
+        /// Controle Ceviche_classico.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Ceviche_clássico;
+        protected global::System.Web.UI.WebControls.Label Ceviche_classico;
         
         /// <summary>
         /// Controle Polenta_grelhada.
@@ -155,15 +146,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Confit_tomate;
-        
-        /// <summary>
-        /// Controle salada.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label salada;
         
         /// <summary>
         /// Controle Salada_de_feijao_branco.
@@ -310,15 +292,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Salada_tropical;
         
         /// <summary>
-        /// Controle principais.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label principais;
-        
-        /// <summary>
         /// Controle Contra_File_Grelhado.
         /// </summary>
         /// <remarks>
@@ -328,22 +301,22 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Contra_File_Grelhado;
         
         /// <summary>
-        /// Controle Espaguete_Formaggio_Quatro_Queijos.
+        /// Controle Espaguete_Formaggio.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Espaguete_Formaggio_Quatro_Queijos;
+        protected global::System.Web.UI.WebControls.Label Espaguete_Formaggio;
         
         /// <summary>
-        /// Controle Risoto_de_Moqueca_Frutos_do_Mar.
+        /// Controle Risoto_de_Moqueca.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Risoto_de_Moqueca_Frutos_do_Mar;
+        protected global::System.Web.UI.WebControls.Label Risoto_de_Moqueca;
         
         /// <summary>
         /// Controle Milanesa_de_Carne.
@@ -355,13 +328,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Milanesa_de_Carne;
         
         /// <summary>
-        /// Controle Feijoada_do_Rango_Brazuca.
+        /// Controle Feijoada_do_Rango.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Feijoada_do_Rango_Brazuca;
+        protected global::System.Web.UI.WebControls.Label Feijoada_do_Rango;
         
         /// <summary>
         /// Controle Estrogonofe_de_FrangoDeli.
@@ -409,13 +382,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Bolo_de_carnevegano;
         
         /// <summary>
-        /// Controle Brocolis_refogado_com_cenoura.
+        /// Controle Brocolis_refogado.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Brocolis_refogado_com_cenoura;
+        protected global::System.Web.UI.WebControls.Label Brocolis_refogado;
         
         /// <summary>
         /// Controle Costelinha_de_porco.
@@ -472,22 +445,22 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Frozen_Yogurt;
         
         /// <summary>
-        /// Controle Sufle_de_Banana_e_Canela.
+        /// Controle Sufle_de_Banana.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Sufle_de_Banana_e_Canela;
+        protected global::System.Web.UI.WebControls.Label Sufle_de_Banana;
         
         /// <summary>
-        /// Controle Mousse_de_Chocolate_Light.
+        /// Controle Mousse_de_Chocolate.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Mousse_de_Chocolate_Light;
+        protected global::System.Web.UI.WebControls.Label Mousse_de_Chocolate;
         
         /// <summary>
         /// Controle Petit_Gateau_Tradicional.
@@ -544,13 +517,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Chico_Balanceado;
         
         /// <summary>
-        /// Controle Canjica_com_leite_condensado.
+        /// Controle Canjica_com_leitecondensado.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Canjica_com_leite_condensado;
+        protected global::System.Web.UI.WebControls.Label Canjica_com_leitecondensado;
         
         /// <summary>
         /// Controle Arroz_Doce.
@@ -605,6 +578,150 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Churros;
+        
+        /// <summary>
+        /// Controle Suco_de_Laranja.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_Laranja;
+        
+        /// <summary>
+        /// Controle Suco_de_Uva.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_Uva;
+        
+        /// <summary>
+        /// Controle Suco_de_Morango.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_Morango;
+        
+        /// <summary>
+        /// Controle Suco_de_Goiaba.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_Goiaba;
+        
+        /// <summary>
+        /// Controle Suco_de_Maracuja.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_Maracuja;
+        
+        /// <summary>
+        /// Controle Suco_de_limao.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_limao;
+        
+        /// <summary>
+        /// Controle Suco_de_manga.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_manga;
+        
+        /// <summary>
+        /// Controle Suco_de_acerola.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_acerola;
+        
+        /// <summary>
+        /// Controle Suco_de_abacaxi.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_abacaxi;
+        
+        /// <summary>
+        /// Controle Suco_de_hortela.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Suco_de_hortela;
+        
+        /// <summary>
+        /// Controle Fanta_Uva.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Fanta_Uva;
+        
+        /// <summary>
+        /// Controle Fanta_Laranja.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Fanta_Laranja;
+        
+        /// <summary>
+        /// Controle Fanta_Misterio.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Fanta_Misterio;
+        
+        /// <summary>
+        /// Controle Sprite.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Sprite;
+        
+        /// <summary>
+        /// Controle Coca_Cola.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Coca_Cola;
+        
+        /// <summary>
+        /// Controle Guarana.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Guarana;
         
         /// <summary>
         /// Controle txt_cadastro_pratos.
