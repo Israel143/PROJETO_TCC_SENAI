@@ -17,6 +17,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
         protected string Contato_Contratada;
         protected string CNPJ_Contratada;
         protected string Data;
+        protected string id;
         protected DateTime DataZ;
         
         
@@ -34,21 +35,25 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
             }
             if (!IsPostBack)
             {
+                if (Session["pedidoID"] != null)
+                {
+                    id = Session["pedidoID"].ToString();
+                }
 
                 {
 
 
                     // Query SQL para buscar as informações
-                    string query = $@"SELECT pedidos.id_cliente, pedidos.data, pedidos.id_menu, empresa.endereco ,empresa.cnpj, cliente.nome AS nome_cliente, cliente.contato AS contato_cliente, cliente.email AS email_cliente, empresa.nome AS nome_empresa, empresa.cnpj, empresa.contato AS contato_empresa, empresa.email AS email_empresa
+                    string query = $@"SELECT pedidos.id_cliente, pedidos.data, pedidos.id_menu, empresa.endereco ,empresa.cnpj, cliente.nome AS nome_cliente, cliente.contato AS contato_cliente, cliente.email AS email_cliente, empresa.nome AS nome_empresa, empresa.cnpj, empresa.contato AS contato_empresa, empresa.email AS email_empresa, pedidos.id_menu
                                    FROM contratos
-                                   INNER JOIN pedidos ON contratos.id_pedido = pedidos.id_menu
+                                   INNER JOIN pedidos ON contratos.id_pedido = pedidos.id
                                    INNER JOIN cliente ON pedidos.id_cliente = cliente.id
-                                   INNER JOIN empresa ON contratos.id_pedido = empresa.id
-                                   WHERE contratos.id_pedido = @id_pedido;";
+                                   INNER JOIN empresa ON pedidos.id_empresa = empresa.id
+                                   WHERE contratos.id_pedido = @id_pedidos;";
 
                     // Criação do objeto MySqlCommand para executar a query SQL
                     MySqlCommand commando = new MySqlCommand(query, conexao);
-                    commando.Parameters.AddWithValue("@id_pedido",1);
+                    commando.Parameters.AddWithValue("@id_pedido",id);
                     
                     try
                     {

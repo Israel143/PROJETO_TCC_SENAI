@@ -22,6 +22,8 @@
                                     </div>
                                 </div>
                                 <button class="btnVerMais btn" data-id="<%# Eval("Id") %>" type="button">Ver Mais</button>
+                                <asp:Button runat="server" CssClass="btn" ID="btnCon" ClientIDMode="static" Text="Contrato" OnClick="btnCon_Click" CommandArgument=<%# Eval("Id") %>/>
+
                                 <div class="InfoAdd InfoBox" id="InfoAdd<%# Eval("Id") %>" style="display: none;">
                                     <div class="row" style="padding-left: 10px">
                                         <p><strong>Pedido</strong></p>
