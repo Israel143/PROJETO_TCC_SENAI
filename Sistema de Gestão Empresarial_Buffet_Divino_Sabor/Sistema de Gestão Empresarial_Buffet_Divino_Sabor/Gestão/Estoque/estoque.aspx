@@ -40,7 +40,7 @@
                     <asp:TextBox runat="server" ID="Txt_Quantidade" class="txtbox"></asp:TextBox>
                 </div>
             </div>
-            <div id="row_btn" style="text-align:center">
+            <div id="row_btn" style="text-align: center">
                 <div class="row">
                     <div class="div-md-6">
                         <div class="row">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="row">
                             <asp:TextBox runat="server" ID="Txt_Seguimento" class="txtbox"></asp:TextBox>
-                        </div>   
+                        </div>
                     </div>
                     <div class="div-md-6">
                         <asp:Button runat="server" ID="Btn_inserir" OnClick="Btn_inserir_Click" class="btn" Text="Inserir" />
