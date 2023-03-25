@@ -13,6 +13,15 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
     public partial class Cadastrodepratos {
         
         /// <summary>
+        /// Controle ddlescolhas.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlescolhas;
+        
+        /// <summary>
         /// Controle Alcatra_ao_molho_roti.
         /// </summary>
         /// <remarks>
@@ -724,12 +733,21 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Menu {
         protected global::System.Web.UI.WebControls.Label Guarana;
         
         /// <summary>
-        /// Controle txt_cadastro_pratos.
+        /// Controle txtcadastrar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_cadastro_pratos;
+        protected global::System.Web.UI.WebControls.TextBox txtcadastrar;
+        
+        /// <summary>
+        /// Controle btnCadastrarPrato.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCadastrarPrato;
     }
 }
