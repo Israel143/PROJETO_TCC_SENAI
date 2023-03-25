@@ -40,11 +40,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                 }
 
                 // Query SQL para buscar as informações
-                string query = $@"SELECT pedidos.id_cliente, pedidos.data, pedidos.id_menu, empresa.endereco ,empresa.cnpj, cliente.nome AS nome_cliente, cliente.contato AS contato_cliente, cliente.email AS email_cliente, empresa.nome AS nome_empresa, empresa.cnpj, empresa.contato AS contato_empresa, empresa.email AS email_empresa
+                string query = $@"SELECT pedidos.id_cliente, pedidos.data, pedidos.id_menu, empresa.endereco ,empresa.cnpj, cliente.nome AS nome_cliente, cliente.contato AS contato_cliente, cliente.email AS email_cliente, empresa.nome AS nome_empresa, empresa.cnpj, empresa.contato AS contato_empresa, empresa.email AS email_empresa, pedidos.id_menu
                                    FROM contratos
-                                   INNER JOIN pedidos ON contratos.id_pedido = pedidos.id_menu
+                                   INNER JOIN pedidos ON contratos.id_pedido = pedidos.id
                                    INNER JOIN cliente ON pedidos.id_cliente = cliente.id
-                                   INNER JOIN empresa ON contratos.id_pedido = empresa.id
+                                   INNER JOIN empresa ON pedidos.id_empresa = empresa.id
                                    WHERE contratos.id_pedido = @id_pedido;";
 
                 // Criação do objeto MySqlCommand para executar a query SQL

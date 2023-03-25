@@ -70,5 +70,14 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
             
             Response.Redirect($"../Contratos/ConfirmaContrato.aspx?");
         }
+
+        protected void btnCon_Click(object sender, EventArgs e)
+        {
+            Button btnCon = (Button)sender;
+            Session["pedidoID"] = int.Parse(btnCon.CommandArgument);
+
+            Response.Redirect($"../Contratos/ConfirmaContrato.aspx");
+
+        }
     }
 }
