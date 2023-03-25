@@ -29,3 +29,16 @@
     right: 0px;
     position: absolute;
 }
+
+.btn-pp {
+    /*text-align:center; position:absolute; bottom:70px; left:20px; color:#942828; font-family: serif;*/
+    width: 150px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    font-family:serif;
+}

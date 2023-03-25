@@ -12,10 +12,9 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
         public static string ConnectionString = "Server=MYSQL8003.site4now.net;Database=db_a95df4_gevent;Uid=a95df4_gevent;Pwd=wac26841379";
         public static string KeyAES = "kjbflkajsb";
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
 
         }
         public static void ExibirAlert(Gestão.Login login, Page page, string mensagem)
@@ -61,6 +60,11 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
             {
                 //VISIBLE=FALSE;
             }
+        }
+
+        protected void btnContato_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Suporte/Contato.aspx");
         }
     }
 }
