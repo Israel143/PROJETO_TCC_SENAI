@@ -71,9 +71,6 @@
         <div class="col-md-4">
             <p><a href="Login/Login Cliente.aspx" class="my-btn-lg">Cadastrar Cliente</a></p>
         </div>
-        <div class="col-md-4">
-            <p><a href="Suporte/Contato.aspx" class="my-btn-lg">Entre em contato</a></p>
-        </div>
         </div>      
     </div>
 
