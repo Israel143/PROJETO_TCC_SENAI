@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="login.css"/>
+    <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
 
     <div class="col-sm-3"></div>
     <div class="col-sm-6">

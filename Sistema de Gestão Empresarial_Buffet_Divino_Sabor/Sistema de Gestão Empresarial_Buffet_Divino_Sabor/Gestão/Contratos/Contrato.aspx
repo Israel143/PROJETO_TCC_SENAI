@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="../Busca de Contratos/EstiloContratos.css" />
     <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
     <div></div>
     <p>
 <b>IDENTIFICAÇÃO DAS PARTES CONTRATANTES</b>

@@ -167,6 +167,7 @@
     <Content Include="Gestão\Funcionarios\JavaScript.js" />
     <Content Include="imgs\background.png" />
     <Content Include="Gestão\Pratos\Cadastrodepratos.aspx" />
+    <Content Include="Login\Cliente.js" />
     <Content Include="Login\Login Cliente.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\login.css" />
