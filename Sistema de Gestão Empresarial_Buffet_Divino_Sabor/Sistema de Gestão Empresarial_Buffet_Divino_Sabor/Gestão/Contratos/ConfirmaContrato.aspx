@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" type="text/css" href="EstiloContrato.css" />
+    <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
 
     <div id="conteudo">
         <div id="contrato" class="caixa-1">
