@@ -75,10 +75,25 @@
     margin: 10px;
 }
 
+.txt-box-md {
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border-width: thin;
+    margin: 10px;
+}
+
 .lbl-box {
     font-family: serif;
-    font-size: 20px;
+    font-size: 20px; 
     font-weight:600;
+    color: white;
+}
+
+.lbl-box-md {
+    font-family: serif;
+    font-size: 14px;
+    font-weight: 500;
     color: white;
 }
 

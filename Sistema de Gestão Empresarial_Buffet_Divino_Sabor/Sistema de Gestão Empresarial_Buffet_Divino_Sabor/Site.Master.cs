@@ -64,7 +64,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor
 
         protected void btnContato_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Suporte/Contato.aspx");
+            Response.Redirect("~/Suporte/Contato.aspx");
         }
 
         protected void BtnDefault_Click(object sender, EventArgs e)
