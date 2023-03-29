@@ -42,6 +42,31 @@
     font-family:serif;
 }
 
+.btn-p {
+    width: 150px;
+    height:30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    font-family: serif;
+}
+
+.btn-ppp {
+    width: 100px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    font-family: serif;
+}
+
 .my-btn-lg {
     background-color: #942828;
     text-align: center;

@@ -40,17 +40,17 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Login
             return;
         }
         //Criar Cadastro do Cliente
-        protected void btn_Cadastro_Cliente_Click(object sender, EventArgs e)
+        protected void btnCadastrar_Click(object sender, EventArgs e)
         {
             var cliente = new Classe.cliente();
-            cliente.email = txt_User.Text;
-            cliente.senha = txt_Pswd.Text;
+            cliente.nome = NomeCad.Text;
+            cliente.contato = ContatoCad.Text;
+            cliente.email = EmailCad.Text;
+            cliente.senha = SenhaCad.Text;
             var user = new Negocio.login().CreateCliente(cliente);
 
             SiteMaster.ExibirAlertRedirecionar(this, "Cliente Cadastrado com sucesso!", "Login Cliente.aspx");
             conexao.Close();
-
-
         }
     }
 }

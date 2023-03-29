@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Clientes\Clientes.css" />
     <Content Include="Clientes\JavaScript.js" />
     <Content Include="Clientes\Menu.aspx" />
     <Content Include="Contact.aspx" />
