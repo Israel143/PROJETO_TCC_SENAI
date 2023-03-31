@@ -40,13 +40,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
         protected global::System.Web.UI.WebControls.Label lbl_fornecedor;
         
         /// <summary>
-        /// Controle Txt_Id_Fornecedor.
+        /// Controle ddlFornecedores.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txt_Id_Fornecedor;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFornecedores;
         
         /// <summary>
         /// Controle lbl_nome_produto.
@@ -166,12 +166,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
         protected global::System.Web.UI.WebControls.Button Btn_pesquisar;
         
         /// <summary>
-        /// Controle GridView1.
+        /// Controle rptEstoque.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Repeater rptEstoque;
     }
 }

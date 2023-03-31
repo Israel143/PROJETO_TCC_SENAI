@@ -57,13 +57,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Funcionario
         // Pesquisa de Funcionarios
         protected void btnPesquisa_Click(object sender, EventArgs e)
         {
-            var Lista =  new Negocio.funcionarios().Read(txtPesquisa.Text);
-            
-            GridView1.DataSource = Lista;
-            GridView1.DataBind();
-                
-        
-            
+            var Lista = new Negocio.funcionarios().Read(txtPesquisa.Text);
+
+            rptFuncionarios.DataSource = new Negocio.funcionarios().Read1(txtPesquisa.Text);
+            rptFuncionarios.DataBind();
+
+
+
 
         }
     }

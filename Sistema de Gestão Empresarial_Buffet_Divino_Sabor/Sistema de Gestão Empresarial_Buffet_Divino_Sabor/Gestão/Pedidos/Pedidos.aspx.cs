@@ -23,7 +23,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
             }
 
             //Carrega os pedidos novos
-            repeaterOrders.DataSource = new Negocio.pedidos().ReadNovos();
+                repeaterOrders.DataSource = new Negocio.pedidos().ReadNovos();
                 repeaterOrders.DataBind();
 
                 //Carrega os pedidos em andamento

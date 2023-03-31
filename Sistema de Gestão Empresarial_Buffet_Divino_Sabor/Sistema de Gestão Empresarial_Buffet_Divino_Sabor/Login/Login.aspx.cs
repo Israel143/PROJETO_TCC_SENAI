@@ -47,8 +47,12 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
         {
             //Criar Cadastro
             var empresa = new Classe.empresa();
-            empresa.email = txt_User.Text;
-            empresa.senha = txt_Pswd.Text;
+            empresa.email = EmailCad.Text;
+            empresa.senha = SenhaCad.Text;
+            empresa.cnpj = CNPJ.Text;
+            empresa.nome = NomeCad.Text;
+            empresa.contato = ContatoCad.Text;
+            empresa.endereco = EnderecoCad.Text;
             var user = new Negocio.login().CreateEmpresa(empresa);
 
             SiteMaster.ExibirAlertRedirecionar(this, "Usuário Cadastrado com sucesso!", "Login.aspx");

@@ -66,17 +66,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Clientes
             }
             Session[categoria] = dt;
 
-            // Desativar os botões de escolha para esta categoria
-            foreach (RepeaterItem item in RepeatPratos.Items)
-            {
-                var button = item.FindControl("BtnSelect") as Button;
-                var prato = new Negocio.escolha().ReadPratosSelecionados(pratoId).Rows[0];
-                var categoriaPrato = prato["categoria"].ToString();
-                if (categoriaPrato == categoria)
-                {
-                    button.Enabled = false;
-                }
-            }
 
             // Adicionar a escolha à sessão e atualizar o contador da categoria
             // criar uma nova tabela clonando a estrutura da tabela original (dt)

@@ -17,9 +17,26 @@
 }
 
 /*ELEMENTOS***************************/
-.txtbox{
-    border-radius:20px;
+exb-box{
+
 }
+.title-1 {
+    color: #942828;
+    font-family: serif;
+    font-weight: 600;
+}
+.txtbox {
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    border:none;
+    width:200px;
+    height:30px;
+}
+
+.lbl-sm{
+
+}
+
 
 .sidebox {
     background-color: rgba(148, 40, 40, 0.67);
@@ -28,6 +45,32 @@
     height: 750px;
     position: fixed;
     right: 0px;
+}
+
+.btn-w-p {
+    width: 150px;
+    height: 30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: serif;
+}
+
+.btn-v-p {
+    width: 150px;
+    height: 30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #942828;
+    font-family: serif;
 }
 
 .btn-pp {
@@ -82,3 +125,4 @@
     display: block;
     border:none;
 }
+

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using MySqlConnector;
@@ -46,6 +47,30 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
 
             return true;
 
+        }
+
+        public DataTable Read1(string Funcionarios)
+        {
+            //cria uma tabela dt
+            DataTable dt = new DataTable();
+
+            //abre a conexão
+            conexao.Open();
+            //comando MySQL para selecionar os dados
+            string query = "SELECT id,nome,cpf,endereco,telefone,salario,cargo,turno FROM funcionarios WHERE nome  like '%" + Funcionarios + "%'";
+            using (MySqlCommand command = new MySqlCommand(query, conexao))
+            {
+                //inclui os dados do banco de dados dentro de uma tabela 
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+                {
+                    //encaixa os dados do adapter em uma tabela dt
+                    adapter.Fill(dt);
+                }
+                //fecha a conexão
+                conexao.Close();
+            }
+            //retorna o valor da datatable
+            return dt;
         }
 
         public List<Classe.funcionarios> Read(string Funcionarios)

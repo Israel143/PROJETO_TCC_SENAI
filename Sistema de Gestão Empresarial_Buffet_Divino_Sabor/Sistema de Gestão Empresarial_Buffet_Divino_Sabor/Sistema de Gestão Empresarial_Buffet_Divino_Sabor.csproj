@@ -155,6 +155,7 @@
     <Content Include="Gestão\Contratos\Contrato.aspx" />
     <Content Include="Gestão\Contratos\EstiloContrato.css" />
     <Content Include="Gestão\Contratos\EstiloContratos.css" />
+    <Content Include="Gestão\Contratos\print.css" />
     <Content Include="Gestão\Dashboard\Dashboard.css" />
     <Content Include="Gestão\Estoque\estoque.aspx" />
     <Content Include="Gestão\Contratos\Busca de Contratos.aspx" />
@@ -245,6 +246,7 @@
     <Compile Include="Classe\pedidos.cs" />
     <Compile Include="Clientes\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Clientes\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>

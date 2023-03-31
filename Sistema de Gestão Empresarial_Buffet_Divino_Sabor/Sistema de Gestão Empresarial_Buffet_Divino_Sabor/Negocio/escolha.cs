@@ -15,6 +15,27 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             connection = new MySqlConnection(SiteMaster.ConnectionString);
         }
 
+        public bool create(Classe.escolha escolha)
+        {
+            try
+            {
+
+                //Criar Cadastro
+                connection.Open();
+                var comando = new MySqlCommand("INSERT INTO escolha (nome, categoria, preco) VALUES (@nome,@categoria,@preco)", connection);
+                comando.Parameters.Add(new MySqlParameter("nome", escolha.nome));
+                comando.Parameters.Add(new MySqlParameter("categoria", escolha.categoria));
+                comando.Parameters.Add(new MySqlParameter("preco", escolha.preco));
+                comando.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
         public DataTable ReadPratos(Classe.escolha escolha)
         {
             //cria uma tabela dt
