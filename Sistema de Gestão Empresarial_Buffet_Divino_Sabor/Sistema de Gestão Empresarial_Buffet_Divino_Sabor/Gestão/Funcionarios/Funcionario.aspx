@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <header>
         <link rel="stylesheet" type="text/css" href="funcionarioestilo.css" />
+        <link rel="stylesheet" type="text/css" href="../../CSS PADRÃO/EstiloPadrao.css" />
         <script src="JavaScript.js"></script>
         <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
     </header>
@@ -17,7 +18,7 @@
             <div id="funcionarios" style="display: block">
                 <div id="create" class="col-md-5">
                     <div class="infobox">
-                        <div id="infos1" class="row">
+                        <div id="infos1" class="row" style="font-family: serif; color: #942828;">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
@@ -55,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="infos2" class="row" style="margin-top: 20px">
+                        <div id="infos2" class="row" style="font-family: serif; color: #942828; margin-top: 20px">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
@@ -118,34 +119,52 @@
                         <div class="col-sm-4" style="padding: 0">
                             <br />
                             <br />
-                            <asp:Button runat="server" ID="btnCadastrar" OnClick="btnCadastrar_Click" CssClass="btn" Text="Cadastrar" />
+                            <asp:Button runat="server" ID="btnCadastrar" OnClick="btnCadastrar_Click" CssClass="my-btn-lg" Text="Cadastrar" />
                         </div>
                         <div class="col-sm-4"></div>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-1"></div>
                 <div id="read" class="col-md-5">
-                    <div id="srcBox" style="margin-top: 20px; margin-bottom:20px" class="row">
+                    <div id="srcBox" style="margin-top: 20px; margin-bottom: 20px" class="row">
                         <div class="col-sm-6">
                             <asp:TextBox runat="server" ID="txtPesquisa" CssClass="txtbox"></asp:TextBox>
                         </div>
                         <div class="col-sm-6">
-                            <asp:Button runat="server" ID="btnPesquisa" OnClick="btnPesquisa_Click" CssClass="btn" Text="Pesquisar" />
+                            <asp:Button runat="server" ID="btnPesquisa" OnClick="btnPesquisa_Click" CssClass="btn-p" Text="Pesquisar" />
                         </div>
                     </div>
                     <div id="resultBox" class="row">
-                        <asp:GridView ID="GridView1" style="background-color: rgba(71, 0, 0, 0.45); padding:10px; color:white; width:60%; margin-left:0; border:thin;" runat="server" CssClass="Grid" AutoGenerateColumns="false">
-                            <Columns>
-                                <asp:BoundField DataField="id" HeaderText="ID" />
-                                <asp:BoundField DataField="nome" HeaderText="Nome" />
-                                <asp:BoundField DataField="cpf" HeaderText="CPF" />
-                                <asp:BoundField DataField="endereco" HeaderText="Endereço" />
-                                <asp:BoundField DataField="telefone" HeaderText="Telefone" />
-                                <asp:BoundField DataField="salario" HeaderText="Salário" />
-                                <asp:BoundField DataField="cargo" HeaderText="Cargo" />
-                                <asp:BoundField DataField="turno" HeaderText="Turno" />
-                            </Columns>
-                        </asp:GridView>
+                        <asp:Repeater runat="server" ID="rptFuncionarios">
+                            <ItemTemplate>
+                                <div class="row" style="color: #942828; font-family: serif; margin-left: 100px; width:250px">
+                                    <div class="row">
+                                        ID: <%# Eval("id") %>
+                                    </div>
+                                    <div class="row">
+                                        NOME: <%# Eval("nome") %>
+                                    </div>
+                                    <div class="row">
+                                        CPF: <%# Eval("cpf") %>
+                                    </div>
+                                    <div class="row">
+                                        ENDEREÇO: <%# Eval("endereco") %>
+                                    </div>
+                                    <div class="row">
+                                        TELEFONE: <%# Eval("telefone") %>
+                                    </div>
+                                    <div class="row">
+                                        SALÁRIO: <%# Eval("salario") %>
+                                    </div>
+                                    <div class="row">
+                                        CARGO: <%# Eval("cargo") %>
+                                    </div>
+                                    <div class="row">
+                                        TURNO: <%# Eval("turno") %>
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>

@@ -13,13 +13,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
     public partial class Login {
         
         /// <summary>
-        /// Controle lbl_User.
+        /// Controle LblEmail.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_User;
+        protected global::System.Web.UI.WebControls.Label LblEmail;
         
         /// <summary>
         /// Controle txt_User.
@@ -31,13 +31,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
         protected global::System.Web.UI.WebControls.TextBox txt_User;
         
         /// <summary>
-        /// Controle lbl_Pswd.
+        /// Controle Label2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Pswd;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// Controle txt_Pswd.
@@ -56,6 +56,60 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_login;
+        
+        /// <summary>
+        /// Controle NomeCad.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NomeCad;
+        
+        /// <summary>
+        /// Controle CNPJ.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CNPJ;
+        
+        /// <summary>
+        /// Controle ContatoCad.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ContatoCad;
+        
+        /// <summary>
+        /// Controle EnderecoCad.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EnderecoCad;
+        
+        /// <summary>
+        /// Controle EmailCad.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EmailCad;
+        
+        /// <summary>
+        /// Controle SenhaCad.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SenhaCad;
         
         /// <summary>
         /// Controle btn_cadastro.

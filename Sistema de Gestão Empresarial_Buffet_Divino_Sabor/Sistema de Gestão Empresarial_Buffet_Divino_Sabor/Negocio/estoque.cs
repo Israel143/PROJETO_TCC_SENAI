@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using MySqlConnector;
@@ -48,6 +49,30 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             }
         }
 
+        public DataTable Read1(string estoque)
+        {
+            //cria uma tabela dt
+            DataTable dt = new DataTable();
+
+            //abre a conexão
+            conexao.Open();
+            //comando MySQL para selecionar os dados
+            string query = $"SELECT id,codigo_de_barra,id_fornecedor,nome_produto,validade,preco_unidade,quantidade,seguimento FROM estoque WHERE id={estoque}";
+            using (MySqlCommand command = new MySqlCommand(query, conexao))
+            {
+                //inclui os dados do banco de dados dentro de uma tabela 
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+                {
+                    //encaixa os dados do adapter em uma tabela dt
+                    adapter.Fill(dt);
+                }
+                //fecha a conexão
+                conexao.Close();
+            }
+            //retorna o valor da datatable
+            return dt;
+        }
+
         public List<Classe.estoque> Read(string estoque)
         {
             var Lista = new List<Classe.estoque>();
@@ -62,7 +87,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
                 {
                     var novo_estoque = new Classe.estoque();
                     novo_estoque.id = reader.GetInt32("id");
-                    novo_estoque.codigo_de_barra = reader.GetInt32("codigo_de_barra");
+                    novo_estoque.codigo_de_barra = reader.GetString("codigo_de_barra");
                     novo_estoque.id_fornecedor = reader.GetInt32("id_fornecedor");
                     novo_estoque.nome_produto = reader.GetString("nome_produto");
                     novo_estoque.validade = reader.GetDateTime("validade");

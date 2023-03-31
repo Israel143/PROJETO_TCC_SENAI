@@ -19,13 +19,19 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             conexao = new MySqlConnection(SiteMaster.ConnectionString);
             if (Session["empresaID"] == null || string.IsNullOrEmpty(Session["empresaID"].ToString()))
             {
-                // redireciona para a página de login
+                //redireciona para a página de login
                 Response.Redirect("~/Login/Login");
             }
             if (IsPostBack)
             {
-               
 
+            }
+            var fornecedor = new Classe.fornecedores();
+            var buscaF = new Negocio.fornecedores().Seleciona();
+
+            foreach (var f in buscaF)
+            {
+                ddlFornecedores.Items.Add(new ListItem(f.nome, f.id.ToString()));
             }
         }
 
@@ -40,9 +46,8 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             }
             else
             {
-                var Lista = new Negocio.estoque().Read(TxtPesquisa.Text);
-                GridView1.DataSource = Lista;
-                GridView1.DataBind();
+                rptEstoque.DataSource = new Negocio.estoque().Read1(TxtPesquisa.Text);
+                rptEstoque.DataBind();
             }
             
 
@@ -53,8 +58,8 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
         protected void Btn_inserir_Click(object sender, EventArgs e)
         {
             var estoque = new Classe.estoque();
-            estoque.codigo_de_barra =Convert.ToInt32(Txt_Codigo_de_Barra.Text);
-            estoque.id_fornecedor = Convert.ToInt32(Txt_Id_Fornecedor.Text);
+            estoque.codigo_de_barra = Txt_Codigo_de_Barra.Text;
+            estoque.id_fornecedor = Convert.ToInt32(ddlFornecedores.SelectedValue);
             estoque.nome_produto = Txt_Nome_Produto.Text;
             estoque.validade = Convert.ToDateTime(Txt_Validade.Text);
             estoque.preco_unidade = Convert.ToDouble(Txt_Preco_Unidade.Text);

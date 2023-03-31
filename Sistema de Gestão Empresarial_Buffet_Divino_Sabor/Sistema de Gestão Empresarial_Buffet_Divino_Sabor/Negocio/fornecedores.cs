@@ -169,6 +169,38 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
             
         }
 
+        public List<Classe.fornecedores> Seleciona()
+        {
+            var Lista = new List<Classe.fornecedores>();
+            try
+
+            {
+                conexao.Open();
+                var reader = new MySqlCommand("SELECT nome, id FROM fornecedores WHERE 1", conexao).ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var fornecedor = new Classe.fornecedores();
+                    fornecedor.nome = reader.GetString("nome");
+                    fornecedor.id = reader.GetInt32("id");
+                    Lista.Add(fornecedor);
+                }
+            }
+            catch
+            {
+
+
+            }
+            finally
+            {
+
+                conexao.Close();
+
+            }
+
+            return Lista;
+        }
+
 
     }
 }

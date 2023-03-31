@@ -2,85 +2,102 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="Estoque.css" />
+    <link rel="stylesheet" href="../../CSS PADRÃO/EstiloPadrao.css" />
     <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
-    <div class="row text-center">
-        <h1>Controle de Estoque</h1>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <asp:Label runat="server" ID="lbl_codigobarra" Text="Código de barra"></asp:Label>
-                    <asp:TextBox runat="server" ID="Txt_Codigo_de_Barra" class="txtbox"></asp:TextBox>
-                </div>
-                <div class="col-md-6">
-                    <!--Trocar para um dropdownList que pega da tabela de fornecedores, e adicionar botão "Criar novo fornecedor"-->
-                    <asp:Label runat="server" ID="lbl_fornecedor" Text="Fornecedor"></asp:Label>
-                    <asp:TextBox runat="server" ID="Txt_Id_Fornecedor" class="txtbox"></asp:TextBox>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <asp:Label runat="server" ID="lbl_nome_produto" Text="Nome do Produto"></asp:Label>
-                    <asp:TextBox runat="server" ID="Txt_Nome_Produto" class="txtbox"></asp:TextBox>
-                </div>
-                <div class="col-md-6">
-                    <asp:Label runat="server" ID="lbl_validade" Text="Data de Validade"></asp:Label>
-                    <asp:TextBox runat="server" ID="Txt_Validade" class="txtbox"></asp:TextBox>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <asp:Label runat="server" ID="lbl_preco_uni" Text="Preço por unidade"></asp:Label>
-                    <asp:TextBox runat="server" ID="Txt_Preco_Unidade" class="txtbox"></asp:TextBox>
-                </div>
-                <div class="col-md-6">
-                    <asp:Label runat="server" ID="lbl_qtd" Text="Quantidade"></asp:Label>
-                    <asp:TextBox runat="server" ID="Txt_Quantidade" class="txtbox"></asp:TextBox>
-                </div>
-            </div>
-            <div id="row_btn" style="text-align: center">
+
+    <div class="conteudo">
+        <div class="row text-center">
+            <h1 class="title-1">Controle de Estoque</h1>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-5">
                 <div class="row">
-                    <div class="div-md-6">
-                        <div class="row">
-                            <asp:Label runat="server" ID="lbl_seguimento" Text="Seguimento"></asp:Label>
-                        </div>
-                        <div class="row">
-                            <asp:TextBox runat="server" ID="Txt_Seguimento" class="txtbox"></asp:TextBox>
-                        </div>
+                    <div class="col-md-6">
+                        <asp:Label runat="server" ID="lbl_codigobarra" CssClass="lbl-box" Text="Código de barra"></asp:Label>
+                        <asp:TextBox runat="server" ID="Txt_Codigo_de_Barra" class="txtbox"></asp:TextBox>
                     </div>
-                    <div class="div-md-6">
-                        <asp:Button runat="server" ID="Btn_inserir" OnClick="Btn_inserir_Click" class="btn" Text="Inserir" />
+                    <div class="col-md-6">
+                        <asp:Label runat="server" ID="lbl_fornecedor" CssClass="lbl-box" Text="Fornecedor"></asp:Label><br />
+                        <asp:DropDownList CssClass="ddl-my" ID="ddlFornecedores" runat="server"></asp:DropDownList>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <asp:Label runat="server" ID="lbl_nome_produto" CssClass="lbl-box" Text="Nome do Produto"></asp:Label>
+                        <asp:TextBox runat="server" ID="Txt_Nome_Produto" class="txtbox"></asp:TextBox>
+                    </div>
+                    <div class="col-md-6">
+                        <asp:Label runat="server" ID="lbl_validade" CssClass="lbl-box" Text="Data de Validade"></asp:Label>
+                        <asp:TextBox runat="server" ID="Txt_Validade" class="txtbox"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <asp:Label runat="server" ID="lbl_preco_uni" CssClass="lbl-box" Text="Preço por unidade"></asp:Label>
+                        <asp:TextBox runat="server" ID="Txt_Preco_Unidade" class="txtbox"></asp:TextBox>
+                    </div>
+                    <div class="col-md-6">
+                        <asp:Label runat="server" ID="lbl_qtd" CssClass="lbl-box" Text="Quantidade"></asp:Label>
+                        <asp:TextBox runat="server" ID="Txt_Quantidade" class="txtbox"></asp:TextBox>
+                    </div>
+                </div>
+                <div id="row_btn" style="margin-top:15px; margin-left:230px;">
+                    <div class="row">
+                        <div class="div-md-6">
+                            <div class="row">
+                                <asp:Label runat="server" ID="lbl_seguimento" CssClass="lbl-box" Text="Seguimento"></asp:Label>
+                            </div>
+                            <div class="row">
+                                <asp:TextBox runat="server" ID="Txt_Seguimento" class="txtbox"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="div-md-6" style="margin-top:20px; margin-left:5px">
+                            <asp:Button runat="server" ID="Btn_inserir" OnClick="Btn_inserir_Click" class="btn-v-p" Text="Inserir" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5">
-            <p>Pesquisa:</p>
-            <asp:TextBox runat="server" ID="TxtPesquisa" class="txtbox"></asp:TextBox>
-            <br />
-            <br />
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <p class="title-1">Pesquisa:</p>
+                <asp:TextBox runat="server" ID="TxtPesquisa" class="txtbox"></asp:TextBox>
+                <br />
+                <br />
 
-            <asp:Button runat="server" ID="Btn_pesquisar" OnClick="Btn_pesquisar_Click" class="btn" Text="Pesquisar" />
-            <br />
-            <br />
+                <asp:Button runat="server" ID="Btn_pesquisar" OnClick="Btn_pesquisar_Click" class="btn-v-p" Text="Pesquisar" />
+                <br />
+                <br />
 
-            <asp:GridView ID="GridView1" CssClass="Grid " runat="server" AutoGenerateColumns="false" Style="width: 600px; height: 300px">
-                <Columns>
-                    <asp:BoundField DataField="id" HeaderText="ID" />
-                    <asp:BoundField DataField="codigo_de_barra" HeaderText="Codigo de barra" />
-                    <asp:BoundField DataField="id_fornecedor" HeaderText="ID Fornecedor" />
-                    <asp:BoundField DataField="nome_produto" HeaderText="Nome Produto" />
-                    <asp:BoundField DataField="validade" HeaderText="Validade" />
-                    <asp:BoundField DataField="preco_unidade" HeaderText="Preco Unidade" />
-                    <asp:BoundField DataField="quantidade" HeaderText="Quantidade" />
-                    <asp:BoundField DataField="seguimento" HeaderText="Seguimento" />
-                </Columns>
-            </asp:GridView>
-
-
+                <asp:Repeater runat="server" ID="rptEstoque">
+                    <ItemTemplate>
+                        <div class="row" style="color:#942828; font-family:serif; margin-left:30px">
+                            <div class="row">
+                                NOME: <%# Eval("nome_produto") %>
+                            </div>
+                            <div class="row">
+                                SEGUIMENTO: <%# Eval("seguimento") %>
+                            </div>
+                            <div class="row">
+                                FORNECEDOR: <%# Eval("id_fornecedor") %>
+                            </div>
+                            <div class="row">
+                                VALIDADE: <%# Eval("validade") %>
+                            </div>
+                            <div class="row">
+                                PREÇO UNI: <%# Eval("preco_unidade") %>
+                            </div>
+                            <div class="row">
+                                QUANTIDADE: <%# Eval("quantidade") %>
+                            </div>
+                            <div class="row">
+                                CÓDIGO DE BARRAS: <%# Eval("codigo_de_barra") %>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
         </div>
     </div>
+
 </asp:Content>

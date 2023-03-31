@@ -19,7 +19,7 @@
                     <asp:ListItem Text="Sobremesa" Value="sobremesa"></asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div id="pratos" style="text-align: justify">
+            <div id="pratos" class="intern-box" style="text-align: justify">
                 <asp:Repeater ID="RepeatPratos" runat="server">
                     <ItemTemplate>
                         <div id="opcoes" class="row option-box">
@@ -43,10 +43,10 @@
         <div id="pedido" class="col-sm-5 car-box">
             <div id="carrinho">
                 <h2 class="title">CARRINHO</h2>
-                <div id="valorTotal">
+                <div id="valorTotal" style="color:#942828;">
                     Total da compra: R$<asp:Label runat="server" ID="lblValorT"></asp:Label>
                 </div>
-                <div id="selecionados" style="margin-bottom:50px;">
+                <div id="selecionados" class="intern-box">
                     <asp:Repeater ID="RepeatPratoSelected" runat="server">
                         <ItemTemplate>
                             <div id="opcoes" class="row option-box">

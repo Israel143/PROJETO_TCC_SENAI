@@ -75,9 +75,13 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Negocio
 
                 //Criar Cadastro
                 conexao.Open();
-                var comando = new MySqlCommand("INSERT INTO empresa (email, senha) VALUES (@email,MD5(@senha))", conexao);
+                var comando = new MySqlCommand("INSERT INTO empresa (email, senha, nome, cnpj, endereco, contato) VALUES (@email,MD5(@senha),@nome,@cnpj,@endereco,@contato)", conexao);
                 comando.Parameters.Add(new MySqlParameter("email", empresa.email));
                 comando.Parameters.Add(new MySqlParameter("senha", empresa.senha));
+                comando.Parameters.Add(new MySqlParameter("nome", empresa.nome));
+                comando.Parameters.Add(new MySqlParameter("cnpj", empresa.cnpj));
+                comando.Parameters.Add(new MySqlParameter("endereco", empresa.endereco));
+                comando.Parameters.Add(new MySqlParameter("contato", empresa.contato));
                 comando.ExecuteNonQuery();
                 conexao.Close();
                 return true;
