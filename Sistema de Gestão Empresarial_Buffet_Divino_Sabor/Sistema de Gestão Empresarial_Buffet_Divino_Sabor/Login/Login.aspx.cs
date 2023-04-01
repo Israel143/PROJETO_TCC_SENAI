@@ -28,7 +28,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão
             {
                 Session["empresaID"] = empresa.id;
 
-                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + empresa.email + " no sistema", "../Gestão/Dashboard/Dashboard.aspx");
+                SiteMaster.ExibirAlertRedirecionar(this, "Você está logado como " + empresa.email + " no sistema", "../Gestão/Pedidos/Pedidos.aspx");
                 
             }
 

@@ -11,7 +11,7 @@
         </div>
         <br />
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-5" style="margin-left:30px">
                 <div class="row">
                     <div class="col-md-6">
                         <asp:Label runat="server" ID="lbl_codigobarra" CssClass="lbl-box" Text="Código de barra"></asp:Label>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div id="row_btn" style="margin-top:15px; margin-left:230px;">
-                    <div class="row">
+                    <div class="row"  style="position:absolute; left:200px">
                         <div class="div-md-6">
                             <div class="row">
                                 <asp:Label runat="server" ID="lbl_seguimento" CssClass="lbl-box" Text="Seguimento"></asp:Label>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="col-md-2"></div>
-            <div class="col-md-5">
+            <div class="col-md-5" style="float:right">
                 <p class="title-1">Pesquisa:</p>
                 <asp:TextBox runat="server" ID="TxtPesquisa" class="txtbox"></asp:TextBox>
                 <br />

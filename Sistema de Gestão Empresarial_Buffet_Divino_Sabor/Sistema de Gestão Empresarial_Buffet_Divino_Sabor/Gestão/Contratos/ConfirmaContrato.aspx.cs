@@ -105,7 +105,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                 //var pedidos = new Negocio.pedidos();
                 //pedidos.Finish(pedido);
 
-                var pedidos = new Negocio.pedidos().Finish(pedido);
+                var pedidos = new Negocio.pedidos().Acept(pedido);
 
                 if(pedidos == true)
                 {

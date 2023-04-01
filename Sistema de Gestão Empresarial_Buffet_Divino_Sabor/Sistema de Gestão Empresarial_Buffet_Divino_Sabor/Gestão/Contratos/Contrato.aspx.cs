@@ -40,9 +40,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                     id = Session["pedidoID"].ToString();
                 }
 
-                {
-
-
                     // Query SQL para buscar as informações
                     string query = $@"SELECT pedidos.id_cliente, pedidos.data, pedidos.id_menu, empresa.endereco ,empresa.cnpj, cliente.nome AS nome_cliente, cliente.contato AS contato_cliente, cliente.email AS email_cliente, empresa.nome AS nome_empresa, empresa.cnpj, empresa.contato AS contato_empresa, empresa.email AS email_empresa, pedidos.id_menu
                                    FROM contratos
@@ -53,7 +50,7 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
 
                     // Criação do objeto MySqlCommand para executar a query SQL
                     MySqlCommand commando = new MySqlCommand(query, conexao);
-                    commando.Parameters.AddWithValue("@id_pedido",id);
+                    commando.Parameters.AddWithValue("@id_pedidos",id);
                     
                     try
                     {
@@ -93,7 +90,6 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                     }
 
                    
-                }
             }
 
 

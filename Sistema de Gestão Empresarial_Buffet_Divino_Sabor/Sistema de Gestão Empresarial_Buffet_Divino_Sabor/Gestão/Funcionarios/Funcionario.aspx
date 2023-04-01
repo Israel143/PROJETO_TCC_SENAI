@@ -8,16 +8,11 @@
         <script src="../../JS PADRÃO/NavBarPadrao.js"></script>
     </header>
     <div id="escopo" class="escopo">
-        <!--Barra Secundaria!-->
-        <div class="row nav-secondary">
-            <a onclick="showDiv('funcionarios');return;" href="#" class="item-nav" type="button">Funcionários</a>
-            <a onclick="showDiv('escalas')" href="#" class="item-nav" type="button">Escalas</a>
-        </div>
         <!--Conteudo!-->
         <div id="content" class="row conteudo">
             <div id="funcionarios" style="display: block">
                 <div id="create" class="col-md-5">
-                    <div class="infobox">
+                    <div class="infobox" style="margin-left: 50px">
                         <div id="infos1" class="row" style="font-family: serif; color: #942828;">
                             <div class="row">
                                 <div class="col-md-6">
@@ -137,7 +132,7 @@
                     <div id="resultBox" class="row">
                         <asp:Repeater runat="server" ID="rptFuncionarios">
                             <ItemTemplate>
-                                <div class="row" style="color: #942828; font-family: serif; margin-left: 100px; width:250px">
+                                <div class="row" style="color: #942828; font-family: serif; margin-left: 100px; width: 250px">
                                     <div class="row">
                                         ID: <%# Eval("id") %>
                                     </div>
@@ -168,11 +163,6 @@
                     </div>
                 </div>
             </div>
-            <div id="escalas" style="display: none">
-                <h1>ESCALA DE SERVIÇO</h1>
-            </div>
         </div>
     </div>
-    <!--Modal!-->
-    <div id="modal"></div>
 </asp:Content>

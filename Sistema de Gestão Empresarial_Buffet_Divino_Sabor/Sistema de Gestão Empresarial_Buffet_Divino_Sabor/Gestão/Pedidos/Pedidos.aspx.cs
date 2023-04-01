@@ -41,42 +41,28 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Pedidos
             var pedido = new Classe.pedidos();
 
             Button btnAcept = (Button)sender;
-            pedido.id = int.Parse(btnAcept.CommandArgument);
-            try
-            {
-                Log.Information("Entrou");
-                var pedidos = new Negocio.pedidos();
-                pedidos.Acept(pedido);
-                Response.Redirect(Request.Url.AbsoluteUri);
-            }
-            catch (Exception err)
-            {
+            Session["pedidoID"] = int.Parse(btnAcept.CommandArgument);
 
-                Log.Error("Problema localizado: " + err.Message);
-            }
-
-            finally
-            {
-                Log.Warning("Acabou");
-
-            }
+            Response.Redirect($"../Contratos/ConfirmaContrato.aspx");
         }
 
         protected void btnFinish_Click(object sender, EventArgs e)
         {
 
             Button btnFinish = (Button)sender;
-            Session["pedidoID"] = int.Parse(btnFinish.CommandArgument);
+            //Session["pedidoID"] = int.Parse(btnFinish.CommandArgument);            
+            //Response.Redirect($"../Contratos/ConfirmaContrato.aspx?");
+
+            var pedido = new Classe.pedidos();
+            pedido.id = int.Parse(btnFinish.CommandArgument);
+            var finaliza = new Negocio.pedidos().Finish(pedido);
             
-            Response.Redirect($"../Contratos/ConfirmaContrato.aspx?");
         }
 
         protected void btnCon_Click(object sender, EventArgs e)
         {
             Button btnCon = (Button)sender;
-            Session["pedidoID"] = int.Parse(btnCon.CommandArgument);
 
-            Response.Redirect($"../Contratos/ConfirmaContrato.aspx");
 
         }
     }

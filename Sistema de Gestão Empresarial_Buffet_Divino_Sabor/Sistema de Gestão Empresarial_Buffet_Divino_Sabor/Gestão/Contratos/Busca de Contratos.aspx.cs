@@ -70,23 +70,22 @@ namespace Sistema_de_Gestão_Empresarial_Buffet_Divino_Sabor.Gestão.Contratos
                 var tabela = (DataTable)Session["tabela"];
                 var id_pedido = tabela.Rows[index]["id"].ToString();
 
-                int id = 0;
-                DateTime data_incio = DateTime.Now;
-                DateTime data_fim = DateTime.Now;
-                conexao.Open();
-                var commando = new MySqlCommand($"SELECT id,data_inicio,data_fim FROM contratos WHERE id = " + id_pedido, conexao);
-                var reader = commando.ExecuteReader();
-                while (reader.Read())
-                {
-                    id = reader.GetInt32("id");
-                    data_inicio = reader.GetDateTime("data_inicio");
-                    data_fim = reader.GetDateTime("data_fim");
-                }
-                conexao.Close();
-                Response.Redirect($"../Contratos/Contrato.aspx?id={id}&data_inicio={data_incio}&data_fim={data_fim}&id_pedido={id_pedido}");
-
-
-
+                //int id = 0;
+                //DateTime data_incio = DateTime.Now;
+                //DateTime data_fim = DateTime.Now;
+                //conexao.Open();
+                //var commando = new MySqlCommand($"SELECT id,data_inicio,data_fim FROM contratos WHERE id = " + id_pedido, conexao);
+                //var reader = commando.ExecuteReader();
+                //while (reader.Read())
+                //{
+                //    id = reader.GetInt32("id");
+                //    data_inicio = reader.GetDateTime("data_inicio");
+                //    data_fim = reader.GetDateTime("data_fim");
+                //}
+                //conexao.Close();
+                //Response.Redirect($"../Contratos/Contrato.aspx?id={id}&data_inicio={data_incio}&data_fim={data_fim}&id_pedido={id_pedido}");
+                Session["pedidoID"] = id_pedido;
+                Response.Redirect("../Contratos/Contrato.aspx");
             }
         }
     }
