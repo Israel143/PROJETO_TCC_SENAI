@@ -2,16 +2,18 @@
 }
 
 .content {
-
+    
 }
 
-.OrderBox{
-    background-color:ghostwhite;
-    border-radius:10px;
-    margin-bottom:5px;
-    padding:10px;
-    height:auto;
-    box-shadow:rgba(0, 0, 0, 0.58) 10px 10px 15px;
+.OrderBox {
+    background-color: #f5d4d2;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+    max-height: inherit;
+    min-height: 100px;
+    max-width: 260px;
+    min-width: 260px;
 }
 
 .InfoBox{
@@ -19,8 +21,47 @@
     padding:5PX;
 }
 
+.mybtn-w-p {
+    width: 100px;
+    height: 30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: serif;
+}
+
+.back-box {
+    background-color: white;
+    width: 285px;
+    max-height: 500px;
+    min-height: 500px;
+    border-radius: 20px;
+    padding: 10px 10px 30px 10px;
+    box-shadow: rgba(0, 0, 0, 0.58) 10px 10px 15px;
+    overflow-y: scroll;
+    margin-right:30px;
+}
+
 /*ELEMENTOS***********************************************************/
 .btn {
     background-color: rgba(71, 0, 0, 0.80);
     color:white;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #942828;
+    border-radius: 20px;
+    border: none;
 }

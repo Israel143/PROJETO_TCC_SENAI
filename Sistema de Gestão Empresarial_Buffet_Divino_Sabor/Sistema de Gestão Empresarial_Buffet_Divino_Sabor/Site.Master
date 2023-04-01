@@ -55,15 +55,13 @@
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a id="default" href="../../Default.aspx">GEvent</a>
+            <%if((Session["clienteID"] == null) && (Session["empresaID"]==null)){ %><a id="default" href="../../Default.aspx">GEvent</a><%} %>
+            <%if(Session["empresaID"] != null){ %><a id="PedidosLink" href="../Pedidos/Pedidos.aspx">Pedidos</a><%} %>
             <%if(Session["empresaID"] != null){ %><a id="BContratosLink" href="../Contratos/Busca de Contratos.aspx">Contratos</a><%} %>
             <%if(Session["empresaID"] != null){ %><a id="EstoqueLink" href="../Estoque/estoque.aspx">Estoque</a><%} %>
             <%if(Session["empresaID"] != null){ %><a id="FuncionariosLink" href="../Funcionarios/Funcionario.aspx">Funcionários</a><%} %>
             <%if(Session["empresaID"] != null){ %><a id="CardapioLink" href="../Pratos/Cadastrodepratos.aspx">Cardápios</a><%} %>
-            <%if(Session["empresaID"] != null){ %><a id="PedidosLink" href="../Pedidos/Pedidos.aspx">Pedidos</a><%} %>
-            <%if(Session["empresaID"] != null){ %><a id="FornecedoresLink" href="../Fornecedores/Fornecedores.aspx">Fornecedores</a><%} %>
-            <%if(Session["clienteID"] != null){ %><a id="EventosLink" href="#">Seus Eventos</a><%} %>
-            <%if(Session["clienteID"] != null){ %><a id="MenuLink" href="~/Clientes/Menu.aspx">Novo Evento</a><%} %>
+            <%if(Session["clienteID"] != null){ %><a id="MenuLink" href="../Clientes/Menu.aspx">Novo Evento</a><%} %>
             <footer style="position:absolute; bottom:70px; left:50px;">
                 <div class="row">
                     <%if(Session["clienteID"] != null || Session["empresaID"]!=null){ %><asp:Button runat="server" ID="btnlogout" Class="btn-pp" OnClick="btnlogout_Click" Text="Sair" /><%} %>
