@@ -1,0 +1,37 @@
+﻿body {
+}
+
+p {
+    font-size: 30px;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width:auto;
+}
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+.Grid {
+    background-color: white;
+}
+
+.txtbox {
+    border-radius: 20px;
+    border: none;
+    padding:5px;
+}
+
+/*containers******************************************/
+.main{
+
+}
+
+.principal{
+    text-align:center
+}

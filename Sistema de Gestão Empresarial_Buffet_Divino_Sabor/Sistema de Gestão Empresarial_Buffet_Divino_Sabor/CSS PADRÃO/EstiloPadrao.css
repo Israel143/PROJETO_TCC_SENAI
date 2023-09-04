@@ -1,0 +1,128 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../imgs/background.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    position: center;
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-white1: #BECAFF;
+    --color-dark: #000000;
+    --color-dark1: #A22B2B;
+    --color-dark2: #470000;
+}
+
+/*ELEMENTOS***************************/
+exb-box{
+
+}
+.title-1 {
+    color: #942828;
+    font-family: serif;
+    font-weight: 600;
+}
+.txtbox {
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    border:none;
+    width:200px;
+    height:30px;
+}
+
+.lbl-sm{
+
+}
+
+
+.sidebox {
+    background-color: rgba(148, 40, 40, 0.67);
+    padding: 30px;
+    width: 50%;
+    height: 750px;
+    position: fixed;
+    right: 0px;
+}
+
+.btn-w-p {
+    width: 150px;
+    height: 30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: serif;
+}
+
+.btn-v-p {
+    width: 150px;
+    height: 30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #942828;
+    font-family: serif;
+}
+
+.btn-pp {
+    width: 150px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    font-family:serif;
+}
+
+.btn-p {
+    width: 150px;
+    height:30px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    font-family: serif;
+}
+
+.btn-ppp {
+    width: 100px;
+    white-space: normal;
+    margin-bottom: 10px;
+    color: #942828;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5d4d2;
+    font-family: serif;
+}
+
+.my-btn-lg {
+    background-color: #942828;
+    text-align: center;
+    font-family: serif;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 5px;
+    color: white;
+    width: 150px;
+    height: unset;
+    border-radius: 30px;
+    box-shadow: #000000 5px 1px 15px;
+    display: block;
+    border:none;
+}
+

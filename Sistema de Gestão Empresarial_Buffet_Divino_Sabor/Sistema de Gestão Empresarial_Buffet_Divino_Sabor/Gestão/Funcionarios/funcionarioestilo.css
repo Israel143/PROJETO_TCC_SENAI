@@ -1,0 +1,63 @@
+﻿body {
+}
+
+/*ELEMENTOS***************************/
+.txtbox {
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+#GridView1 {
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(71, 0, 0, 0.45);
+}
+
+/*ORGANIZAÇÃO*************************/
+.conteudo {
+    margin-top:50px;
+    background-color: white;
+    border-radius: 20px;
+    max-height: 500px;
+    min-height: 500px;
+    width: 1200px;
+    padding-top:50px;
+}
+
+.escopo {
+    margin-top: 50px;
+}
+
+/*NavBar2*/
+.nav-secondary {
+    background-color: rgba(71, 0, 0, 0.80);
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin-left: auto;
+    padding: 5px;
+}
+
+.item-nav {
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+    .item-nav:hover {
+        color: black;
+    }
